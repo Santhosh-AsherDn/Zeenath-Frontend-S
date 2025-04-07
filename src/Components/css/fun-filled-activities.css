@@ -1,0 +1,159 @@
+body {
+  font-family: "PT Serif", serif;
+  font-family: "Philosopher", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: "PT Serif", serif;
+}
+p {
+  font-family: "Philosopher", sans-serif;
+}
+a {
+  font-family: "PT Serif", serif;
+}
+
+.experienceAtZeenath {
+  font-family: PT Serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 100%;
+  text-align: center;
+  color: #637557;
+  margin-top: 50px;
+}
+
+.yourStayAtZeenath {
+  font-family: Philosopher;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 37px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #535353;
+  margin-top: 24px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 50px;
+}
+
+.ActivityCards {
+  width: 31%;
+}
+
+.ActivityCardsImage {
+}
+
+.ActivityCardsImage img {
+  width: 100%;
+}
+
+.ActivityCardsName {
+  font-family: PT Serif;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 38px;
+  letter-spacing: 0%;
+  color: #425f2f;
+  margin-top: 13px;
+}
+
+.ActivityContent {
+  font-family: Philosopher;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  color: #535353;
+  margin-top: 13px;
+}
+
+.ActivityCrdFle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.activtyContainer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+}
+
+.activityMainDiv {
+  width: 1200px;
+}
+.funfilledactivityBanner {
+  background-image: url("../../../public/images/Fun-Filled-Activity-Banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 700px) {
+  .experienceAtZeenath {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 100%;
+    text-align: center;
+    color: #637557;
+    margin-top: 50px;
+  }
+  .yourStayAtZeenath {
+    font-family: Philosopher;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #535353;
+    margin-top: 24px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 50px;
+  }
+  .ActivityCrdFle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 40px;
+    row-gap: 40px;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ActivityCardsImage img {
+    width: 100%;
+  }
+  .ActivityCards {
+    width: 100%;
+  }
+  .ActivityCardsName {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0%;
+    color: #425f2f;
+    margin-top: 13px;
+  }
+  .ActivityContent {
+    font-family: Philosopher;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #535353;
+    margin-top: 13px;
+  }
+
+  .funfilledactivityBanner {
+    height: 350px;
+  }
+  .deluxe-chalet-banner h1 {
+    padding-top: 130px;
+  }
+}

@@ -1,0 +1,36 @@
+.activeline {
+  position: relative;
+}
+
+.activeline::before {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  content: ".";
+  color: transparent;
+  background: #ffffff;
+  height: 2px;
+}
+
+.activeline:nth-child(5)::before {
+  background: #425f2f;
+}
+
+.carousel-item img {
+  transition: transform 1.5s ease-in-out; /* Smooth transition */
+}
+
+.carousel-item.active img {
+  transform: scale(1.1); /* Zoom in on the active slide */
+}
+
+#deluxeChaletGallery2 .carousel-item img {
+  transition: none;
+}
+
+#deluxeChaletGallery2 .carousel-item.active img {
+  transform: none;
+}

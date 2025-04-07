@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fff6372b.css",
+    "main.js": "/static/js/main.f865a601.js",
+    "static/js/453.55c15a21.chunk.js": "/static/js/453.55c15a21.chunk.js",
+    "static/media/home-banner.png": "/static/media/home-banner.65bba5514fcf6f8f0260.png",
+    "static/media/Fun-Filled-Activity-Banner.png": "/static/media/Fun-Filled-Activity-Banner.9a860ba295f1885735a0.png",
+    "static/media/banner-img.png": "/static/media/banner-img.7fb528b5cd2c7a423e51.png",
+    "static/media/full-bg.png": "/static/media/full-bg.22a130a5699ea75ed958.png",
+    "static/media/contactus-bg.png": "/static/media/contactus-bg.0b9f57eb351f67ea3a36.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/index.html",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/ArrowNext.svg": "/static/media/ArrowNext.8910c2c8052d137e2476.svg",
+    "static/media/ArrowPrev.svg": "/static/media/ArrowPrev.5995f4741760c8992cef.svg",
+    "main.fff6372b.css.map": "/static/css/main.fff6372b.css.map",
+    "main.f865a601.js.map": "/static/js/main.f865a601.js.map",
+    "453.55c15a21.chunk.js.map": "/static/js/453.55c15a21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fff6372b.css",
+    "static/js/main.f865a601.js"
+  ]
+}

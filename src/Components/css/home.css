@@ -1,0 +1,4119 @@
+body {
+  font-family: "PT Serif", serif;
+  font-family: "Philosopher", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: "PT Serif", serif;
+}
+p {
+  font-family: "Philosopher", sans-serif;
+}
+a {
+  font-family: "PT Serif", serif;
+}
+
+/* header css start */
+
+/* .nav-link {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  font-family: "PT Serif", serif;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0rem 1rem !important;
+}
+
+#zeenath-logo-position {
+  position: relative;
+}
+
+#zeenath-logo-position img {
+  position: absolute;
+  top: -38px;
+  left: 115px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+  }
+} */
+
+/* mobile screen media query */
+
+@media (max-width: 700px) {
+  br {
+    display: none !important;
+  }
+  .homeaboutimg img {
+    width: 100%;
+  }
+  .dining-img-1 img {
+    width: 100%;
+  }
+  .fun-filled-activities img {
+    width: 100%;
+  }
+  .flora-faunaimg img {
+    width: 100%;
+  }
+  .index-banner-section {
+    /* background-image: url(images/home-page/home-banner.png); */
+    background-image: url(../../../public/images/home-page/home-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .index-banner-section h1 {
+    color: #ffffff;
+    font-size: 30px;
+  }
+  .homeaboutsectiontext h2 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .homeaboutsectiontext h3 {
+    color: #637557;
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .homeaboutsectiontext p {
+    color: #535353;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .accommodation-section-home p {
+    font-size: 16px;
+  }
+  .diningsection {
+    margin-top: 10px;
+  }
+
+  .diningsection .container .row {
+    margin-bottom: 15px !important;
+  }
+  .dining-img-1 {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: auto;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .diningsection h2 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .fun-filled-activities h2 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .fun-filled-activities p {
+    font-size: 16px;
+    color: #535353;
+    font-weight: 400;
+  }
+  .fun-filled-activities-a a {
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
+  .flora-fauna-content {
+    padding: 40px 0px;
+  }
+  .flora-fauna-content h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 8px !important;
+  }
+  .flora-fauna-content h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 8px !important;
+  }
+  .flora-fauna-content p {
+    color: #ffffff;
+    font-size: 16px;
+  }
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    left: 6px;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -114px;
+    /* left: 115px; */
+    width: 150px;
+  }
+  .smallstrip {
+    background-color: #637557;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .strippara {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .homeaboutsectiontext {
+    margin-top: 50px;
+  }
+  .accommodation-para {
+    margin-top: 50px;
+  }
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    width: 96%;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: "Philosopher";
+  }
+  .dining-popup {
+    position: relative;
+  }
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 250px;
+    bottom: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    right: 1%;
+    bottom: 7px;
+  }
+  .inner-dining-popup p {
+    font-size: 15px;
+    font-weight: 400;
+    /* font-family: "Poppins", sans-serif; */
+    line-height: 18px;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    width: 96%;
+    bottom: 18px;
+    left: 2%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 13px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    /* font-family: "Poppins", sans-serif; */
+    font-size: 15px;
+    font-weight: 400;
+    /* font-family: "Poppins", sans-serif; */
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    color: #000000;
+    font-size: 15px !important;
+    line-height: 20px;
+    margin-top: 14px;
+  }
+  .flora-fauna-content {
+    color: #ffffff;
+    background-color: #637557;
+    padding: 30px;
+  }
+  .smallscreenimgforflorafauna {
+    width: 100%;
+  }
+  .homeaboutsectiontext h2 {
+    font-size: 24px;
+  }
+  .homeaboutsectiontext h3 {
+    font-size: 22px;
+  }
+  .homeaboutsectiontext p {
+    font-size: 16px;
+  }
+  .dining-img-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .fun-filled-activities {
+    margin-top: 50px;
+  }
+  .hometestimonalsec {
+    padding-top: 50px;
+    margin-top: 50px;
+  }
+  .testimonal-section-box {
+    background-color: #637557;
+    padding: 50px 15px 30px;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  .testimonal-section-borderline {
+    border: 2px solid #ffffff;
+    padding: 20px 20px 20px;
+  }
+  .commaone {
+    position: relative;
+  }
+  .commaone img {
+    position: absolute;
+    bottom: 15px;
+    left: -5px;
+  }
+  .commatwo {
+    position: relative;
+  }
+  .commatwo img {
+    position: absolute;
+    right: 0px;
+    bottom: -15px;
+  }
+  .source {
+    padding-top: 10px;
+    color: #ffffff;
+  }
+  .diningthiredimg {
+    padding-top: 539px;
+    height: 568px;
+    margin-top: 40px;
+  }
+  .carousel-caption {
+    top: 30% !important;
+  }
+  .button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    transition: all 1000ms;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bd8d45;
+    font-family: poppins;
+    width: 200px;
+    background-color: #bd8d45;
+    margin-top: 21px;
+    width: 133px;
+    padding: 6px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+    font-family: "Philosopher", sans-serif;
+  }
+  .button:hover {
+    background-color: #ffffff;
+    color: #bd8d45;
+    transform: scale(1.1);
+    outline: 2px solid #bd8d45;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+  /* br {
+    display: none !important;
+  } */
+  .titleofhomebanner {
+    font-size: 27px;
+  }
+
+  .strippara p {
+    margin-bottom: 0;
+  }
+  .strippara img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .smallstrip .row {
+    margin-bottom: 0;
+    font-size: 16px;
+    row-gap: 15px;
+  }
+
+  #HomeId .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 560px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* banner css start */
+
+  .banner-bg-img {
+    /* background-image: url(assets/images/home-page/home-banner.png); */
+    background-image: url(../../../public/images/home-page/home-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding-top: 260px;
+  }
+
+  /* Accommodation section css start  */
+
+  .accommodation-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f1f1;
+  }
+
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+  }
+
+  /* footer section css start */
+
+  .footer-logo img {
+    width: 210px;
+  }
+
+  .footer-section {
+    padding: 0px 0px 0px;
+    color: #ffffff;
+    font-family: "Philosopher", sans-serif !important;
+  }
+
+  .bg-black-color-for-footer {
+    background-color: #262825;
+    padding: 40px 0px 20px;
+  }
+  .footer-links {
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  .footer-links li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  .footer-links li {
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  #footer-addres-gap li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  #footer-addres-gap li a {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  #social-link-icons {
+    display: flex;
+    gap: 40px;
+  }
+
+  .fulladresss p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .fulladresss li a {
+    color: #ffffff;
+  }
+
+  .socialmeida p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  #social-link-icons img {
+    width: 25px;
+  }
+
+  /* home page banner start */
+
+  .index-banner-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* padding-top: 250px; */
+    padding-bottom: 200px;
+  }
+
+  .index-banner-section h1 {
+    color: #ffffff;
+    font-size: 60px;
+    padding-top: 250px;
+  }
+
+  .book-now button {
+    border: none;
+    background: #bd8d45;
+    color: #ffffff;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: poppins;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  /* home page small strip start */
+
+  .smallstrip {
+    padding: 15px 30px;
+    background-color: #637557;
+    color: #ffffff;
+  }
+
+  .strippara {
+    display: flex;
+    gap: 10px;
+  }
+
+  .strippara p {
+    font-family: "Philosopher", sans-serif;
+    font-size: 19px;
+    margin-bottom: 0px;
+  }
+
+  /* home about section start */
+
+  .homeaboutsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .homeaboutsectiontext h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext h3 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext p {
+    color: #535353;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .homeaboutimg img {
+    width: 550px;
+  }
+
+  /* Elegant Accommodation Choices start */
+
+  .accommodation-section-home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .accommodation-section-home p {
+    font-size: 24px;
+  }
+
+  /* OPTION 1 */
+  .overlay-outer {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .overlay {
+    background: rgba(4, 125, 67, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  a:hover .overlay {
+    opacity: 1;
+  }
+
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .overlay-outer:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .fadeIn_bottom {
+    top: 80%;
+  }
+  /*  */
+
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: "Philosopher";
+  }
+
+  /* dining section css start */
+
+  .diningsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .dining-img-1 {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 580px;
+  }
+
+  .dining-img-1 img {
+    width: 545px;
+  }
+
+  .dining-img-text {
+    padding: 25px;
+  }
+  .dining-img-1 h3 {
+    font-size: 32px;
+    color: #2c4a18;
+  }
+
+  .dining-img-text p {
+    font-size: 18px;
+  }
+
+  .diningthiredimg {
+    padding-top: 400px;
+  }
+
+  .diningsection h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  /* fun-filled-activities css start */
+
+  .fun-filled-activities {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .fun-filled-activities h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities p {
+    font-size: 24px;
+    color: #535353;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities img {
+    width: 550px;
+  }
+
+  .fun-filled-activities-a {
+    position: relative;
+  }
+
+  .fun-filled-activities-a a {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
+
+  .fun-filled-activities-a a:hover {
+    color: #637557;
+  }
+
+  /* flora-fauna css start */
+
+  .flora-fauna {
+    padding-bottom: 50px;
+  }
+
+  #flora-fauna-bg {
+    background-color: #637557;
+  }
+
+  .flora-fauna-content {
+    padding: 121px 30px;
+  }
+
+  .flora-fauna-content h3 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .flora-fauna-content h2 {
+    color: #ffffff;
+    font-size: 48px;
+  }
+
+  .flora-fauna-content p {
+    color: #ffffff;
+    font-size: 19px;
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #ffffff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 40px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -50px;
+    left: 115px;
+    width: 170px;
+  }
+
+  /* testimonals section css */
+
+  .hometestimonalsec {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 48px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  .testimonal-section-box {
+    background-color: #637557;
+    padding: 80px 30px 40px;
+  }
+
+  .testimonal-section-borderline {
+    border: 2px solid #ffffff;
+    padding: 50px 20px 20px;
+  }
+
+  .profile-img {
+    position: relative;
+  }
+
+  .profile-img img {
+    position: absolute;
+    bottom: 2px;
+  }
+
+  .testimonal-section-borderline h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .testimonal-section-borderline p {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .commaone {
+    position: relative;
+  }
+
+  .commaone img {
+    position: absolute;
+    bottom: 30px;
+    left: -15px;
+  }
+  .commatwo {
+    position: relative;
+  }
+
+  .commatwo img {
+    position: absolute;
+    right: -8px;
+  }
+
+  .source {
+    padding-top: 10px;
+    color: #ffffff;
+  }
+
+  .source img {
+    background-color: #ffffff;
+    padding: 1px;
+  }
+
+  /* From Uiverse.io by vikiWayne */
+  .button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    transition: all 1000ms;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bd8d45;
+    font-family: poppins;
+    width: 200px;
+    background-color: #bd8d45;
+    margin-top: 40px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .button:hover {
+    background-color: #ffffff;
+    color: #bd8d45;
+    transform: scale(1.1);
+    outline: 2px solid #bd8d45;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+
+  .button:hover::before {
+    width: 250%;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* banner css start */
+
+  .banner-bg-img {
+    /* background-image: url(assets/images/home-page/home-banner.png); */
+    background-image: url(../../../public/images/home-page//home-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding-top: 260px;
+  }
+
+  /* Accommodation section css start  */
+
+  .accommodation-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f1f1;
+  }
+
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+  }
+
+  /* footer section css start */
+
+  .footer-logo img {
+    width: 210px;
+  }
+
+  .footer-section {
+    padding: 0px 0px 0px;
+    color: #ffffff;
+    font-family: "Philosopher", sans-serif !important;
+  }
+
+  .bg-black-color-for-footer {
+    background-color: #262825;
+    padding: 40px 0px 20px;
+  }
+  .footer-links {
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  .footer-links li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  .footer-links li {
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  #footer-addres-gap li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  #footer-addres-gap li a {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+    margin-bottom: 0;
+  }
+
+  #social-link-icons {
+    display: flex;
+    gap: 40px;
+  }
+
+  .fulladresss p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .fulladresss li a {
+    color: #ffffff;
+  }
+
+  .socialmeida p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  #social-link-icons img {
+    width: 25px;
+  }
+
+  /* home page banner start */
+
+  .index-banner-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* padding-top: 250px; */
+    padding-bottom: 200px;
+  }
+
+  .index-banner-section h1 {
+    color: #ffffff;
+    font-size: 60px;
+    padding-top: 250px;
+  }
+
+  .book-now button {
+    border: none;
+    background: #bd8d45;
+    color: #ffffff;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: poppins;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  /* home page small strip start */
+
+  .smallstrip {
+    padding: 15px 30px;
+    background-color: #637557;
+    color: #ffffff;
+  }
+
+  .strippara {
+    display: flex;
+    gap: 10px;
+  }
+
+  .strippara p {
+    font-family: "Philosopher", sans-serif;
+    font-size: 19px;
+    margin-bottom: 0px;
+  }
+
+  /* home about section start */
+
+  .homeaboutsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .homeaboutsectiontext h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext h3 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext p {
+    color: #535353;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .homeaboutimg img {
+    width: 550px;
+  }
+
+  /* Elegant Accommodation Choices start */
+
+  .accommodation-section-home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .accommodation-section-home p {
+    font-size: 24px;
+  }
+
+  /* OPTION 1 */
+  .overlay-outer {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .overlay {
+    background: rgba(4, 125, 67, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  a:hover .overlay {
+    opacity: 1;
+  }
+
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .overlay-outer:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .fadeIn_bottom {
+    top: 80%;
+  }
+  /*  */
+
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: "Philosopher";
+  }
+
+  /* dining section css start */
+
+  .diningsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .dining-img-1 {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 580px;
+  }
+
+  .dining-img-1 img {
+    width: 545px;
+  }
+
+  .dining-img-text {
+    padding: 25px;
+  }
+  .dining-img-1 h3 {
+    font-size: 32px;
+    color: #2c4a18;
+  }
+
+  .dining-img-text p {
+    font-size: 18px;
+  }
+
+  .diningthiredimg {
+    padding-top: 400px;
+  }
+
+  .diningsection h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  /* fun-filled-activities css start */
+
+  .fun-filled-activities {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .fun-filled-activities h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities p {
+    font-size: 24px;
+    color: #535353;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities img {
+    width: 550px;
+  }
+
+  .fun-filled-activities-a {
+    position: relative;
+  }
+
+  .fun-filled-activities-a a {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
+
+  .fun-filled-activities-a a:hover {
+    color: #637557;
+  }
+
+  /* flora-fauna css start */
+
+  .flora-fauna {
+    padding-bottom: 50px;
+  }
+
+  .flora-faunaimg img {
+    width: 620px;
+  }
+
+  #flora-fauna-bg {
+    background-color: #637557;
+  }
+
+  .flora-fauna-content {
+    padding: 121px 30px;
+  }
+
+  .flora-fauna-content h3 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .flora-fauna-content h2 {
+    color: #ffffff;
+    font-size: 48px;
+  }
+
+  .flora-fauna-content p {
+    color: #ffffff;
+    font-size: 19px;
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #ffffff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 40px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -50px;
+    left: 115px;
+    width: 170px;
+  }
+  /* testimonals section css */
+
+  .hometestimonalsec {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 48px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  .testimonal-section-box {
+    background-color: #637557;
+    padding: 80px 30px 40px;
+  }
+
+  .testimonal-section-borderline {
+    border: 2px solid #ffffff;
+    padding: 50px 20px 20px;
+  }
+
+  .profile-img {
+    position: relative;
+  }
+
+  .profile-img img {
+    position: absolute;
+    bottom: 2px;
+  }
+
+  .testimonal-section-borderline h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .testimonal-section-borderline p {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .commaone {
+    position: relative;
+  }
+
+  .commaone img {
+    position: absolute;
+    bottom: 30px;
+    left: -15px;
+  }
+  .commatwo {
+    position: relative;
+  }
+
+  .commatwo img {
+    position: absolute;
+    right: -8px;
+  }
+
+  .source {
+    padding-top: 10px;
+    color: #ffffff;
+  }
+
+  .source img {
+    background-color: #ffffff;
+    padding: 1px;
+  }
+
+  /* From Uiverse.io by vikiWayne */
+  .button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    transition: all 1000ms;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bd8d45;
+    font-family: poppins;
+    width: 200px;
+    background-color: #bd8d45;
+    margin-top: 40px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .button:hover {
+    background-color: #ffffff;
+    color: #bd8d45;
+    transform: scale(1.1);
+    outline: 2px solid #bd8d45;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+
+  .button:hover::before {
+    width: 250%;
+  }
+  .flora-faunaimg {
+    position: relative;
+  }
+  .flora-faunaimg img {
+    width: 633px;
+    position: absolute;
+    left: -12px;
+  }
+  .dining-popup {
+    position: relative;
+  }
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1300px) {
+  /* banner css start */
+
+  .banner-bg-img {
+    /* background-image: url(assets/images/home-page/home-banner.png); */
+    background-image: url(../../../public/images/home-page//home-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding-top: 260px;
+  }
+
+  /* Accommodation section css start  */
+
+  .accommodation-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f1f1;
+  }
+
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+  }
+
+  /* footer section css start */
+
+  .footer-logo img {
+    width: 210px;
+  }
+
+  .footer-section {
+    padding: 0px 0px 0px;
+    color: #ffffff;
+    font-family: "Philosopher", sans-serif !important;
+  }
+
+  .bg-black-color-for-footer {
+    background-color: #262825;
+    padding: 40px 0px 20px;
+  }
+  .footer-links {
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  .footer-links li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  .footer-links li {
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  #footer-addres-gap li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  #footer-addres-gap li a {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+    margin-bottom: 0;
+  }
+
+  #social-link-icons {
+    display: flex;
+    gap: 40px;
+  }
+
+  .fulladresss p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .fulladresss li a {
+    color: #ffffff;
+  }
+
+  .socialmeida p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  #social-link-icons img {
+    width: 25px;
+  }
+
+  /* home page banner start */
+
+  .index-banner-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* padding-top: 250px; */
+    padding-bottom: 200px;
+  }
+
+  .index-banner-section h1 {
+    color: #ffffff;
+    font-size: 60px;
+    padding-top: 250px;
+  }
+
+  .book-now button {
+    border: none;
+    background: #bd8d45;
+    color: #ffffff;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: poppins;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  /* home page small strip start */
+
+  .smallstrip {
+    padding: 15px 30px;
+    background-color: #637557;
+    color: #ffffff;
+  }
+
+  .strippara {
+    display: flex;
+    gap: 10px;
+  }
+
+  .strippara p {
+    font-family: "Philosopher", sans-serif;
+    font-size: 19px;
+    margin-bottom: 0px;
+  }
+
+  /* home about section start */
+
+  .homeaboutsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .homeaboutsectiontext h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext h3 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext p {
+    color: #535353;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .homeaboutimg img {
+    width: 550px;
+  }
+
+  /* Elegant Accommodation Choices start */
+
+  .accommodation-section-home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .accommodation-section-home p {
+    font-size: 24px;
+  }
+
+  /* OPTION 1 */
+  .overlay-outer {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .overlay {
+    background: rgba(4, 125, 67, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  a:hover .overlay {
+    opacity: 1;
+  }
+
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .overlay-outer:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .fadeIn_bottom {
+    top: 80%;
+  }
+  /*  */
+
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: "Philosopher";
+  }
+
+  /* dining section css start */
+
+  .diningsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .dining-img-1 {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 580px;
+  }
+
+  .dining-img-1 img {
+    width: 545px;
+  }
+
+  .dining-img-text {
+    padding: 25px;
+  }
+  .dining-img-1 h3 {
+    font-size: 32px;
+    color: #2c4a18;
+  }
+
+  .dining-img-text p {
+    font-size: 18px;
+  }
+
+  .diningthiredimg {
+    padding-top: 400px;
+  }
+
+  .diningsection h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  /* fun-filled-activities css start */
+
+  .fun-filled-activities {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .fun-filled-activities h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities p {
+    font-size: 24px;
+    color: #535353;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities img {
+    width: 550px;
+  }
+
+  .fun-filled-activities-a {
+    position: relative;
+  }
+
+  .fun-filled-activities-a a {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
+
+  .fun-filled-activities-a a:hover {
+    color: #637557;
+  }
+
+  /* flora-fauna css start */
+
+  .flora-fauna {
+    padding-bottom: 50px;
+  }
+
+  .flora-faunaimg img {
+    width: 620px;
+  }
+
+  #flora-fauna-bg {
+    background-color: #637557;
+  }
+
+  .flora-fauna-content {
+    padding: 121px 30px;
+  }
+
+  .flora-fauna-content h3 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .flora-fauna-content h2 {
+    color: #ffffff;
+    font-size: 48px;
+  }
+
+  .flora-fauna-content p {
+    color: #ffffff;
+    font-size: 19px;
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #ffffff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 40px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -50px;
+    left: 115px;
+    width: 170px;
+  }
+  /* testimonals section css */
+
+  .hometestimonalsec {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 48px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  .testimonal-section-box {
+    background-color: #637557;
+    padding: 80px 30px 40px;
+  }
+
+  .testimonal-section-borderline {
+    border: 2px solid #ffffff;
+    padding: 50px 20px 20px;
+  }
+
+  .profile-img {
+    position: relative;
+  }
+
+  .profile-img img {
+    position: absolute;
+    bottom: 2px;
+  }
+
+  .testimonal-section-borderline h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .testimonal-section-borderline p {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .commaone {
+    position: relative;
+  }
+
+  .commaone img {
+    position: absolute;
+    bottom: 30px;
+    left: -15px;
+  }
+  .commatwo {
+    position: relative;
+  }
+
+  .commatwo img {
+    position: absolute;
+    right: -8px;
+  }
+
+  .source {
+    padding-top: 10px;
+    color: #ffffff;
+  }
+
+  .source img {
+    background-color: #ffffff;
+    padding: 1px;
+  }
+
+  /* From Uiverse.io by vikiWayne */
+  .button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    transition: all 1000ms;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bd8d45;
+    font-family: poppins;
+    width: 200px;
+    background-color: #bd8d45;
+    margin-top: 40px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .button:hover {
+    background-color: #ffffff;
+    color: #bd8d45;
+    transform: scale(1.1);
+    outline: 2px solid #bd8d45;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+
+  .button:hover::before {
+    width: 250%;
+  }
+  .flora-faunaimg {
+    position: relative;
+  }
+  .flora-faunaimg img {
+    width: 633px;
+    position: absolute;
+    left: -12px;
+  }
+  .dining-popup {
+    position: relative;
+  }
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* banner css start */
+
+  .banner-bg-img {
+    /* background-image: url(assets/images/home-page/home-banner.png); */
+    background-image: url(../../../public/images/home-page//home-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding-top: 260px;
+  }
+
+  /* Accommodation section css start  */
+
+  .accommodation-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f1f1;
+  }
+
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+  }
+
+  /* footer section css start */
+
+  .footer-logo img {
+    width: 210px;
+  }
+
+  .footer-section {
+    padding: 0px 0px 0px;
+    color: #ffffff;
+    font-family: "Philosopher", sans-serif !important;
+  }
+
+  .bg-black-color-for-footer {
+    background-color: #262825;
+    padding: 40px 0px 20px;
+  }
+  .footer-links {
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  .footer-links li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  .footer-links li {
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  #footer-addres-gap li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  #footer-addres-gap li a {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+    margin-bottom: 0;
+  }
+
+  #social-link-icons {
+    display: flex;
+    gap: 40px;
+  }
+
+  .fulladresss p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .fulladresss li a {
+    color: #ffffff;
+  }
+
+  .socialmeida p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  #social-link-icons img {
+    width: 25px;
+  }
+
+  /* home page banner start */
+
+  .index-banner-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* padding-top: 250px; */
+    padding-bottom: 200px;
+  }
+
+  .index-banner-section h1 {
+    color: #ffffff;
+    font-size: 60px;
+    padding-top: 250px;
+  }
+
+  .book-now button {
+    border: none;
+    background: #bd8d45;
+    color: #ffffff;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: poppins;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  /* home page small strip start */
+
+  .smallstrip {
+    padding: 15px 30px;
+    background-color: #637557;
+    color: #ffffff;
+  }
+
+  .strippara {
+    display: flex;
+    gap: 10px;
+  }
+
+  .strippara p {
+    font-family: "Philosopher", sans-serif;
+    font-size: 19px;
+    margin-bottom: 0px;
+  }
+
+  /* home about section start */
+
+  .homeaboutsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .homeaboutsectiontext h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext h3 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext p {
+    color: #535353;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .homeaboutimg img {
+    width: 550px;
+  }
+
+  /* Elegant Accommodation Choices start */
+
+  .accommodation-section-home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .accommodation-section-home p {
+    font-size: 24px;
+  }
+
+  /* OPTION 1 */
+  .overlay-outer {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .overlay {
+    background: rgba(4, 125, 67, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  a:hover .overlay {
+    opacity: 1;
+  }
+
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .overlay-outer:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .fadeIn_bottom {
+    top: 80%;
+  }
+  /*  */
+
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: "Philosopher";
+  }
+
+  /* dining section css start */
+
+  .diningsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .dining-img-1 {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: auto;
+  }
+
+  .dining-img-1 img {
+    width: 100%;
+  }
+
+  .dining-img-text {
+    padding: 25px;
+  }
+  .dining-img-1 h3 {
+    font-size: 32px;
+    color: #2c4a18;
+  }
+
+  .dining-img-text p {
+    font-size: 18px;
+  }
+
+  .diningthiredimg {
+    padding-top: 400px;
+  }
+
+  .diningsection h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  /* fun-filled-activities css start */
+
+  .fun-filled-activities {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .fun-filled-activities h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities p {
+    font-size: 24px;
+    color: #535353;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities img {
+    width: 550px;
+  }
+
+  .fun-filled-activities-a {
+    position: relative;
+  }
+
+  .fun-filled-activities-a a {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
+
+  .fun-filled-activities-a a:hover {
+    color: #637557;
+  }
+
+  /* flora-fauna css start */
+
+  .flora-fauna {
+    padding-bottom: 50px;
+  }
+
+  .flora-faunaimg img {
+    width: 620px;
+  }
+
+  #flora-fauna-bg {
+    background-color: #637557;
+  }
+
+  .flora-fauna-content {
+    padding: 121px 30px;
+  }
+
+  .flora-fauna-content h3 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .flora-fauna-content h2 {
+    color: #ffffff;
+    font-size: 48px;
+  }
+
+  .flora-fauna-content p {
+    color: #ffffff;
+    font-size: 19px;
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #ffffff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 40px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -50px;
+    left: 115px;
+    width: 170px;
+  }
+  /* testimonals section css */
+
+  .hometestimonalsec {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 48px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  .testimonal-section-box {
+    background-color: #637557;
+    padding: 80px 30px 40px;
+  }
+
+  .testimonal-section-borderline {
+    border: 2px solid #ffffff;
+    padding: 50px 20px 20px;
+  }
+
+  .profile-img {
+    position: relative;
+  }
+
+  .profile-img img {
+    position: absolute;
+    bottom: 2px;
+  }
+
+  .testimonal-section-borderline h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .testimonal-section-borderline p {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .commaone {
+    position: relative;
+  }
+
+  .commaone img {
+    position: absolute;
+    bottom: 30px;
+    left: -15px;
+  }
+  .commatwo {
+    position: relative;
+  }
+
+  .commatwo img {
+    position: absolute;
+    right: -8px;
+  }
+
+  .source {
+    padding-top: 10px;
+    color: #ffffff;
+  }
+
+  .source img {
+    background-color: #ffffff;
+    padding: 1px;
+  }
+
+  /* From Uiverse.io by vikiWayne */
+  .button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    transition: all 1000ms;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bd8d45;
+    font-family: poppins;
+    width: 200px;
+    background-color: #bd8d45;
+    margin-top: 40px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .button:hover {
+    background-color: #ffffff;
+    color: #bd8d45;
+    transform: scale(1.1);
+    outline: 2px solid #bd8d45;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+
+  .button:hover::before {
+    width: 250%;
+  }
+  .flora-faunaimg {
+    position: relative;
+  }
+  .flora-faunaimg img {
+    width: 632px;
+    position: absolute;
+    left: -12px;
+  }
+  .dining-popup {
+    position: relative;
+  }
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  /* banner css start */
+
+  .banner-bg-img {
+    /* background-image: url(assets/images/home-page/home-banner.png); */
+    background-image: url(../../../public/images/home-page//home-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding-top: 260px;
+  }
+
+  /* Accommodation section css start  */
+
+  .accommodation-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f1f1;
+  }
+
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+  }
+
+  /* footer section css start */
+
+  .footer-logo img {
+    width: 210px;
+  }
+
+  .footer-section {
+    padding: 0px 0px 0px;
+    color: #ffffff;
+    font-family: "Philosopher", sans-serif !important;
+  }
+
+  .bg-black-color-for-footer {
+    background-color: #262825;
+    padding: 40px 0px 20px;
+  }
+  .footer-links {
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  .footer-links li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  .footer-links li {
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  #footer-addres-gap li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  #footer-addres-gap li a {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+    margin-bottom: 0;
+  }
+
+  #social-link-icons {
+    display: flex;
+    gap: 40px;
+  }
+
+  .fulladresss p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .fulladresss li a {
+    color: #ffffff;
+  }
+
+  .socialmeida p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  #social-link-icons img {
+    width: 25px;
+  }
+
+  /* home page banner start */
+
+  .index-banner-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* padding-top: 250px; */
+    padding-bottom: 200px;
+  }
+
+  .index-banner-section h1 {
+    color: #ffffff;
+    font-size: 60px;
+    padding-top: 250px;
+  }
+
+  .book-now button {
+    border: none;
+    background: #bd8d45;
+    color: #ffffff;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: poppins;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  /* home page small strip start */
+
+  .smallstrip {
+    padding: 15px 30px;
+    background-color: #637557;
+    color: #ffffff;
+  }
+
+  .strippara {
+    display: flex;
+    gap: 10px;
+  }
+
+  .strippara p {
+    font-family: "Philosopher", sans-serif;
+    font-size: 19px;
+    margin-bottom: 0px;
+  }
+
+  /* home about section start */
+
+  .homeaboutsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .homeaboutsectiontext h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext h3 {
+    color: #637557;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .homeaboutsectiontext p {
+    color: #535353;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .homeaboutimg img {
+    width: 550px;
+  }
+
+  /* Elegant Accommodation Choices start */
+
+  .accommodation-section-home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .accommodation-section-home p {
+    font-size: 24px;
+  }
+
+  /* OPTION 1 */
+  .overlay-outer {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .overlay {
+    background: rgba(4, 125, 67, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  a:hover .overlay {
+    opacity: 1;
+  }
+
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .overlay-outer:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .fadeIn_bottom {
+    top: 80%;
+  }
+  /*  */
+
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: "Philosopher";
+  }
+
+  /* dining section css start */
+
+  .diningsection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .dining-img-1 {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: auto;
+  }
+
+  .dining-img-1 img {
+    width: 100%;
+  }
+
+  .dining-img-text {
+    padding: 25px;
+  }
+  .dining-img-1 h3 {
+    font-size: 32px;
+    color: #2c4a18;
+  }
+
+  .dining-img-text p {
+    font-size: 18px;
+  }
+
+  .diningthiredimg {
+    padding-top: 400px;
+  }
+
+  .diningsection h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  /* fun-filled-activities css start */
+
+  .fun-filled-activities {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .fun-filled-activities h2 {
+    color: #637557;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities p {
+    font-size: 24px;
+    color: #535353;
+    font-weight: 400;
+  }
+
+  .fun-filled-activities img {
+    width: 550px;
+  }
+
+  .fun-filled-activities-a {
+    position: relative;
+  }
+
+  .fun-filled-activities-a a {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
+
+  .fun-filled-activities-a a:hover {
+    color: #637557;
+  }
+
+  /* flora-fauna css start */
+
+  .flora-fauna {
+    padding-bottom: 50px;
+  }
+
+  .flora-faunaimg img {
+    width: 620px;
+  }
+
+  #flora-fauna-bg {
+    background-color: #637557;
+  }
+
+  .flora-fauna-content {
+    padding: 121px 30px;
+  }
+
+  .flora-fauna-content h3 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .flora-fauna-content h2 {
+    color: #ffffff;
+    font-size: 48px;
+  }
+
+  .flora-fauna-content p {
+    color: #ffffff;
+    font-size: 19px;
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #ffffff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 40px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -50px;
+    left: 115px;
+    width: 170px;
+  }
+  /* testimonals section css */
+
+  .hometestimonalsec {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+
+  .hometestimonalsec h2 {
+    font-size: 48px;
+    color: #637557;
+    font-weight: 400;
+  }
+
+  .testimonal-section-box {
+    background-color: #637557;
+    padding: 80px 30px 40px;
+  }
+
+  .testimonal-section-borderline {
+    border: 2px solid #ffffff;
+    padding: 50px 20px 20px;
+  }
+
+  .profile-img {
+    position: relative;
+  }
+
+  .profile-img img {
+    position: absolute;
+    bottom: 2px;
+  }
+
+  .testimonal-section-borderline h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .testimonal-section-borderline p {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .commaone {
+    position: relative;
+  }
+
+  .commaone img {
+    position: absolute;
+    bottom: 30px;
+    left: -15px;
+  }
+  .commatwo {
+    position: relative;
+  }
+
+  .commatwo img {
+    position: absolute;
+    right: -8px;
+  }
+
+  .source {
+    padding-top: 10px;
+    color: #ffffff;
+  }
+
+  .source img {
+    background-color: #ffffff;
+    padding: 1px;
+  }
+
+  /* From Uiverse.io by vikiWayne */
+  .button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    transition: all 1000ms;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bd8d45;
+    font-family: poppins;
+    width: 200px;
+    background-color: #bd8d45;
+    margin-top: 40px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .button:hover {
+    background-color: #ffffff;
+    color: #bd8d45;
+    transform: scale(1.1);
+    outline: 2px solid #bd8d45;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+
+  .button:hover::before {
+    width: 250%;
+  }
+  .flora-faunaimg {
+    position: relative;
+  }
+  .flora-faunaimg img {
+    width: 632px;
+    position: absolute;
+    left: -12px;
+  }
+  .dining-popup {
+    position: relative;
+  }
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
+}
+#HomeId header .navbar-nav .nav-item .nav-link {
+  color: #fff !important;
+}
+
+/* My Css */
+
+#HomeId header {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.carousel-item img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-caption {
+  top: 40%;
+}
+
+@media (max-width: 700px) {
+  #HomeId .carousel-control-prev-icon {
+    background-image: url("../../../public/images/ArrowPrev.svg") !important;
+    border-radius: 50%;
+    border: 1.5px solid white;
+  }
+  #HomeId .carousel-control-next-icon {
+    background-image: url("../../../public/images/ArrowNext.svg") !important;
+    border-radius: 50%;
+    border: 1.5px solid white;
+  }
+
+  #HomeId .carousel-indicators {
+    display: none;
+  }
+}

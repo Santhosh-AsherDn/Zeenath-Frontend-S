@@ -1,0 +1,51 @@
+.slider-container {
+  width: 89%;
+}
+
+.slick-slider {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#testimonalSection .col-lg-4 {
+  width: 100%;
+}
+
+/* .slick-list {
+  display: flex;
+  justify-content: center;
+} */
+
+#testimonalSection .testimonalMainSection {
+  width: 90% !important;
+}
+.testimaindiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#testimonalSection .slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: green;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background: green;
+}

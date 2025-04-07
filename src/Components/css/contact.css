@@ -1,0 +1,287 @@
+body {
+  font-family: "PT Serif", serif;
+  font-family: "Philosopher", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: "PT Serif", serif;
+}
+p {
+  font-family: "Philosopher", sans-serif;
+}
+a {
+  font-family: "PT Serif", serif;
+}
+
+@media (max-width: 575.98px) {
+  .contactus-img img {
+    width: 100%;
+  }
+  .contact-box {
+    background-color: #425f2f;
+    margin-top: 200px;
+    padding: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .contactpage-number a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .flex-contact-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 10px;
+  }
+  .contactus h2 {
+    margin-bottom: 40px;
+  }
+  .contactpage-number {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactpagemap {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Styles for tablets */
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Styles for desktops */
+}
+
+@media (min-width: 1200px) {
+  .contactfullpage-bg {
+    background-image: url(../../../public/images/contactus-page/contactus-bg.png);
+  }
+
+  #ContactPageId .nav-link {
+    color: #425f2f !important;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: poppins;
+  }
+
+  .navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0rem 1rem !important;
+  }
+
+  #zeenath-logo-position {
+    position: relative;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -50px;
+    left: 115px;
+    width: 170px;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 0.5rem;
+    }
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #fff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  #ContactPageId nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #425f2f;
+    /* background: #fff; */
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+
+  /* contact box section start */
+
+  .contact-box {
+    margin-top: 180px;
+    margin-bottom: 50px;
+    color: #fff;
+  }
+  .contactus-box {
+    background-color: #425f2f;
+    padding: 40px 70px;
+  }
+
+  .contactus-img img {
+    width: 600px;
+  }
+
+  .contactus h2 {
+    margin-bottom: 40px;
+    font-size: 42px;
+  }
+
+  .flex-contact-details {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+  }
+  .flex-contact-details p {
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .flex-contact-details img {
+    width: 25px;
+    height: 25px;
+  }
+  .flex-contact-details a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .contactpage-number {
+    display: grid;
+  }
+
+  .contact-page-map {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .contact-page-map-title h2 {
+    color: #425f2f;
+    font-size: 42px;
+    font-weight: 400;
+  }
+
+  .contactpage-number a:hover {
+    color: #cadd6f;
+  }
+  .contactpagemap {
+    width: 1130px;
+    height: 450px;
+    border-radius: 10px;
+  }
+  .contactus {
+    margin-bottom: 40px;
+  }
+  .contact-page-map-title h2 {
+    font-size: 24px;
+  }
+}
+
+#ContactId header .navbar-nav .nav-item .nav-link {
+  color: #425f2f !important;
+}
+#ContactId nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  background: #425f2f;
+}
+
+@media (max-width: 700px) {
+  #ContactId header .navbar-nav .nav-item .nav-link {
+    color: #fff !important;
+  }
+
+  #ContactId .activeline:nth-child(5)::before {
+    background: #fff;
+  }
+
+  #ContactId .navbar-toggler {
+    background-color: #425f2f;
+    border: 2px solid #425f2f;
+  }
+
+  #ContactPageId .contact-box .d-flex {
+  }
+  .contact-box {
+    background-color: #425f2f;
+    margin-top: 80px;
+    padding: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+    padding: 10px;
+    padding-top: 22px;
+    padding-bottom: 40px;
+  }
+
+  .mobileFlexDiv {
+    flex-direction: column-reverse !important;
+    row-gap: 34px;
+  }
+
+  .contactus h2 {
+    margin-bottom: 25px;
+  }
+
+  .mapsSectionMobile {
+    padding-bottom: 50px;
+  }
+}

@@ -1,0 +1,790 @@
+body {
+  font-family: "PT Serif", serif;
+  font-family: "Philosopher", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: "PT Serif", serif;
+}
+p {
+  font-family: "Philosopher", sans-serif;
+}
+a {
+  font-family: "PT Serif", serif;
+}
+
+/* .nav-link {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  font-family: "PT Serif", serif;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0rem 1rem !important;
+}
+
+#zeenath-logo-position {
+  position: relative;
+}
+
+#zeenath-logo-position img {
+  position: absolute;
+  top: -50px;
+  left: 115px;
+  width: 170px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+  }
+} */
+
+/* new button style */
+
+.viewmore-btn {
+  background-color: #bd8d45;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  font-family: poppins;
+}
+
+@media (max-width: 575.98px) {
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -35px !important;
+    left: 0px !important;
+    width: 100px !important;
+  }
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 400;
+    padding-top: 100px;
+  }
+  .accommodation-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f1f1f1;
+  }
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* banner css start */
+
+  .banner-bg-img {
+    /* background-image: url(assets/images/accommodation-pages-images/banner-img.png); */
+    background-image: url(../../../public/images/accommodation-pages-images/banner-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding-top: 250px;
+  }
+
+  /* Accommodation section css start  */
+
+  .accommodation-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f1f1;
+  }
+
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+  }
+
+  /* footer section css start */
+
+  .footer-logo img {
+    width: 210px;
+  }
+
+  .footer-section {
+    padding: 30px 0px 0px;
+    color: #ffffff;
+    font-family: "Philosopher", sans-serif !important;
+  }
+
+  .bg-black-color-for-footer {
+    background-color: #262825;
+    padding: 40px 0px 20px;
+  }
+  .footer-links {
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  .footer-links li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  .footer-links li {
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  #footer-addres-gap li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  #footer-addres-gap li a {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  #social-link-icons {
+    display: flex;
+    gap: 31px;
+    justify-content: center;
+  }
+
+  .fulladresss p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .fulladresss li a {
+    color: #ffffff;
+  }
+
+  .socialmeida p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  #social-link-icons img {
+    width: 25px;
+  }
+
+  /* Elegant Accommodation Choices start */
+
+  .accommodation-section-home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 48px;
+    font-weight: 400;
+  }
+
+  .accommodation-section-home p {
+    font-size: 24px;
+  }
+
+  /* OPTION 1 */
+  .overlay-outer {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .overlay {
+    background: rgba(4, 125, 67, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  a:hover .overlay {
+    opacity: 1;
+  }
+
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .overlay-outer:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .fadeIn_bottom {
+    top: 80%;
+  }
+  /*  */
+
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: poppins;
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #ffffff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  /* banner css start */
+
+  .banner-bg-img {
+    /* background-image: url(assets/images/accommodation-pages-images/banner-img.png); */
+    background-image: url(../../../public/images/accommodation-pages-images/banner-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+
+  .banner-bg-img h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding-top: 250px;
+  }
+
+  /* Accommodation section css start  */
+
+  .accommodation-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f1f1f1;
+  }
+
+  .accommodation-para {
+    color: #535353;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+  }
+
+  /* footer section css start */
+
+  .footer-logo img {
+    width: 210px;
+  }
+
+  .footer-section {
+    padding: 30px 0px 0px;
+    color: #ffffff;
+    font-family: "Philosopher", sans-serif !important;
+  }
+
+  .bg-black-color-for-footer {
+    background-color: #262825;
+    padding: 40px 0px 20px;
+  }
+  .footer-links {
+    list-style: none;
+    padding-left: 0px !important;
+  }
+  .footer-links li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  .footer-links li {
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  #footer-addres-gap li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  #footer-addres-gap li a {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Philosopher", sans-serif;
+    text-decoration: none;
+  }
+
+  #social-link-icons {
+    display: flex;
+    gap: 31px;
+    justify-content: center;
+  }
+
+  .fulladresss p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .fulladresss li a {
+    color: #ffffff;
+  }
+
+  .socialmeida p {
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  #social-link-icons img {
+    width: 25px;
+  }
+
+  /* Elegant Accommodation Choices start */
+
+  .accommodation-section-home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+  }
+
+  .accommodation-section-home h2 {
+    color: #637557;
+    font-size: 48px;
+    font-weight: 400;
+  }
+
+  .accommodation-section-home p {
+    font-size: 24px;
+  }
+
+  /* OPTION 1 */
+  .overlay-outer {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .overlay {
+    background: rgba(4, 125, 67, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  a:hover .overlay {
+    opacity: 1;
+  }
+
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .overlay-outer:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .content-details p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+
+  .fadeIn_bottom {
+    top: 80%;
+  }
+  /*  */
+
+  /* OPTION 2 */
+  .hover_color {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .hover_color::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    background: #00000091;
+    transition: all 350ms;
+    /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
+    /*   margin-bottom: 3px;  */
+  }
+
+  /* top or bottom, to choose where it starts */
+  .hover_color:hover::before {
+    top: 0;
+  }
+
+  .hover_color img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*alternate solution for that stupid space at the bottom*/
+    margin-bottom: 0px;
+    /*  if the title is always there and you need to darken the background:
+   filter: brightness(40%); */
+  }
+
+  .hover_color .hover_color-inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .hover_title {
+    transform: translateY(-4px);
+    opacity: 0; /*or 1, if the title is always visible*/
+    transition: all 350ms;
+  }
+
+  .hover_color a {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* don't need this if the title is always visible */
+  .hover_color:hover .hover_title {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*  */
+
+  .hover_title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hover_title h3 {
+    font-size: 30px;
+  }
+
+  .hover_title p {
+    font-size: 20px;
+  }
+
+  .viewmore-btn {
+    background-color: #bd8d45;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    font-family: poppins;
+  }
+
+  /* NAVIGATION new style */
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #ffffff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      gap: 50px;
+      padding-top: 15px;
+    }
+  }
+}
+
+#AccomodationId header .navbar-nav .nav-item .nav-link {
+  color: #fff !important;
+}
