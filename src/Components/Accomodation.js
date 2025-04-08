@@ -8,7 +8,7 @@ export default function Accomodation() {
   const navigate = useNavigate();
   return (
     <>
-      <div id="AccomodationId">
+      <div id="DiningId">
         {/* Header and Banner Section */}
         <section className="banner-bg-img">
           <Header />
@@ -50,7 +50,7 @@ export default function Accomodation() {
                       alt={room.name}
                       style={{
                         height: "444px",
-                        width: "356px",
+                        width: "100%",
                         objectFit: "cover",
                       }}
                     />

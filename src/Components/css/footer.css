@@ -48,6 +48,7 @@
 #social-link-icons {
   display: flex;
   gap: 40px;
+  justify-content: center;
 }
 
 .fulladresss p {
@@ -126,6 +127,7 @@
   #social-link-icons {
     display: flex;
     gap: 24px;
+    justify-content: center;
   }
 
   .fulladresss p {

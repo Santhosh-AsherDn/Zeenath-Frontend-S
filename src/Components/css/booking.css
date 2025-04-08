@@ -3,11 +3,11 @@
 }
 .contactfullpage-bg {
   /* background-image: url(assets/images/contactus-page/contactus-bg.png); */
-  background-image: url(../../../public/images/contactus-page/contactus-bg.png);
+  background-image: url(/public/images/contactus-page/contactus-bg.png);
 }
 
 .nav-link {
-  color: #425f2f !important;
+  color: #ffffff !important;
   font-size: 18px !important;
   font-weight: 500 !important;
   font-family: poppins;
@@ -113,7 +113,7 @@ nav.fill ul li a:hover:after {
 
 #bookingform-bg-color {
   /* background-image: url(assets/images/booking-form-images/contactus-bg.png); */
-  background-image: url(../../../public/images/booking-form-images/contactus-bg.png);
+  background-image: url(/public/images/booking-form-images/contactus-bg.png);
   padding: 40px 0;
 }
 
@@ -284,7 +284,7 @@ nav.fill ul li a:hover:after {
   padding: 0;
   height: 40px;
   font-size: 15px;
-  text-align: end;
+  text-align: center;
   line-height: 20px;
   padding: 0;
 }
@@ -464,4 +464,303 @@ nav.fill ul li a:after {
   height: 276px;
   display: flex;
   align-items: center;
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 15px;
+    align-items: flex-start;
+  }
+
+  .booking-form-section {
+    margin-top: 100px;
+  }
+
+  #bookingform-bg-color {
+    /* background-image: url(assets/images/booking-form-images/contactus-bg.png); */
+    background-image: url(/public/images/booking-form-images/contactus-bg.png);
+    padding: 40px 0;
+  }
+
+  .booking-form {
+    padding: 40px 20px 30px;
+    border-radius: 10px;
+    padding-bottom: 0;
+  }
+
+  .booking-form label {
+    font-family: "PT Serif", serif;
+    color: #2c2929;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .booking-form .form-control {
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    background: white;
+    font-family: "Poppins", sans-serif;
+    border-radius: 0px;
+    border-radius: 5px;
+  }
+
+  .booking-form .btn-outline-secondary {
+    padding: 4px 12px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  #room-decrement {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  #room-increment {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+  }
+
+  #extra-bed-decrement {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+  }
+
+  #extra-bed-increment {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+  }
+
+  #adult-decrement {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+  }
+
+  #adult-increment {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+  }
+
+  #children-decrement {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+  }
+
+  #children-increment {
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    background: white;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+  }
+
+  .childrensWidth {
+    width: 100%;
+  }
+
+  .booking-form .row > div {
+    margin-bottom: 20px;
+  }
+
+  .bookingdetails {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .booking-form .row {
+    row-gap: 10px;
+  }
+
+  .bookingdetails h2 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 32px;
+    position: absolute;
+    background-color: #637557;
+    left: 65px;
+    padding: 20px;
+    color: #fff;
+    width: 300px;
+  }
+
+  .booking-form input[type="number"] {
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    padding: 0;
+  }
+  .bookingcONTENTcHALET {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: #fff;
+    width: 50%;
+    margin-left: -20px;
+    border: 1px #ffffff;
+  }
+  .BookingNameSectionflexconatiner .BookingNameSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 15px;
+  }
+  #room1details {
+    margin-top: 30px;
+    background-color: #f1f4f3;
+  }
+  .booking-summary {
+    padding-bottom: 0 !important;
+  }
+  .pricing-details {
+    font-size: 20px;
+    font-family: "PT Serif", serif;
+    border-top: 1px solid #425f2f80;
+  }
+  .pricing-details .border-bottom {
+    font-size: 20px;
+    font-family: "PT Serif", serif;
+    border-top: 1px solid #425f2f80;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-top: 20px !important;
+  }
+  .bookingPrice {
+    width: 300px;
+  }
+
+  .bookingCottage {
+    width: 300px;
+  }
+
+  .pricing-details .border-bottom {
+    font-size: 20px;
+    font-family: "PT Serif", serif;
+    border-top: 1px solid #425f2f80;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-top: 20px !important;
+  }
+  .pricelistflex {
+    display: flex;
+    gap: 30px;
+  }
+  .nav-link {
+    color: #425f2f !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    font-family: poppins;
+  }
+
+  .navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0rem 1rem !important;
+  }
+
+  #zeenath-logo-position {
+    position: relative;
+  }
+
+  #zeenath-logo-position img {
+    position: absolute;
+    top: -50px;
+    left: 115px;
+    width: 170px;
+  }
+  #BookingId header .navbar-nav .nav-item .nav-link {
+    color: #ffffff !important;
+  }
+  #BookingId header .navbar-nav .nav-item .nav-link {
+    color: #425f2f !important;
+  }
+  #BookingId nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    background: #425f2f;
+  }
+  .contactfullpage-bg {
+    /* background-image: url(assets/images/contactus-page/contactus-bg.png); */
+    background-image: url(/public/images/contactus-page/contactus-bg.png);
+  }
 }

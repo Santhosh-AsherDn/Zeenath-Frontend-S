@@ -61,7 +61,7 @@ a {
 
 @media (min-width: 1200px) {
   .contactfullpage-bg {
-    background-image: url(../../../public/images/contactus-page/contactus-bg.png);
+    background-image: url(/public/images/contactus-page/contactus-bg.png);
   }
 
   #ContactPageId .nav-link {
@@ -259,8 +259,6 @@ nav.fill ul li a:after {
     border: 2px solid #425f2f;
   }
 
-  #ContactPageId .contact-box .d-flex {
-  }
   .contact-box {
     background-color: #425f2f;
     margin-top: 80px;

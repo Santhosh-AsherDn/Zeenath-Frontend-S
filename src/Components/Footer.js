@@ -18,12 +18,10 @@ export default function Footer() {
                 <div className="col-md-3">
                   <ul className="footer-links">
                     <li className="FooterLinksHover">
-                      <Link to="/" href="#">
-                        Home
-                      </Link>
+                      <Link to="/">Home</Link>
                     </li>
                     <li className="FooterLinksHover">
-                      <Link to="/deluxechalet">Rooms & Cottages</Link>
+                      <Link to="/accomodation">Rooms & Cottages</Link>
                     </li>
                     <li className="FooterLinksHover">
                       <Link to="/fun-filled-activites">
@@ -56,13 +54,13 @@ export default function Footer() {
                         Tamil Nadu-635853
                       </li>
                       <li>
-                        <a href="">
+                        <a href="callto:9751657458">
                           <img src="./images/shapes/fa_mobile.svg" alt="" />
                           9751657458 | 9840083576 | 9840029445
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="mailto:info@zeenathtaigardens.com">
                           <img src="./images/shapes/famicons_mail.svg" alt="" />
                           info@zeenathtajgardens.com
                         </a>
@@ -75,22 +73,22 @@ export default function Footer() {
                     <p>Connect with Us</p>
                     <ul className="list-unstyled mb-3" id="social-link-icons">
                       <li>
-                        <a href="#" className="social-link">
+                        <a href="/contact" className="social-link">
                           <img src="./images/shapes/Vector.svg" alt="" />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-link">
+                        <a href="/contact" className="social-link">
                           <img src="./images/shapes/Vector (1).svg" alt="" />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-link">
+                        <a href="/contact" className="social-link">
                           <img src="./images/shapes/Vector (2).svg" alt="" />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-link">
+                        <a href="/contact" className="social-link">
                           <img src="./images/shapes/Vector (3).svg" alt="" />
                         </a>
                       </li>

@@ -170,9 +170,7 @@ export default function Booking() {
                   <div
                     className="BannerBookingSection"
                     style={{
-                      backgroundImage:
-                        // "url(./images/booking-form-images/Booking-DeluxeChalet2.png)",
-                        `url(${room.gallery[0]})`,
+                      backgroundImage: `url(${room.gallery[0]})`,
                     }}
                   >
                     <div className="BookingNameSectionflexconatiner">
@@ -451,7 +449,7 @@ export default function Booking() {
                 </div>
 
                 <div className="ProceedTocheckoutFlex">
-                  <button className="ProceedTocheckout">
+                  <button className="ProceedTocheckout" onClick={handleSubmit}>
                     Proceed to Check out
                   </button>
                 </div>

@@ -41,7 +41,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [handleScroll]);
 
   return (
     <header id="headerId" className={`header ${isSticky ? "sticky" : ""}`}>
@@ -68,7 +68,7 @@ export default function Header() {
         >
           <nav className="stroke">
             <ul className="navbar-nav">
-              <li className={getActiveClass("/")}>
+              <li className={getActiveClass("")}>
                 <Link
                   to="/"
                   className="nav-link"

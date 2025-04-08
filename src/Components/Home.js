@@ -252,7 +252,7 @@ export default function Home() {
                       alt={room.name}
                       style={{
                         height: "444px",
-                        width: "356px",
+                        width: "100%",
                         objectFit: "cover",
                       }}
                     />
@@ -280,7 +280,7 @@ export default function Home() {
             {/*             
 
 
-      // dynamic code
+      
 
       
             <div className="row">
@@ -431,8 +431,7 @@ export default function Home() {
                   <a href="#."></a>
                 </div>
               </div>
-            </div> */
-            }
+            </div> */}
           </div>
         </section>
 
@@ -577,7 +576,6 @@ export default function Home() {
                     alt=""
                     style={{
                       height: "382.68px",
-                      width: "550px",
                       objectFit: "cover",
                     }}
                   />

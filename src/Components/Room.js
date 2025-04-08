@@ -205,7 +205,7 @@ export default function Room() {
               data-aos-duration="600"
             >
               <form
-                className="d-flex align-items-center gap-4 mb-5"
+                className=" align-items-center gap-4 mb-5"
                 onSubmit={handleBook}
               >
                 <div className="ameneties-check">
@@ -237,8 +237,8 @@ export default function Room() {
                 For any further assistant please contact the Reservation at
               </p>
               <div className="callbtnno">
-                <a href="tel:9751657458"> 9751657458  |</a>
-                <a href="tel:9840083576"> 9840083576 |</a> 
+                <a href="tel:9751657458"> 9751657458 |</a>
+                <a href="tel:9840083576"> 9840083576 |</a>
                 <a href="tel:9840029445"> 9840029445</a>
               </div>
             </div>

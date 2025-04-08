@@ -88,7 +88,7 @@ a {
   width: 1200px;
 }
 .funfilledactivityBanner {
-  background-image: url("../../../public/images/Fun-Filled-Activity-Banner.png");
+  background-image: url("/public/images/Fun-Filled-Activity-Banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

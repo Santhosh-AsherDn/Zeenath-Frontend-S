@@ -95,11 +95,11 @@ export default function Contact() {
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-12 mt-3 mapsSectionMobile">
                   <iframe
+                    title="Google Map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.783733552595!2d78.62770447366472!3d12.596500122993938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3badaaf21acddda7%3A0x649f3e06540798bf!2sZeenath%20Taj%20Gardens!5e0!3m2!1sen!2sin!4v1740921536940!5m2!1sen!2sin"
-                    //   style="border:20px;"
                     className="contactpagemap"
                     style={{ border: "20px" }}
-                    allowfullscreen=""
+                    allowFullScreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                   ></iframe>
