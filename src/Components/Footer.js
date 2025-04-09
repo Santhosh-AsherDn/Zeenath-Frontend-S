@@ -42,7 +42,10 @@ export default function Footer() {
                     <ul className="list-unstyled" id="footer-addres-gap">
                       <li>
                         <img
-                          src={require("../images/shapes/fluent_location-16-filled.svg")}
+                          src={
+                            require("../images/shapes/fluent_location-16-filled.svg")
+                              .default
+                          }
                           alt=""
                         />
                         ZEENATH TAJ GARDENS,
@@ -56,7 +59,9 @@ export default function Footer() {
                       <li>
                         <a href="callto:9751657458">
                           <img
-                            src={require("../images/shapes/fa_mobile.svg")}
+                            src={
+                              require("../images/shapes/fa_mobile.svg").default
+                            }
                             alt=""
                           />
                           9751657458 | 9840083576 | 9840029445
@@ -65,7 +70,10 @@ export default function Footer() {
                       <li>
                         <a href="mailto:info@zeenathtaigardens.com">
                           <img
-                            src={require("../images/shapes/famicons_mail.svg")}
+                            src={
+                              require("../images/shapes/famicons_mail.svg")
+                                .default
+                            }
                             alt=""
                           />
                           info@zeenathtajgardens.com
@@ -81,7 +89,7 @@ export default function Footer() {
                       <li>
                         <a href="/contact" className="social-link">
                           <img
-                            src={require("../images/shapes/Vector.svg")}
+                            src={require("../images/shapes/Vector.svg").default}
                             alt=""
                           />
                         </a>
@@ -89,7 +97,9 @@ export default function Footer() {
                       <li>
                         <a href="/contact" className="social-link">
                           <img
-                            src={require("../images/shapes/Vector (1).svg")}
+                            src={
+                              require("../images/shapes/Vector (1).svg").default
+                            }
                             alt=""
                           />
                         </a>
@@ -97,7 +107,9 @@ export default function Footer() {
                       <li>
                         <a href="/contact" className="social-link">
                           <img
-                            src={require("../images/shapes/Vector (2).svg")}
+                            src={
+                              require("../images/shapes/Vector (2).svg").default
+                            }
                             alt=""
                           />
                         </a>
@@ -105,7 +117,9 @@ export default function Footer() {
                       <li>
                         <a href="/contact" className="social-link">
                           <img
-                            src={require("../images/shapes/Vector (3).svg")}
+                            src={
+                              require("../images/shapes/Vector (3).svg").default
+                            }
                             alt=""
                           />
                         </a>

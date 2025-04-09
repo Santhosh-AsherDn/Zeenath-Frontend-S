@@ -171,13 +171,14 @@ footer {
     background-size: cover;
     padding-top: 20px;
     padding-bottom: 70px;
+    height: 350px;
   }
 
   .banner-bg-img h1 {
     color: var(--text-light);
-    font-size: 50px;
-    font-weight: 400;
-    padding-top: 260px;
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 100px;
   }
 }
 
