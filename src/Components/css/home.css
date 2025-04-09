@@ -405,10 +405,10 @@ a {
     font-family: poppins;
     width: 200px;
     background-color: #bd8d45;
-    margin-top: -1px;
+    margin-top: 40px;
     width: 110px;
     padding: 6px;
-    font-weight: 200;
+    font-weight: 300;
     font-family: "PT Serif", serif;
     font-family: "Philosopher", sans-serif;
   }
@@ -421,7 +421,7 @@ a {
   }
 
   .titleofhomebanner {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .strippara p {
@@ -442,7 +442,11 @@ a {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 160px;
+    height: 300px;
+  }
+  .d-block {
+    width: 100% !important;
+    height: 300px !important;
   }
 }
 
