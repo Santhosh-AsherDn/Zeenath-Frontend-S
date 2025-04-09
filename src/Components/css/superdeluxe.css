@@ -1,3 +1,5 @@
+/* room css */
+
 body {
   font-family: "PT Serif", serif;
   font-family: "Philosopher", sans-serif;
@@ -161,7 +163,6 @@ a {
   }
   .small-screen-flex {
     display: flex;
-    /* justify-content: space-evenly; */
     margin-top: 25px;
     margin-bottom: 25px;
     flex-direction: column;
@@ -229,12 +230,6 @@ a {
     display: none !important;
   }
 
-  /* .check-in {
-    border-right: 2px solid #d2d2d2 !important;
-  }
-  .check-out {
-    border-right: 2px solid #d2d2d2 !important;
-  } */
   .check-in p {
     font-family: "PT Serif", serif;
     color: #637557;
@@ -291,8 +286,6 @@ a {
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* dining  banner css start */
-
   .dining-banner-img {
     background-position: center;
     background-repeat: no-repeat;
@@ -457,14 +450,8 @@ a {
   .booknowbutton {
     font-size: 20px;
   }
-
-  /* gallery dining section css */
-
-  /* .dininggallerysection {
-    /* padding-top: 50px;
-  padding-bottom: 50px; */
 }
-*/ .diningpagegallery h2 {
+.diningpagegallery h2 {
   font-size: 40px;
   color: #637557;
 }
@@ -505,8 +492,6 @@ a {
 }
 
 @media (min-width: 1200px) {
-  /* dining  banner css start */
-
   .dining-banner-img {
     background-position: center;
     background-repeat: no-repeat;
@@ -676,14 +661,8 @@ a {
   .booknowbutton {
     font-size: 20px;
   }
-
-  /* gallery dining section css */
-
-  /* .dininggallerysection {
-    /* padding-top: 50px;
-  padding-bottom: 50px; */
 }
-*/ .diningpagegallery h2 {
+.diningpagegallery h2 {
   font-size: 40px;
   color: #637557;
 }
@@ -770,8 +749,6 @@ a {
 }
 
 @media (min-width: 1300px) {
-  /* dining  banner css start */
-
   .dining-banner-img {
     background-position: center;
     background-repeat: no-repeat;
@@ -941,14 +918,8 @@ a {
   .booknowbutton {
     font-size: 20px;
   }
-
-  /* gallery dining section css */
-
-  /* .dininggallerysection {
-    /* padding-top: 50px;
-    padding-bottom: 50px; */
 }
-*/ .diningpagegallery h2 {
+.diningpagegallery h2 {
   font-size: 40px;
   color: #637557;
 }
@@ -1050,8 +1021,6 @@ a {
 }
 
 @media (min-width: 1400px) {
-  /* dining  banner css start */
-
   .dining-banner-img {
     background-position: center;
     background-repeat: no-repeat;
@@ -1221,14 +1190,8 @@ a {
   .booknowbutton {
     font-size: 20px;
   }
-
-  /* gallery dining section css */
-
-  /* .dininggallerysection {
-    /* padding-top: 50px;
-  padding-bottom: 50px; */
 }
-*/ .diningpagegallery h2 {
+.diningpagegallery h2 {
   font-size: 40px;
   color: #637557;
 }
@@ -1339,8 +1302,6 @@ a {
 }
 
 @media (min-width: 400px) and (max-width: 700px) {
-  /* dining  banner css start */
-
   .dining-banner-img {
     background-position: center;
     background-repeat: no-repeat;

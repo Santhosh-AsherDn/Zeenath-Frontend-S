@@ -1,3 +1,5 @@
+/* Header CSS */
+
 .nav-link {
   color: #ffffff !important;
   font-size: 20px !important;
@@ -46,7 +48,6 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-/* stroke */
 nav.stroke ul li a,
 nav.fill ul li a {
   position: relative;
@@ -200,10 +201,6 @@ nav.fill ul li a:hover:after {
     margin-left: 200px;
   }
 }
-
-/* .sticky {
-  z-index: 10000 !important;
-} */
 
 .navbar-toggler:focus {
   text-decoration: none;

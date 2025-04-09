@@ -20,11 +20,11 @@
 }
 
 .carousel-item img {
-  transition: transform 1.5s ease-in-out; /* Smooth transition */
+  transition: transform 1.5s ease-in-out;
 }
 
 .carousel-item.active img {
-  transform: scale(1.1); /* Zoom in on the active slide */
+  transform: scale(1.1); 
 }
 
 #deluxeChaletGallery2 .carousel-item img {

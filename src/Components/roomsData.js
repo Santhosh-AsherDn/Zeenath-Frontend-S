@@ -4,7 +4,7 @@ export const rooms = [
     name: "PREMIUM COTTAGE",
     description:
       "Premium Cottages are cosy and peaceful, making it an ideal retreat for a holiday.The cottages are furnished and designed with thoughtful care and attention.",
-    image: "../images/premium-room/p-3.jpg",
+    image: "/images/premium-room/p-3.jpg",
     path: "/premiumwh",
     rate: "3500",
     gst: "12%",

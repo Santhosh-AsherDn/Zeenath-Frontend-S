@@ -1,3 +1,4 @@
+/* Testimonal Css */
 .slider-container {
   width: 89%;
 }
@@ -10,11 +11,6 @@
 #testimonalSection .col-lg-4 {
   width: 100%;
 }
-
-/* .slick-list {
-  display: flex;
-  justify-content: center;
-} */
 
 #testimonalSection .testimonalMainSection {
   width: 90% !important;

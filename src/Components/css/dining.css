@@ -1,3 +1,5 @@
+/* dining.css */
+
 body {
   font-family: "PT Serif", serif;
   font-family: "Philosopher", sans-serif;
@@ -71,7 +73,6 @@ a {
   .deluxe-chalet-about-flex-1 {
     display: flex;
     justify-content: space-between;
-    /* flex-direction: column; */
     margin-bottom: 10px !important;
     flex-wrap: wrap;
   }
@@ -134,8 +135,6 @@ a {
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* deluxe-chalet-banner css start */
-
   .deluxe-chalet-banner {
     background-position: center;
     background-repeat: no-repeat;
@@ -151,11 +150,6 @@ a {
   }
 
   /* deluxe-chalet-about section start */
-
-  /* .full-bg-dining {
-  background-position: center;
-  background-repeat: no-repeat;
-} */
 
   .deluxe-chalet-about-1 {
     padding-top: 50px;
@@ -232,8 +226,6 @@ a {
 }
 
 @media (min-width: 1200px) {
-  /* deluxe-chalet-banner css start */
-
   .deluxe-chalet-banner {
     background-position: center;
     background-repeat: no-repeat;
