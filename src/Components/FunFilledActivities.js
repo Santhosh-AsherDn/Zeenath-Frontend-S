@@ -52,14 +52,17 @@ export default function FunFilledActivities() {
                   data-aos-duration="900"
                 >
                   <div className="ActivityCardsImage">
-                    <img src="/images/Fun-Filled-Activity4.jpg" alt="fun"/>
+                    <img
+                      src={require("../images/Fun-Filled-Activity4.jpg")}
+                      alt="fun"
+                    />
                   </div>
                   <div className="ActivityCardsName">Trekking</div>
                   <div className="ActivityContent">
                     Borem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis. className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.
+                    mattis. className aptent taciti sociosqu ad litora torquent
+                    per conubia nostra, per inceptos himenaeos.
                   </div>
                 </div>
                 <div
@@ -68,14 +71,17 @@ export default function FunFilledActivities() {
                   data-aos-duration="900"
                 >
                   <div className="ActivityCardsImage">
-                    <img src="/images/Fun-Filled-Activity2.png" alt="fun"/>
+                    <img
+                      src={require("../images/Fun-Filled-Activity2.png")}
+                      alt="fun"
+                    />
                   </div>
                   <div className="ActivityCardsName">Bird Watching</div>
                   <div className="ActivityContent">
                     Borem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis. className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.
+                    mattis. className aptent taciti sociosqu ad litora torquent
+                    per conubia nostra, per inceptos himenaeos.
                   </div>
                 </div>
                 <div
@@ -84,14 +90,17 @@ export default function FunFilledActivities() {
                   data-aos-duration="900"
                 >
                   <div className="ActivityCardsImage">
-                    <img src="/images/Fun-Filled-Activity5.png" alt="fun" />
+                    <img
+                      src={require("../images/Fun-Filled-Activity5.png")}
+                      alt="fun"
+                    />
                   </div>
                   <div className="ActivityCardsName">Nature Trail</div>
                   <div className="ActivityContent">
                     Borem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis. className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.
+                    mattis. className aptent taciti sociosqu ad litora torquent
+                    per conubia nostra, per inceptos himenaeos.
                   </div>
                 </div>
                 <div
@@ -100,14 +109,17 @@ export default function FunFilledActivities() {
                   data-aos-duration="1100"
                 >
                   <div className="ActivityCardsImage">
-                    <img src="/images/Fun-Filled-Activity3.png" alt="fun" />
+                    <img
+                      src={require("../images/Fun-Filled-Activity3.png")}
+                      alt="fun"
+                    />
                   </div>
                   <div className="ActivityCardsName">Bonfire with Music</div>
                   <div className="ActivityContent">
                     Borem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis. className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.
+                    mattis. className aptent taciti sociosqu ad litora torquent
+                    per conubia nostra, per inceptos himenaeos.
                   </div>
                 </div>
                 <div
@@ -116,14 +128,17 @@ export default function FunFilledActivities() {
                   data-aos-duration="1100"
                 >
                   <div className="ActivityCardsImage">
-                    <img src="/images/Fun-Filled-Activity1.png" alt="fun"/>
+                    <img
+                      src={require("../images/Fun-Filled-Activity1.png")}
+                      alt="fun"
+                    />
                   </div>
                   <div className="ActivityCardsName">Fundera Bird Park</div>
                   <div className="ActivityContent">
                     Borem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis. className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.
+                    mattis. className aptent taciti sociosqu ad litora torquent
+                    per conubia nostra, per inceptos himenaeos.
                   </div>
                 </div>
                 <div
@@ -132,14 +147,17 @@ export default function FunFilledActivities() {
                   data-aos-duration="1100"
                 >
                   <div className="ActivityCardsImage">
-                    <img src="/images/Fun-Filled-Activity6.png" alt="fun"/>
+                    <img
+                      src={require("../images/Fun-Filled-Activity6.png")}
+                      alt="fun"
+                    />
                   </div>
                   <div className="ActivityCardsName">Adventure Sports</div>
                   <div className="ActivityContent">
                     Borem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc vulputate libero et velit interdum, ac aliquet odio
-                    mattis. className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.
+                    mattis. className aptent taciti sociosqu ad litora torquent
+                    per conubia nostra, per inceptos himenaeos.
                   </div>
                 </div>
               </div>

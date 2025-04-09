@@ -205,7 +205,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/public/images/ArrowPrev.svg") !important;
+    background-image: url("/src/images/ArrowPrev.svg") !important;
     top: 44%;
   }
   #SuperDeluxeGallery2 .carousel-control-next {
@@ -216,7 +216,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/public/images/ArrowNext.svg") !important;
+    background-image: url("/src/images/ArrowNext.svg") !important;
     top: 44%;
   }
   .carousel-control-next-icon {
@@ -294,8 +294,6 @@ a {
   /* dining  banner css start */
 
   .dining-banner-img {
-    /* background-image: url(assets/images/dining-page/diingpagebanner.png); */
-    /* background-image: url(/public/images/dining-page/diingpagebanner.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -510,8 +508,6 @@ a {
   /* dining  banner css start */
 
   .dining-banner-img {
-    /* background-image: url(assets/images/dining-page/diingpagebanner.png); */
-    /* background-image: url(/public/images/dining-page/diingpagebanner.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -746,12 +742,12 @@ a {
 }
 
 #SuperDeluxeGallery2 .carousel-control-prev-icon {
-  background-image: url("/public/images/ArrowPrev.svg");
+  background-image: url("/src/images/ArrowPrev.svg");
   width: 50px;
   height: 50px;
 }
 #SuperDeluxeGallery2 .carousel-control-next-icon {
-  background-image: url("/public/images/ArrowNext.svg");
+  background-image: url("/src/images/ArrowNext.svg");
   width: 50px;
   height: 50px;
 }
@@ -777,8 +773,6 @@ a {
   /* dining  banner css start */
 
   .dining-banner-img {
-    /* background-image: url(assets/images/dining-page/diingpagebanner.png); */
-    /* background-image: url(/public/images/dining-page/diingpagebanner.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1013,14 +1007,14 @@ a {
 }
 
 #SuperDeluxeGallery2 .carousel-control-prev-icon {
-  background-image: url("/public/images/ArrowPrev.svg");
+  background-image: url("/src/images/ArrowPrev.svg");
   width: 50px;
   height: 50px;
   background-color: #425f2f;
   border-radius: 50%;
 }
 #SuperDeluxeGallery2 .carousel-control-next-icon {
-  background-image: url("/public/images/ArrowNext.svg");
+  background-image: url("/src/images/ArrowNext.svg");
   width: 50px;
   height: 50px;
   background-color: #425f2f;
@@ -1059,8 +1053,6 @@ a {
   /* dining  banner css start */
 
   .dining-banner-img {
-    /* background-image: url(assets/images/dining-page/diingpagebanner.png); */
-    /* background-image: url(/public/images/dining-page/diingpagebanner.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1296,12 +1288,12 @@ a {
 }
 
 #SuperDeluxeGallery2 .carousel-control-prev-icon {
-  background-image: url("/public/images/ArrowPrev.svg");
+  background-image: url("/src/images/ArrowPrev.svg");
   width: 50px;
   height: 50px;
 }
 #SuperDeluxeGallery2 .carousel-control-next-icon {
-  background-image: url("/public/images/ArrowNext.svg");
+  background-image: url("/src/images/ArrowNext.svg");
   width: 50px;
   height: 50px;
 }
@@ -1376,14 +1368,14 @@ a {
     width: 100%;
   }
   #SuperDeluxeGallery2 .carousel-control-prev-icon {
-    background-image: url("/public/images/ArrowPrev.svg");
+    background-image: url("/src/images/ArrowPrev.svg");
     width: 50px;
     height: 50px;
     background-color: #425f2f;
     border-radius: 50%;
   }
   #SuperDeluxeGallery2 .carousel-control-next-icon {
-    background-image: url("/public/images/ArrowNext.svg");
+    background-image: url("/src/images/ArrowNext.svg");
     width: 50px;
     height: 50px;
     background-color: #0a0a0a;

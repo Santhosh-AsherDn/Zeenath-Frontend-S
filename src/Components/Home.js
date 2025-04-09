@@ -33,7 +33,7 @@ export default function Home() {
         <Carousel>
           <Carousel.Item interval={3000}>
             <img
-              src="/images/banner/Home1.png"
+              src={require("../images/banner/Home1.png")}
               alt="First slide"
               className="d-block w-100 h-50"
             />
@@ -52,7 +52,7 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src="/images/banner/Home2.png"
+              src={require("../images/banner/Home2.png")}
               alt="First slide"
               className="d-block w-100 h-50"
             />
@@ -71,7 +71,7 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src="/images/banner/Home3.png"
+              src={require("../images/banner/Home3.png")}
               alt="First slide"
               className="d-block w-100 h-50"
             />
@@ -90,7 +90,7 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src="/images/banner/Home4.png"
+              src={require("../images/banner/Home4.png")}
               alt="First slide"
               className="d-block w-100 h-50"
             />
@@ -109,7 +109,7 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src="/images/banner/Home5.png"
+              src={require("../images/banner/Home5.png")}
               alt="First slide"
               className="d-block w-100 h-50"
             />
@@ -147,7 +147,10 @@ export default function Home() {
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-4">
                 <div className="strippara">
                   <img
-                    src="./images/shapes/streamline_pet-paw-solid.svg"
+                    src={
+                      require("../images/shapes/streamline_pet-paw-solid.svg")
+                        .default
+                    }
                     alt=""
                   />
                   <p>Pet friendly</p>
@@ -156,7 +159,10 @@ export default function Home() {
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-4">
                 <div className="strippara">
                   <img
-                    src="./images/shapes/solar_temperature-line-duotone.svg"
+                    src={
+                      require("../images/shapes/solar_temperature-line-duotone.svg")
+                        .default
+                    }
                     alt=""
                   />
                   <p>29°C</p>
@@ -164,7 +170,10 @@ export default function Home() {
               </div>
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-4">
                 <div className="strippara">
-                  <img src="./images/shapes/fa_mobile.svg" alt="" />
+                  <img
+                    src={require("../images/shapes/fa_mobile.svg").default}
+                    alt=""
+                  />
                   <p> 9751657458 | 9840083576 | 9840029445</p>
                 </div>
               </div>
@@ -210,7 +219,10 @@ export default function Home() {
                 data-aos-duration="500"
               >
                 <div className="homeaboutimg">
-                  <img src="./images/home-page/home-about-img.png" alt="" />
+                  <img
+                    src={require("../images/home-page/home-about-img.png")}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -263,11 +275,7 @@ export default function Home() {
                         {/* <Link to={room.path} className="viewmore-btn">
                                 View More
                               </Link> */}
-                        <button
-                          className="viewmore-btn"
-                          // onClick={() => navigate("/accomodation")}
-                          onClick={handleShow}
-                        >
+                        <button className="viewmore-btn" onClick={handleShow}>
                           View More
                         </button>
                       </div>
@@ -276,162 +284,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
-            {/*             
-
-
-      
-
-      
-            <div className="row">
-              <div
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <div className="hover_color">
-                  <img src="./images/accommodation-pages-images/Accommodation-img-1.png" />
-                  <div className="hover_color-inner">
-                    <div className="hover_title">
-                      <h3>Premium Cottage</h3>
-                      <p>
-                        Teatures a queen size bed with colourful furnishings.
-                        LED TV and Free Wifi. Wake up to the chirping of birds
-                        to refresh your mind
-                      </p>
-                      <button className="viewmore-btn">View More</button>
-                    </div>
-                  </div>
-                  <a href="#."></a>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
-                data-aos="fade-up"
-                data-aos-duration="600"
-              >
-                <div className="hover_color">
-                  <img src="./images/accommodation-pages-images/Accommodation-img-2.png" />
-                  <div className="hover_color-inner">
-                    <div className="hover_title">
-                      <h3>Premium Cottage</h3>
-                      <p>
-                        Teatures a queen size bed with colourful furnishings.
-                        LED TV and Free Wifi. Wake up to the chirping of birds
-                        to refresh your mind
-                      </p>
-                      <button className="viewmore-btn">View More</button>
-                    </div>
-                  </div>
-                  <a href="#."></a>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
-                data-aos="fade-up"
-                data-aos-duration="700"
-              >
-                <div className="hover_color">
-                  <img src="./images/accommodation-pages-images/Accommodation-img-3.png" />
-                  <div className="hover_color-inner">
-                    <div className="hover_title">
-                      <h3>Premium Cottage</h3>
-                      <p>
-                        Teatures a queen size bed with colourful furnishings.
-                        LED TV and Free Wifi. Wake up to the chirping of birds
-                        to refresh your mind
-                      </p>
-                      <button className="viewmore-btn">View More</button>
-                    </div>
-                  </div>
-                  <a href="#."></a>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
-                data-aos="fade-up"
-                data-aos-duration="500"
-              >
-                <div className="hover_color">
-                  <img src="./images/accommodation-pages-images/Accommodation-img-1.png" />
-                  <div className="hover_color-inner">
-                    <div className="hover_title">
-                      <h3>Premium Cottage</h3>
-                      <p>
-                        Teatures a queen size bed with colourful furnishings.
-                        LED TV and Free Wifi. Wake up to the chirping of birds
-                        to refresh your mind
-                      </p>
-                      <button className="viewmore-btn">View More</button>
-                    </div>
-                  </div>
-                  <a href="#."></a>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
-                data-aos="fade-up"
-                data-aos-duration="600"
-              >
-                <div className="hover_color">
-                  <img src="./images/accommodation-pages-images/Accommodation-img-2.png" />
-                  <div className="hover_color-inner">
-                    <div className="hover_title">
-                      <h3>Premium Cottage</h3>
-                      <p>
-                        Teatures a queen size bed with colourful furnishings.
-                        LED TV and Free Wifi. Wake up to the chirping of birds
-                        to refresh your mind
-                      </p>
-                      <button className="viewmore-btn">View More</button>
-                    </div>
-                  </div>
-                  <a href="#."></a>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
-                data-aos="fade-up"
-                data-aos-duration="700"
-              >
-                <div className="hover_color">
-                  <img src="./images/accommodation-pages-images/Accommodation-img-3.png" />
-                  <div className="hover_color-inner">
-                    <div className="hover_title">
-                      <h3>Premium Cottage</h3>
-                      <p>
-                        Teatures a queen size bed with colourful furnishings.
-                        LED TV and Free Wifi. Wake up to the chirping of birds
-                        to refresh your mind
-                      </p>
-                      <button className="viewmore-btn">View More</button>
-                    </div>
-                  </div>
-                  <a href="#."></a>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
-                data-aos="fade-up"
-                data-aos-duration="600"
-              >
-                <div className="hover_color">
-                  <img src="./images/accommodation-pages-images/Accommodation-img-1.png" />
-                  <div className="hover_color-inner">
-                    <div className="hover_title">
-                      <h3>Premium Cottage</h3>
-                      <p>
-                        Teatures a queen size bed with colourful furnishings.
-                        LED TV and Free Wifi. Wake up to the chirping of birds
-                        to refresh your mind
-                      </p>
-                      <button className="viewmore-btn">View More</button>
-                    </div>
-                  </div>
-                  <a href="#."></a>
-                </div>
-              </div>
-            </div> */}
           </div>
         </section>
 
@@ -456,7 +308,10 @@ export default function Home() {
                 data-aos-duration="500"
               >
                 <div className="dining-img-1 text-center">
-                  <img src="./images/home-page/home-dining-img.png" alt="" />
+                  <img
+                    src={require("../images/home-page/home-dining-img.png")}
+                    alt=""
+                  />
                   <div className="dining-popup">
                     <div className="inner-dining-popup">
                       <h4>Complimentary Breakfast</h4>
@@ -482,7 +337,10 @@ export default function Home() {
                 data-aos-duration="700"
               >
                 <div className="dining-img-1 text-center">
-                  <img src="./images/home-page/home-dining-img-2.png" alt="" />
+                  <img
+                    src={require("../images/home-page/home-dining-img-2.png")}
+                    alt=""
+                  />
                   <div className="dining-popup">
                     <div className="inner-dining-popup">
                       <h4>Complimentary Breakfast</h4>
@@ -510,7 +368,7 @@ export default function Home() {
         <section
           className="diningthiredimg"
           style={{
-            backgroundImage: "url(./images/home-page/home-dining-img-3.png)",
+            backgroundImage: `url(${require("../images/home-page/home-dining-img-3.png")})`,
           }}
         >
           <div className="dining-popup2">
@@ -557,7 +415,7 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src="./images/home-page/FunfilledActivities-1.png"
+                    src={require("../images/home-page/FunfilledActivities-1.png")}
                     alt=""
                   />
                 </div>
@@ -572,7 +430,7 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src="./images/home-page/trip.png"
+                    src={require("../images/home-page/trip.png")}
                     alt=""
                     style={{
                       height: "382.68px",
@@ -596,7 +454,7 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src="./images/home-page/FunfilledActivities-3.png"
+                    src={require("../images/home-page/FunfilledActivities-3.png")}
                     alt=""
                   />
                 </div>
@@ -611,7 +469,7 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src="./images/home-page/FunfilledActivities-4.png"
+                    src={require("../images/home-page/FunfilledActivities-4.png")}
                     alt=""
                   />
                 </div>
@@ -631,7 +489,7 @@ export default function Home() {
               <div className="col-xlg-6 col-lg-6 col-md-6 col-sm-12">
                 {/* <div className="flora-faunaimg"> */}
                 <img
-                  src="./images/home-page/flora-fauna-img.png"
+                  src={require("../images/home-page/flora-fauna-img.png")}
                   alt=""
                   className="smallscreenimgforflorafauna"
                 />
@@ -664,7 +522,7 @@ export default function Home() {
         <section
           className="hometestimonalsec"
           style={{
-            backgroundImage: "url(images/home-page/testimonals-bg.png)",
+            backgroundImage: `url(${require("../images/home-page/testimonals-bg.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -680,13 +538,18 @@ export default function Home() {
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
                 <div className="testimonal-section-box">
                   <div className="commaone">
-                    <img src="images/home-page/comma-1.svg" alt="" />
+                    <img
+                      src={require("../images/home-page/comma-1.svg").default}
+                      alt=""
+                    />
                   </div>
                   <div className="testimonal-section-borderline">
                     <div className="testimonial-profile">
                       <div className="profile-img">
                         <img
-                          src="images/home-page/profile-1.svg"
+                          src={
+                            require("../images/home-page/profile-1.svg").default
+                          }
                           alt="Jennifer Chris Profile"
                           className="profile-img"
                         />
@@ -712,25 +575,33 @@ export default function Home() {
                   <div className="source">
                     <span>Source : </span>
                     <img
-                      src="images/home-page/google-review.png"
+                      src={require("../images/home-page/google-review.png")}
                       alt="Google Review"
                     />
                   </div>
                   <div className="commatwo">
-                    <img src="images/home-page/comma-2.svg" alt="" />
+                    <img
+                      src={require("../images/home-page/comma-2.svg").default}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
                 <div className="testimonal-section-box">
                   <div className="commaone">
-                    <img src="images/home-page/comma-1.svg" alt="" />
+                    <img
+                      src={require("../images/home-page/comma-1.svg").default}
+                      alt=""
+                    />
                   </div>
                   <div className="testimonal-section-borderline">
                     <div className="testimonial-profile">
                       <div className="profile-img">
                         <img
-                          src="images/home-page/profile-2.svg"
+                          src={
+                            require("../images/home-page/profile-2.svg").default
+                          }
                           alt="Jennifer Chris Profile"
                           className="profile-img"
                         />
@@ -756,25 +627,33 @@ export default function Home() {
                   <div className="source">
                     <span>Source : </span>
                     <img
-                      src="images/home-page/booking.png"
+                      src={require("../images/home-page/booking.png")}
                       alt="Google Review"
                     />
                   </div>
                   <div className="commatwo">
-                    <img src="images/home-page/comma-2.svg" alt="" />
+                    <img
+                      src={require("../images/home-page/comma-2.svg").default}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
                 <div className="testimonal-section-box">
                   <div className="commaone">
-                    <img src="images/home-page/comma-1.svg" alt="" />
+                    <img
+                      src={require("../images/home-page/comma-1.svg").default}
+                      alt=""
+                    />
                   </div>
                   <div className="testimonal-section-borderline">
                     <div className="testimonial-profile">
                       <div className="profile-img">
                         <img
-                          src="images/home-page/profile-3.svg"
+                          src={
+                            require("../images/home-page/profile-3.svg").default
+                          }
                           alt="Jennifer Chris Profile"
                           className="profile-img"
                         />
@@ -800,12 +679,15 @@ export default function Home() {
                   <div className="source">
                     <span>Source : </span>
                     <img
-                      src="images/home-page/google-review.png"
+                      src={require("../images/home-page/google-review.png")}
                       alt="Google Review"
                     />
                   </div>
                   <div className="commatwo">
-                    <img src="images/home-page/comma-2.svg" alt="" />
+                    <img
+                      src={require("../images/home-page/comma-2.svg").default}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>

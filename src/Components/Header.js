@@ -47,7 +47,7 @@ export default function Header() {
     <header id="headerId" className={`header ${isSticky ? "sticky" : ""}`}>
       <nav className="navbar navbar-expand-lg navbar-light">
         <Link to="/" className="navbar-brand" id="zeenath-logo-position">
-          <img src="/images/zeenath-logo.svg" alt="Zeenath Logo" />
+          <img src={require("../images/zeenath-logo.svg").default} alt="Zeenath Logo" />
         </Link>
         <button
           className={`navbar-toggler ${isOpen ? "open" : ""}`}

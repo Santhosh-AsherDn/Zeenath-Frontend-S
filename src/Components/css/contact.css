@@ -61,7 +61,7 @@ a {
 
 @media (min-width: 1200px) {
   .contactfullpage-bg {
-    background-image: url(/public/images/contactus-page/contactus-bg.png);
+    background-image: url(/src/images/contactus-page/contactus-bg.png);
   }
 
   #ContactPageId .nav-link {

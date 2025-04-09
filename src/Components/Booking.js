@@ -175,7 +175,8 @@ export default function Booking() {
                   >
                     <div className="BookingNameSectionflexconatiner">
                       <img
-                        src="./images/booking-form-images/Booking-DeluxeChalet.png"
+                        src={require("../images/booking-form-images/Booking-DeluxeChalet.png")}
+                        
                         alt="booking-image"
                       />
                       <div className="BookingNameSection">

@@ -58,13 +58,16 @@ function Responsive() {
             <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
               <div className="testimonal-section-box">
                 <div className="commaone">
-                  <img src="./images/home-page/comma-1.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-1.svg")}
+                    alt=""
+                  />
                 </div>
                 <div className="testimonal-section-borderline">
                   <div className="testimonial-profile">
                     <div className="profile-img">
                       <img
-                        src="./images/home-page/profile-1.svg"
+                        src={require("../images/home-page/profile-1.svg")}
                         alt="Jennifer Chris Profile"
                         className="profile-img"
                       />
@@ -90,12 +93,15 @@ function Responsive() {
                 <div className="source">
                   <span>Source : </span>
                   <img
-                    src="./images/home-page/google-review.png"
+                    src={require("../images/home-page/google-review.png")}
                     alt="Google Review"
                   />
                 </div>
                 <div className="commatwo">
-                  <img src="./images/home-page/comma-2.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-2.svg")}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -105,13 +111,16 @@ function Responsive() {
             <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
               <div className="testimonal-section-box">
                 <div className="commaone">
-                  <img src="./images/home-page/comma-1.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-1.svg")}
+                    alt=""
+                  />
                 </div>
                 <div className="testimonal-section-borderline">
                   <div className="testimonial-profile">
                     <div className="profile-img">
                       <img
-                        src="./images/home-page/profile-2.svg"
+                        src={require("../images/home-page/profile-2.svg")}
                         alt="Jennifer Chris Profile"
                         className="profile-img"
                       />
@@ -137,12 +146,15 @@ function Responsive() {
                 <div className="source">
                   <span>Source : </span>
                   <img
-                    src="./images/home-page/booking.png"
+                    src={require("../images/home-page/booking.png")}
                     alt="Google Review"
                   />
                 </div>
                 <div className="commatwo">
-                  <img src="./images/home-page/comma-2.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-2.svg")}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -152,13 +164,16 @@ function Responsive() {
             <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
               <div className="testimonal-section-box">
                 <div className="commaone">
-                  <img src="./images/home-page/comma-1.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-1.svg")}
+                    alt=""
+                  />
                 </div>
                 <div className="testimonal-section-borderline">
                   <div className="testimonial-profile">
                     <div className="profile-img">
                       <img
-                        src="./images/home-page/profile-3.svg"
+                        src={require("../images/home-page/profile-3.svg")}
                         alt="Jennifer Chris Profile"
                         className="profile-img"
                       />
@@ -184,12 +199,15 @@ function Responsive() {
                 <div className="source">
                   <span>Source : </span>
                   <img
-                    src="./images/home-page/google-review.png"
+                    src={require("../images/home-page/google-review.png")}
                     alt="Google Review"
                   />
                 </div>
                 <div className="commatwo">
-                  <img src="./images/home-page/comma-2.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-2.svg")}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -198,13 +216,16 @@ function Responsive() {
             <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
               <div className="testimonal-section-box">
                 <div className="commaone">
-                  <img src="./images/home-page/comma-1.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-1.svg")}
+                    alt=""
+                  />
                 </div>
                 <div className="testimonal-section-borderline">
                   <div className="testimonial-profile">
                     <div className="profile-img">
                       <img
-                        src="./images/home-page/profile-3.svg"
+                        src={require("../images/home-page/profile-3.svg")}
                         alt="Jennifer Chris Profile"
                         className="profile-img"
                       />
@@ -230,12 +251,15 @@ function Responsive() {
                 <div className="source">
                   <span>Source : </span>
                   <img
-                    src="./images/home-page/google-review.png"
+                    src={require("../images/home-page/google-review.png")}
                     alt="Google Review"
                   />
                 </div>
                 <div className="commatwo">
-                  <img src="./images/home-page/comma-2.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-2.svg")}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -245,13 +269,16 @@ function Responsive() {
             <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
               <div className="testimonal-section-box">
                 <div className="commaone">
-                  <img src="./images/home-page/comma-1.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-1.svg")}
+                    alt=""
+                  />
                 </div>
                 <div className="testimonal-section-borderline">
                   <div className="testimonial-profile">
                     <div className="profile-img">
                       <img
-                        src="./images/home-page/profile-3.svg"
+                        src={require("../images/home-page/profile-3.svg")}
                         alt="Jennifer Chris Profile"
                         className="profile-img"
                       />
@@ -277,12 +304,15 @@ function Responsive() {
                 <div className="source">
                   <span>Source : </span>
                   <img
-                    src="./images/home-page/google-review.png"
+                    src={require("../images/home-page/google-review.png")}
                     alt="Google Review"
                   />
                 </div>
                 <div className="commatwo">
-                  <img src="./images/home-page/comma-2.svg" alt="" />
+                  <img
+                    src={require("../images/home-page/comma-2.svg")}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>

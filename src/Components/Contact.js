@@ -30,7 +30,7 @@ export default function Contact() {
                     <h2>Contact Us</h2>
                     <div className="flex-contact-details mb-3">
                       <img
-                        src="./images/contactus-page/contactus-bg-icon-1.png"
+                        src={require("../images/contactus-page/contactus-bg-icon-1.png")}
                         alt=""
                       />
                       <p>
@@ -45,7 +45,7 @@ export default function Contact() {
                     </div>
                     <div className="flex-contact-details mb-3">
                       <img
-                        src="./images/contactus-page/contactus-bg-icon-2.png"
+                        src={require("../images/contactus-page/contactus-bg-icon-2.png")}
                         alt=""
                       />
                       <div className="contactpage-number">
@@ -56,7 +56,7 @@ export default function Contact() {
                     </div>
                     <div className="flex-contact-details mb-3">
                       <img
-                        src="./images/contactus-page/contactus-bg-icon-3.png"
+                        src={require("../images/contactus-page/contactus-bg-icon-3.png")}
                         alt=""
                       />
                       <div className="contactpage-number">
@@ -73,7 +73,7 @@ export default function Contact() {
                 <div className="col-xlg-7 col-lg-7 col-md-6 col-sm-12">
                   <div className="contactus-img">
                     <img
-                      src="./images/contactus-page/contactus-bg-about.png"
+                      src={require("../images/contactus-page/contactus-bg-about.png")}
                       alt=""
                     />
                   </div>

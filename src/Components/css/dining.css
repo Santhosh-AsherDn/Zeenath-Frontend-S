@@ -16,7 +16,6 @@ a {
   font-family: "PT Serif", serif;
 }
 
-
 @media (max-width: 700px) {
   br {
     display: none !important;
@@ -98,7 +97,7 @@ a {
   .deluxe-chalet-about-1 {
     padding-top: 40px;
     padding-bottom: 50px;
-    background-image: url(/public/images/deluxe-chalet-page/full-bg.png);
+    background-image: url(/src/images/deluxe-chalet-page/full-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,7 +106,7 @@ a {
   .deluxe-chalet-about-2 {
     padding-top: 1px;
     padding-bottom: 50px;
-    background-image: url(/public/images/deluxe-chalet-page/full-bg.png);
+    background-image: url(/src/images/deluxe-chalet-page/full-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -161,7 +160,7 @@ a {
   .deluxe-chalet-about-1 {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url(/public/images/deluxe-chalet-page/full-bg.png);
+    background-image: url(/src/images/deluxe-chalet-page/full-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -170,7 +169,7 @@ a {
   .deluxe-chalet-about-2 {
     padding-top: 80px;
     padding-bottom: 50px;
-    background-image: url(/public/images/deluxe-chalet-page/full-bg.png);
+    background-image: url(/src/images/deluxe-chalet-page/full-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,12 +250,10 @@ a {
 
   /* deluxe-chalet-about section start */
 
-
-
   .deluxe-chalet-about-1 {
     padding-top: 50px;
     padding-bottom: 150px;
-    background-image: url(/public/images/deluxe-chalet-page/full-bg.png);
+    background-image: url(/src/images/deluxe-chalet-page/full-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,7 +262,7 @@ a {
   .deluxe-chalet-about-2 {
     padding-top: 30px;
     padding-bottom: 150px;
-    background-image: url(/public/images/deluxe-chalet-page/full-bg.png);
+    background-image: url(/src/images/deluxe-chalet-page/full-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

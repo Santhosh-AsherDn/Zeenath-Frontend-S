@@ -17,8 +17,7 @@ export default function Dining() {
         <section
           className="deluxe-chalet-banner"
           style={{
-            backgroundImage:
-              "url(./images/deluxe-chalet-page/deluxe-chalet-banner.png)",
+            backgroundImage: `url(${'../images/deluxe-chalet-page/deluxe-chalet-banner.png'})`,
           }}
         >
           <Header />
@@ -41,7 +40,7 @@ export default function Dining() {
                 <div className="col-xlg-6 col-lg-6 col-md-6 col-sm-12">
                   <div className="deluxe-chalet-maincontent">
                     <img
-                      src="./images/deluxe-chalet-page/deluxe-chalet-about-1.png"
+                      src={require("../images/deluxe-chalet-page/deluxe-chalet-about-1.png")}
                       alt=""
                     />
                   </div>
@@ -65,7 +64,7 @@ export default function Dining() {
                     <div className="deluxe-chalet-about-flex-1 mb-5">
                       <div className="deluxe-chalet-1">
                         <img
-                          src="./images/deluxe-chalet-page/deluxe-chalet-1.png"
+                          src={require(".././images/deluxe-chalet-page/deluxe-chalet-1.png")}
                           alt=""
                           width="20px"
                         />
@@ -76,7 +75,7 @@ export default function Dining() {
                       </div>
                       <div className="deluxe-chalet-1">
                         <img
-                          src="./images/deluxe-chalet-page/deluxe-chalet-2.png"
+                          src={require("../images/deluxe-chalet-page/deluxe-chalet-2.png")}
                           alt=""
                           width="20px"
                         />
@@ -87,7 +86,7 @@ export default function Dining() {
                       </div>
                       <div className="deluxe-chalet-1">
                         <img
-                          src="./images/deluxe-chalet-page/deluxe-chalet-3.png"
+                          src={require("../images/deluxe-chalet-page/deluxe-chalet-3.png")}
                           alt=""
                           width="20px"
                         />
@@ -126,14 +125,14 @@ export default function Dining() {
                     <div className="deluxe-chalet-about-flex-1 mb-5">
                       <div className="deluxe-chalet-1">
                         <img
-                          src="./images/deluxe-chalet-page/deluxe-chalet-6.png"
+                          src={require("../images/deluxe-chalet-page/deluxe-chalet-6.png")}
                           alt=""
                         />
                         <p>Dinner</p>
                       </div>
                       <div className="deluxe-chalet-1">
                         <img
-                          src="./images/deluxe-chalet-page/deluxe-chalet-5.png"
+                          src={require("../images/deluxe-chalet-page/deluxe-chalet-5.png")}
                           alt=""
                           width="20px"
                         />
@@ -141,7 +140,7 @@ export default function Dining() {
                       </div>
                       <div className="deluxe-chalet-1">
                         <img
-                          src="./images/deluxe-chalet-page/deluxe-chalet-4.png"
+                          src={require("../images/deluxe-chalet-page/deluxe-chalet-4.png")}
                           alt=""
                           width="20px"
                         />
@@ -156,7 +155,7 @@ export default function Dining() {
                 <div className="col-xlg-6 col-lg-6 col-md-6 col-sm-12">
                   <div className="deluxe-chalet-maincontent-2">
                     <img
-                      src="./images/deluxe-chalet-page/deluxe-chalet-about-2.png"
+                      src={require("../images/deluxe-chalet-page/deluxe-chalet-about-2.png")}
                       alt=""
                     />
                   </div>

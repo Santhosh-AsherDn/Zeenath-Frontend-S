@@ -2,8 +2,7 @@
   padding-bottom: 0 !important;
 }
 .contactfullpage-bg {
-  /* background-image: url(assets/images/contactus-page/contactus-bg.png); */
-  background-image: url(/public/images/contactus-page/contactus-bg.png);
+  background-image: url(/src/images/contactus-page/contactus-bg.png);
 }
 
 .nav-link {
@@ -112,8 +111,7 @@ nav.fill ul li a:hover:after {
 }
 
 #bookingform-bg-color {
-  /* background-image: url(assets/images/booking-form-images/contactus-bg.png); */
-  background-image: url(/public/images/booking-form-images/contactus-bg.png);
+  background-image: url(/src/images/booking-form-images/contactus-bg.png);
   padding: 40px 0;
 }
 
@@ -479,8 +477,7 @@ nav.fill ul li a:after {
   }
 
   #bookingform-bg-color {
-    /* background-image: url(assets/images/booking-form-images/contactus-bg.png); */
-    background-image: url(/public/images/booking-form-images/contactus-bg.png);
+    background-image: url(/src/images/booking-form-images/contactus-bg.png);
     padding: 40px 0;
   }
 
@@ -760,7 +757,6 @@ nav.fill ul li a:after {
     background: #425f2f;
   }
   .contactfullpage-bg {
-    /* background-image: url(assets/images/contactus-page/contactus-bg.png); */
-    background-image: url(/public/images/contactus-page/contactus-bg.png);
+    background-image: url(/src/images/contactus-page/contactus-bg.png);
   }
 }

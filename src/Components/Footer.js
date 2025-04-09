@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="col-md-3">
                   <Link to="/">
                     <div className="footer-logo">
-                      <img src="./images/zeenath-logo.svg" alt="" />
+                      <img src={require("../images/zeenath-logo.svg")} alt="" />
                     </div>
                   </Link>
                 </div>
@@ -42,7 +42,7 @@ export default function Footer() {
                     <ul className="list-unstyled" id="footer-addres-gap">
                       <li>
                         <img
-                          src="./images/shapes/fluent_location-16-filled.svg"
+                          src={require("../images/shapes/fluent_location-16-filled.svg")}
                           alt=""
                         />
                         ZEENATH TAJ GARDENS,
@@ -55,13 +55,19 @@ export default function Footer() {
                       </li>
                       <li>
                         <a href="callto:9751657458">
-                          <img src="./images/shapes/fa_mobile.svg" alt="" />
+                          <img
+                            src={require("../images/shapes/fa_mobile.svg")}
+                            alt=""
+                          />
                           9751657458 | 9840083576 | 9840029445
                         </a>
                       </li>
                       <li>
                         <a href="mailto:info@zeenathtaigardens.com">
-                          <img src="./images/shapes/famicons_mail.svg" alt="" />
+                          <img
+                            src={require("../images/shapes/famicons_mail.svg")}
+                            alt=""
+                          />
                           info@zeenathtajgardens.com
                         </a>
                       </li>
@@ -74,22 +80,34 @@ export default function Footer() {
                     <ul className="list-unstyled mb-3" id="social-link-icons">
                       <li>
                         <a href="/contact" className="social-link">
-                          <img src="./images/shapes/Vector.svg" alt="" />
+                          <img
+                            src={require("../images/shapes/Vector.svg")}
+                            alt=""
+                          />
                         </a>
                       </li>
                       <li>
                         <a href="/contact" className="social-link">
-                          <img src="./images/shapes/Vector (1).svg" alt="" />
+                          <img
+                            src={require("../images/shapes/Vector (1).svg")}
+                            alt=""
+                          />
                         </a>
                       </li>
                       <li>
                         <a href="/contact" className="social-link">
-                          <img src="./images/shapes/Vector (2).svg" alt="" />
+                          <img
+                            src={require("../images/shapes/Vector (2).svg")}
+                            alt=""
+                          />
                         </a>
                       </li>
                       <li>
                         <a href="/contact" className="social-link">
-                          <img src="./images/shapes/Vector (3).svg" alt="" />
+                          <img
+                            src={require("../images/shapes/Vector (3).svg")}
+                            alt=""
+                          />
                         </a>
                       </li>
                     </ul>
