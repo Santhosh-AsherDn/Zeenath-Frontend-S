@@ -18,6 +18,16 @@ a {
   font-family: "PT Serif", serif;
 }
 
+.fun-activity {
+  position: absolute;
+  color: #ffffff !important;
+  font-size: 28px !important;
+  text-decoration: none;
+  font-family: "PT Serif", serif !important;
+  bottom: 40px !important;
+  left: 27px !important;
+  font-weight: 700 !important;
+}
 @media (max-width: 700px) {
   br {
     display: none !important;
@@ -33,6 +43,15 @@ a {
   }
   .flora-faunaimg img {
     width: 100%;
+  }
+  .fun-activity {
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px !important;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
   }
   .index-banner-section {
     background-image: url(/src/images/home-page/home-banner.png);
@@ -774,6 +793,15 @@ a {
     width: 150px;
     font-family: "Philosopher";
   }
+  .fun-activity {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
 
   /* dining section css start */
 
@@ -1429,6 +1457,15 @@ a {
     padding: 10px;
     width: 150px;
     font-family: "Philosopher";
+  }
+  .fun-activity {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
   }
 
   /* dining section css start */
@@ -2155,6 +2192,15 @@ a {
     font-family: "Philosopher";
   }
 
+  .fun-activity {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
   /* dining section css start */
 
   .diningsection {
@@ -2879,6 +2925,15 @@ a {
     font-family: "Philosopher";
   }
 
+  .fun-activity {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
+  }
   /* dining section css start */
 
   .diningsection {
@@ -3603,6 +3658,16 @@ a {
     padding: 10px;
     width: 150px;
     font-family: "Philosopher";
+  }
+
+  .fun-activity {
+    position: absolute;
+    color: #ffffff;
+    font-size: 28px;
+    text-decoration: none;
+    bottom: 40px;
+    left: 27px;
+    font-weight: 700;
   }
 
   /* dining section css start */

@@ -420,7 +420,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="fun-filled-activities-a">
-                  <a href="/fun-filled-activites">Indoor Games</a>
+                <p className="fun-activity">Indoor Games</p>
                 </div>
               </div>
               <div
@@ -439,12 +439,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="fun-filled-activities-a">
-                  <a
-                    href="/fun-filled-activites
-                  "
-                  >
-                    Nature Trail & Trekking
-                  </a>
+                  <p className="fun-activity">Nature Trail & Trekking</p>
                 </div>
               </div>
               <div
@@ -459,7 +454,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="fun-filled-activities-a">
-                  <a href="/fun-filled-activites">Outdoor Sport</a>
+                  <p className="fun-activity">Outdoor Sport</p>
                 </div>
               </div>
               <div
@@ -474,7 +469,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="fun-filled-activities-a">
-                  <a href="/fun-filled-activites">Bonfire with Music</a>
+                  <p className="fun-activity">Bonfire with Music</p>
                 </div>
               </div>
             </div>
