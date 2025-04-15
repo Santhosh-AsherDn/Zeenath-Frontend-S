@@ -12,18 +12,68 @@ export default function Room() {
   const navigate = useNavigate();
   const room = rooms.find((r) => r.path.toString() === roomPath);
   const [currentDate, setCurrentDate] = useState("");
+  const [checkInDate, setCheckInDate] = useState("");
+  const [checkOutDate, setCheckOutDate] = useState("");
+  const [dateError, setDateError] = useState("");
 
   useEffect(() => {
     AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
-    setCurrentDate(new Date().toISOString().split("T")[0]);
+
+    // Set today's date as the default and minimum
+    const today = new Date();
+    const formattedDate = today.toISOString().split("T")[0];
+    setCurrentDate(formattedDate);
+    setCheckInDate(formattedDate);
+
+    // Set default checkout to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    setCheckOutDate(tomorrow.toISOString().split("T")[0]);
   }, []);
 
   if (!room) return <div>Room not found</div>;
 
+  const handleDateChange = (e) => {
+    const { id, value } = e.target;
+
+    if (id === "checkInDate") {
+      setCheckInDate(value);
+
+      // Ensure checkout is after checkin
+      const checkIn = new Date(value);
+      const checkOut = new Date(checkOutDate);
+
+      if (checkOut <= checkIn) {
+        // Set checkout to the day after checkin
+        const nextDay = new Date(checkIn);
+        nextDay.setDate(nextDay.getDate() + 1);
+        setCheckOutDate(nextDay.toISOString().split("T")[0]);
+      }
+    } else if (id === "checkOutDate") {
+      const newCheckOut = new Date(value);
+      const checkIn = new Date(checkInDate);
+
+      if (newCheckOut <= checkIn) {
+        setDateError("Check-out date must be after check-in date");
+      } else {
+        setDateError("");
+        setCheckOutDate(value);
+      }
+    }
+  };
+
   const handleBook = (e) => {
     e.preventDefault();
-    const checkInDate = e.target.checkInDate.value;
-    const checkOutDate = e.target.checkOutDate.value;
+
+    // Validate dates
+    const startDate = new Date(checkInDate);
+    const endDate = new Date(checkOutDate);
+
+    if (startDate >= endDate) {
+      setDateError("Check-out date must be after check-in date");
+      return;
+    }
+
     navigate(
       `/booking?roomPath=${room.path}&checkInDate=${checkInDate}&checkOutDate=${checkOutDate}`
     );
@@ -181,14 +231,14 @@ export default function Room() {
                             <>
                               <img
                                 src={amenity.icon}
-                                alt={amenity.lable || "Amenity"}
+                                alt={amenity.label || "Amenity"}
                                 style={{
                                   width: "50px",
                                   height: "50px",
                                   marginRight: "8px",
                                 }}
                               />
-                              <p>{amenity.lable}</p>
+                              <p>{amenity.label}</p>
                             </>
                           )}
                         </div>

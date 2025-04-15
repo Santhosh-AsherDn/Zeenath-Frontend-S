@@ -13,25 +13,28 @@ export const rooms = [
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "200 square feet",
-    capacity: "2 adults + 1 child",
+    capacity: {
+      adults: 2,
+      children: 1,
+    },
     numberOfRooms: 11,
     extraPerson: "1 Adult or Child",
-    occupancy: "2 Adults",
+    occupancy: "2 Adults + 1 Child",
     amenities: [
-      { icon: "../images/icon/amenities-img-1.png", lable: "Free Wifi" },
+      { icon: "../images/icon/amenities-img-1.png", label: "Free Wifi" },
       {
         icon: "../images/icon/amenities-img-3.png",
-        lable: "Plush Queen size bed with ergonomic mattress",
+        label: "Plush Queen size bed with ergonomic mattress",
       },
       {
         icon: "../images/icon/amenities-img-2.png",
-        lable: "LED TV with cable connection",
+        label: "LED TV with cable connection",
       },
-      { icon: "../images/icon/amenities-img-9.png", lable: "Writing Table" },
-      { icon: "../images/icon/amenities-img-7.png", lable: "Hot Water Kettle" },
+      { icon: "../images/icon/amenities-img-9.png", label: "Writing Table" },
+      { icon: "../images/icon/amenities-img-7.png", label: "Hot Water Kettle" },
       {
         icon: "../images/icon/amenities-img-10.png",
-        lable: "Shampoo & Shower Gel Dispenser",
+        label: "Shampoo & Shower Gel Dispenser",
       },
     ],
     gallery: [
@@ -57,25 +60,28 @@ export const rooms = [
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "260 square feet",
-    capacity: "2 adults + 1 child",
+    capacity: {
+      adults: 2,
+      children: 1,
+    },
     numberOfRooms: 5,
     extraPerson: "1 Adult",
     occupancy: "2 Adults + 1 Child",
     amenities: [
-      { icon: "/images/icon/amenities-img-1.png", lable: "Free Wifi" },
+      { icon: "/images/icon/amenities-img-1.png", label: "Free Wifi" },
       {
         icon: "/images/icon/amenities-img-3.png",
-        lable: "Plush Queen size bed with ergonomic mattress",
+        label: "Plush Queen size bed with ergonomic mattress",
       },
       {
         icon: "/images/icon/amenities-img-2.png",
-        lable: " LED TV with cable connection",
+        label: " LED TV with cable connection",
       },
-      { icon: "/images/icon/amenities-img-9.png", lable: "Writing Table" },
-      { icon: "/images/icon/amenities-img-7.png", lable: "Hot Water Kettle" },
+      { icon: "/images/icon/amenities-img-9.png", label: "Writing Table" },
+      { icon: "/images/icon/amenities-img-7.png", label: "Hot Water Kettle" },
       {
         icon: "/images/icon/amenities-img-10.png",
-        lable: "Shampoo & Shower Gel Dispenser",
+        label: "Shampoo & Shower Gel Dispenser",
       },
     ],
     gallery: [
@@ -100,24 +106,27 @@ export const rooms = [
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
     size: "280 square feet",
-    capacity: "2 adults + 1 child",
+    capacity: {
+      adults: 2,
+      children: 1,
+    },
     numberOfRooms: 3,
     extraPerson: "1 Adult",
     occupancy: "2 Adults + 1 Child",
     amenities: [
-      { icon: "/images/icon/amenities-img-1.png", lable: "Free Wifi" },
+      { icon: "/images/icon/amenities-img-1.png", label: "Free Wifi" },
       {
         icon: "/images/icon/amenities-img-3.png",
-        lable: "Plush Queen size bed with ergonomic mattress",
+        label: "Plush Queen size bed with ergonomic mattress",
       },
       {
         icon: "/images/icon/amenities-img-2.png",
-        lable: " LED TV with cable connection",
+        label: " LED TV with cable connection",
       },
-      { icon: "/images/icon/amenities-img-9.png", lable: "Writing Table" },
+      { icon: "/images/icon/amenities-img-9.png", label: "Writing Table" },
       {
         icon: "/images/icon/amenities-img-10.png",
-        lable: "Shampoo & Shower Gel Dispenser",
+        label: "Shampoo & Shower Gel Dispenser",
       },
     ],
     gallery: [
@@ -141,35 +150,38 @@ export const rooms = [
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "340 square feet",
-    capacity: "2 adults + 1 child",
+    capacity: {
+      adults: 4,
+      children: 1,
+    },
     numberOfRooms: 8,
     extraPerson: "1 Adult",
     occupancy: "2 Adults + 1 Child",
     amenities: [
-      { icon: "/images/icon/amenities-img-1.png", lable: "Free Wifi" },
+      { icon: "/images/icon/amenities-img-1.png", label: "Free Wifi" },
       {
         icon: "/images/icon/amenities-img-3.png",
-        lable: "Plush King size bed with ergonomic mattress",
+        label: "Plush King size bed with ergonomic mattress",
       },
       {
         icon: "/images/icon/amenities-img-2.png",
-        lable: " 32'LCD TV with cable connection",
+        label: " 32'LCD TV with cable connection",
       },
       {
         icon: "/images/icon/diningaboutimg-2.png",
-        lable: "Openable French Door",
+        label: "Openable French Door",
       },
-      { icon: "/images/icon/amenities-img-9.png", lable: "Writing Table" },
-      { icon: "/images/icon/amenities-img-7.png", lable: "Hot Water Kettle" },
-      { icon: "/images/icon/amenities-img-4.png", lable: "2 Seater Sofa" },
+      { icon: "/images/icon/amenities-img-9.png", label: "Writing Table" },
+      { icon: "/images/icon/amenities-img-7.png", label: "Hot Water Kettle" },
+      { icon: "/images/icon/amenities-img-4.png", label: "2 Seater Sofa" },
       {
         icon: "/images/icon/amenities-img-12.png",
-        lable: "Rattan Cane Bucket Swing",
+        label: "Rattan Cane Bucket Swing",
       },
-      { icon: "/images/icon/amenities-img-6.png", lable: "Lounge Deck Chair" },
+      { icon: "/images/icon/amenities-img-6.png", label: "Lounge Deck Chair" },
       {
         icon: "/images/icon/amenities-img-10.png",
-        lable: "Shampoo & Shower Gel Dispenser",
+        label: "Shampoo & Shower Gel Dispenser",
       },
     ],
     gallery: [
@@ -195,25 +207,28 @@ export const rooms = [
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "380 square feet",
-    capacity: "2 adults + 1 child",
+    capacity: {
+      adults: 4,
+      children: 1,
+    },
     numberOfRooms: 1,
     extraPerson: "1 Adult",
     occupancy: "4 Adults + 1 Child",
     amenities: [
-      { icon: "/images/icon/amenities-img-1.png", lable: "Free Wifi" },
+      { icon: "/images/icon/amenities-img-1.png", label: "Free Wifi" },
       {
         icon: "/images/icon/amenities-img-3.png",
-        lable: "Plush Queen size bed with ergonomic mattress",
+        label: "Plush Queen size bed with ergonomic mattress",
       },
       {
         icon: "/images/icon/amenities-img-2.png",
-        lable: " LED TV with cable connection",
+        label: " LED TV with cable connection",
       },
-      { icon: "/images/icon/amenities-img-9.png", lable: "Writing Table" },
-      { icon: "/images/icon/amenities-img-7.png", lable: "Hot Water Kettle" },
+      { icon: "/images/icon/amenities-img-9.png", label: "Writing Table" },
+      { icon: "/images/icon/amenities-img-7.png", label: "Hot Water Kettle" },
       {
         icon: "/images/icon/amenities-img-10.png",
-        lable: "Shampoo & Shower Gel Dispenser",
+        label: "Shampoo & Shower Gel Dispenser",
       },
     ],
     gallery: [
@@ -239,38 +254,41 @@ export const rooms = [
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "460 square feet",
-    capacity: "2 adults + 1 child",
+    capacity: {
+      adults: 2,
+      children: 1,
+    },
     numberOfRooms: 1,
     extraPerson: "1 Adult",
     occupancy: "4 Adults + 1 Child",
     amenities: [
-      { icon: "/images/icon/amenities-img-1.png", lable: "Free Wifi" },
+      { icon: "/images/icon/amenities-img-1.png", label: "Free Wifi" },
       {
         icon: "/images/icon/amenities-img-3.png",
-        lable: "Plush King size bed with ergonomic mattress",
+        label: "Plush King size bed with ergonomic mattress",
       },
       {
         icon: "/images/icon/amenities-img-3.png",
-        lable: "Plush Queen size bed with ergonomic mattress",
+        label: "Plush Queen size bed with ergonomic mattress",
       },
       {
         icon: "/images/icon/amenities-img-2.png",
-        lable: " 32'LCD TV with cable connection",
+        label: " 32'LCD TV with cable connection",
       },
       {
         icon: "/images/icon/diningaboutimg-2.png",
-        lable: "Openable French Door",
+        label: "Openable French Door",
       },
-      { icon: "/images/icon/amenities-img-9.png", lable: "Writing Table" },
-      { icon: "/images/icon/amenities-img-7.png", lable: "Hot Water Kettle" },
-      { icon: "/images/icon/amenities-img-4.png", lable: "2 Seater Sofa" },
+      { icon: "/images/icon/amenities-img-9.png", label: "Writing Table" },
+      { icon: "/images/icon/amenities-img-7.png", label: "Hot Water Kettle" },
+      { icon: "/images/icon/amenities-img-4.png", label: "2 Seater Sofa" },
       {
         icon: "/images/icon/amenities-img-12.png",
-        lable: "Bucket Swing in Balcony",
+        label: "Bucket Swing in Balcony",
       },
       {
         icon: "/images/icon/amenities-img-10.png",
-        lable: "Shampoo & Shower Gel Dispenser",
+        label: "Shampoo & Shower Gel Dispenser",
       },
     ],
     gallery: [
@@ -296,25 +314,28 @@ export const rooms = [
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "200 square feet",
-    capacity: "2 adults + 1 child",
+    capacity: {
+      adults: 2,
+      children: 1,
+    },
     numberOfRooms: 11,
     extraPerson: "1 Adult or Child",
     occupancy: "2 Adults",
     amenities: [
-      { icon: "/images/icon/amenities-img-1.png", lable: "Free Wifi" },
+      { icon: "/images/icon/amenities-img-1.png", label: "Free Wifi" },
       {
         icon: "/images/icon/amenities-img-3.png",
-        lable: "Plush Queen size bed with ergonomic mattress",
+        label: "Plush Queen size bed with ergonomic mattress",
       },
       {
         icon: "/images/icon/amenities-img-2.png",
-        lable: "LED TV with cable connection",
+        label: "LED TV with cable connection",
       },
-      { icon: "/images/icon/amenities-img-9.png", lable: "Writing Table" },
-      { icon: "/images/icon/amenities-img-7.png", lable: "Hot Water Kettle" },
+      { icon: "/images/icon/amenities-img-9.png", label: "Writing Table" },
+      { icon: "/images/icon/amenities-img-7.png", label: "Hot Water Kettle" },
       {
         icon: "/images/icon/amenities-img-10.png",
-        lable: "Shampoo & Shower Gel Dispenser",
+        label: "Shampoo & Shower Gel Dispenser",
       },
     ],
     gallery: [

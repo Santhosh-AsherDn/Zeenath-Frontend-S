@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-//alter code
 import { useLocation, useNavigate } from "react-router-dom";
 import { rooms } from "./roomsData";
 import "./css/booking.css";
 import Header from "./Header";
-// import Razorpay from "razorpay";
+
 export default function Booking() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -13,24 +12,110 @@ export default function Booking() {
   const checkInDate = queryParams.get("checkInDate");
   const checkOutDate = queryParams.get("checkOutDate");
   const room = rooms.find((r) => r.path === roomPath);
-  const [roomQuantity, setRoomQuantity] = useState(0);
+
+  const [roomQuantity, setRoomQuantity] = useState(1); // Default to 1 room
   const [bedQuantity, setBedQuantity] = useState(0);
-  const [numberOfAdults, setNumberOfAdults] = useState(0);
+  const [numberOfAdults, setNumberOfAdults] = useState(
+    room?.capacity?.adults > 0 ? 1 : 0
+  ); // Default to 1 adult if possible
   const [numberOfChildren, setNumberOfChildren] = useState(0);
-  // const [data, setData] = useState([]);
+  const [isAvailable, setIsAvailable] = useState(true);
+  const [availabilityMessage, setAvailabilityMessage] = useState("");
+  const [maxAvailableRooms, setMaxAvailableRooms] = useState(
+    room?.numberOfRooms || 0
+  );
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
     mobilenumber: "",
     address: "",
-    NoofRoom: "",
-    extraBed: "",
-    adults: "",
-    children: "",
+    NoofRoom: "1", // Default to 1 room
+    extraBed: "0",
+    adults: room?.capacity?.adults > 0 ? "1" : "0", // Default to 1 adult if possible
+    children: "0",
   });
 
-  // calculate the number of nights
+  // Check availability on component mount and when dates or room change
+  useEffect(() => {
+    const checkAvailability = async () => {
+      if (!room || !checkInDate || !checkOutDate) {
+        console.log("Missing required data for availability check:", {
+          room,
+          checkInDate,
+          checkOutDate,
+        });
+        return;
+      }
 
+      try {
+        console.log("Checking availability for:", {
+          roomId: room.id,
+          checkInDate,
+          checkOutDate,
+        });
+
+        const response = await fetch(
+          "http://localhost:5000/api/rooms/availability",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              roomId: room.id,
+              checkInDate,
+              checkOutDate,
+            }),
+          }
+        );
+
+        const data = await response.json();
+        console.log("Availability response:", data);
+
+        if (!response.ok) {
+          throw new Error(
+            data.message || `HTTP error! status: ${response.status}`
+          );
+        }
+
+        if (data.availableRooms === undefined) {
+          throw new Error("Invalid response format from server");
+        }
+
+        // Update state with availability info
+        setMaxAvailableRooms(data.availableRooms);
+
+        if (data.availableRooms <= 0) {
+          setIsAvailable(false);
+          setAvailabilityMessage("No rooms available for selected dates");
+          setRoomQuantity(0);
+        } else {
+          setIsAvailable(true);
+          setAvailabilityMessage(`${data.availableRooms} rooms available`);
+
+          // Ensure roomQuantity is valid
+          if (roomQuantity > data.availableRooms) {
+            setRoomQuantity(data.availableRooms);
+          }
+        }
+
+        // Update input fields to match state
+        setInputs((prev) => ({
+          ...prev,
+          NoofRoom: roomQuantity.toString(),
+          extraBed: bedQuantity.toString(),
+          adults: numberOfAdults.toString(),
+          children: numberOfChildren.toString(),
+        }));
+      } catch (error) {
+        console.error("Availability check failed:", error);
+        setIsAvailable(false);
+        setAvailabilityMessage(`Error checking availability: ${error.message}`);
+      }
+    };
+
+    checkAvailability();
+  }, [room, checkInDate, checkOutDate]);
+
+  // Calculate the number of nights
   const calculateNights = () => {
     if (checkInDate && checkOutDate) {
       const start = new Date(checkInDate);
@@ -44,8 +129,17 @@ export default function Booking() {
   const numberofNights = calculateNights();
 
   // Calculate Total price
-
   const calculateTotal = () => {
+    if (!room)
+      return {
+        roomTotal: 0,
+        bedTotal: 0,
+        gstAmount: 0,
+        gstPercentage: 0,
+        subTotal: 0,
+        total: 0,
+      };
+
     // Convert all values to numbers
     const roomRate = Number(room.rate);
     const extraBedRate = Number(room.extraBedRate);
@@ -66,58 +160,153 @@ export default function Booking() {
   };
 
   const totals = calculateTotal();
-  // const [editIndex, setEditIndex] = useState(null);
 
   const handleRoomDecrement = () => {
     if (roomQuantity > 0) {
-      setRoomQuantity(roomQuantity - 1);
+      const newValue = roomQuantity - 1;
+      setRoomQuantity(newValue);
+      setInputs((prev) => ({ ...prev, NoofRoom: newValue.toString() }));
     }
   };
+
   const handleRoomIncrement = () => {
-    setRoomQuantity(roomQuantity + 1);
+    if (roomQuantity < maxAvailableRooms) {
+      const newValue = roomQuantity + 1;
+      setRoomQuantity(newValue);
+      setInputs((prev) => ({ ...prev, NoofRoom: newValue.toString() }));
+    } else {
+      alert(`Only ${maxAvailableRooms} rooms available for selected dates`);
+    }
   };
 
   const handleExtraBedDecrement = () => {
     if (bedQuantity > 0) {
-      setBedQuantity(bedQuantity - 1);
+      const newValue = bedQuantity - 1;
+      setBedQuantity(newValue);
+      setInputs((prev) => ({ ...prev, extraBed: newValue.toString() }));
     }
   };
+
   const handleExtraBedIncrement = () => {
-    if (bedQuantity < 1) {
-      setBedQuantity(bedQuantity + 1);
+    if (bedQuantity < roomQuantity) {
+      // Only allow one extra bed per room
+      const newValue = bedQuantity + 1;
+      setBedQuantity(newValue);
+      setInputs((prev) => ({ ...prev, extraBed: newValue.toString() }));
+    } else {
+      alert("Maximum one extra bed per room allowed");
     }
   };
 
   const handleAdultsDecrement = () => {
-    if (numberOfAdults > 0) {
-      setNumberOfAdults(numberOfAdults - 1);
+    if (numberOfAdults > 1) {
+      // Always keep at least 1 adult
+      const newValue = numberOfAdults - 1;
+      setNumberOfAdults(newValue);
+      setInputs((prev) => ({ ...prev, adults: newValue.toString() }));
     }
   };
+
   const handleAdultsIncrement = () => {
-    setNumberOfAdults(numberOfAdults + 1);
+    if (!room) return;
+
+    const maxAdults = room.capacity.adults * roomQuantity;
+    if (numberOfAdults < maxAdults) {
+      const newValue = numberOfAdults + 1;
+      setNumberOfAdults(newValue);
+      setInputs((prev) => ({ ...prev, adults: newValue.toString() }));
+    } else {
+      alert(`Maximum ${maxAdults} adults allowed for ${roomQuantity} room(s)`);
+    }
   };
 
   const handleChildrenDecrement = () => {
     if (numberOfChildren > 0) {
-      setNumberOfChildren(numberOfChildren - 1);
+      const newValue = numberOfChildren - 1;
+      setNumberOfChildren(newValue);
+      setInputs((prev) => ({ ...prev, children: newValue.toString() }));
     }
   };
+
   const handleChildrenIncrement = () => {
-    setNumberOfChildren(numberOfChildren + 1);
+    if (!room) return;
+
+    // Usually allow 1 child per room booked
+    const maxChildren = roomQuantity;
+    if (numberOfChildren < maxChildren) {
+      const newValue = numberOfChildren + 1;
+      setNumberOfChildren(newValue);
+      setInputs((prev) => ({ ...prev, children: newValue.toString() }));
+    } else {
+      alert(
+        `Maximum ${maxChildren} children allowed for ${roomQuantity} room(s)`
+      );
+    }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs((prev) => ({ ...prev, [name]: value }));
-    console.log(inputs);
+
+    // Also update state values for controlled components
+    switch (name) {
+      case "NoofRoom":
+        const roomVal = parseInt(value) || 0;
+        if (roomVal >= 0 && roomVal <= maxAvailableRooms) {
+          setRoomQuantity(roomVal);
+        }
+        break;
+      case "extraBed":
+        const bedVal = parseInt(value) || 0;
+        if (bedVal >= 0) {
+          setBedQuantity(bedVal);
+        }
+        break;
+      case "adults":
+        const adultsVal = parseInt(value) || 0;
+        if (adultsVal >= 0) {
+          setNumberOfAdults(adultsVal);
+        }
+        break;
+      case "children":
+        const childrenVal = parseInt(value) || 0;
+        if (childrenVal >= 0) {
+          setNumberOfChildren(childrenVal);
+        }
+        break;
+    }
   };
 
   const handleBooking = async () => {
     if (!inputs.name || !inputs.email || !inputs.mobilenumber) {
-      alert("Please fill in all required fields.");
+      alert(
+        "Please fill in all required fields: Name, Email, and Mobile Number."
+      );
       return;
     }
-    // const gstPercentage = parseInt(room.gsts);
+
+    if (!room) {
+      alert("Room information not available. Please try again.");
+      return;
+    }
+
+    if (roomQuantity <= 0) {
+      alert("Please select at least one room.");
+      return;
+    }
+
+    if (numberOfAdults <= 0) {
+      alert("Please select at least one adult.");
+      return;
+    }
+
+    const maxAdults = room.capacity.adults * roomQuantity;
+    if (numberOfAdults > maxAdults) {
+      alert(`Maximum ${maxAdults} adults allowed for ${roomQuantity} room(s)`);
+      return;
+    }
+
+    // Prepare payment payload
     const payload = {
       name: inputs.name,
       email: inputs.email,
@@ -136,7 +325,7 @@ export default function Booking() {
       gstPercentage: totals.gstPercentage,
       gstAmount: totals.gstAmount,
       total: totals.total,
-      amount: Math.round(totals.total * 100),
+      amount: Math.round(totals.total * 100), // Amount in paisa for Razorpay
       currency: "INR",
       receipt: `order_${Date.now()}`,
       notes: {
@@ -149,10 +338,34 @@ export default function Booking() {
       },
     };
 
-    // console.log("Sending payload:", payload); // debug log
     try {
-      // Request for payment order details
+      // Verify again that rooms are available
+      const availabilityResponse = await fetch(
+        "http://localhost:5000/api/rooms/availability",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            roomId: room.id,
+            checkInDate,
+            checkOutDate,
+          }),
+        }
+      );
 
+      const availabilityData = await availabilityResponse.json();
+      if (
+        !availabilityResponse.ok ||
+        availabilityData.availableRooms < roomQuantity
+      ) {
+        alert(
+          `Only ${availabilityData.availableRooms} rooms available. Please adjust your selection.`
+        );
+        setMaxAvailableRooms(availabilityData.availableRooms);
+        return;
+      }
+
+      // Request for payment order details
       const res = await fetch(
         "http://localhost:5000/api/payments/create-order",
         {
@@ -169,9 +382,7 @@ export default function Booking() {
         throw new Error(data.message || "Failed to create booking");
       }
 
-      // const { orderId, paymentData } = await res.json();
-
-      //Initialize RazorPay with the payment data
+      // Initialize RazorPay with the payment data
       const options = {
         key: data.paymentData.key,
         amount: data.paymentData.amount,
@@ -180,9 +391,9 @@ export default function Booking() {
         name: "Zeenath Taj Garden",
         description: `Booking for ${room.name}`,
         handler: async (response) => {
-          // Payments successful, send the payment  data to your server
+          // Payment successful, send the payment data to your server
           try {
-            const verifications = await fetch(
+            const verificationResponse = await fetch(
               "http://localhost:5000/api/payments/payment-success",
               {
                 method: "POST",
@@ -196,38 +407,32 @@ export default function Booking() {
                 headers: { "Content-Type": "application/json" },
               }
             );
-            if (!verifications.ok) {
-              throw new Error("Payment verification failed");
+
+            if (!verificationResponse.ok) {
+              const errorData = await verificationResponse.json();
+              throw new Error(
+                errorData.message || "Payment verification failed"
+              );
             }
 
-            const booking = await verifications.json();
+            const booking = await verificationResponse.json();
 
-            // redirect to success page with data
-
+            // Navigate to success page with data
             navigate("/payment-success", {
               state: {
                 booking: {
                   ...payload,
-                  _id: booking._id,
+                  _id: booking.bookingId,
                   razorpayPaymentId: response.razorpay_payment_id,
                   status: "confirmed",
                 },
               },
             });
-
-            // const verificationData = await verificationResponse.json();
-
-            // if (!verificationResponse.ok) {
-            //   throw new Error(
-            //     verificationData.message || "Payment verification failed"
-            //   );
-            // }
-
-            // alert("Payment Successful! Booking Confirmed");
           } catch (error) {
             console.error("Payment Verification Failed:", error);
             alert(
-              "Payment successful but verification failed. Please contact support."
+              "Payment successful but verification failed. Please contact support with your payment ID: " +
+                response.razorpay_payment_id
             );
           }
         },
@@ -246,8 +451,13 @@ export default function Booking() {
         },
       };
 
-      const rzp1 = new window.Razorpay(options);
-      rzp1.open();
+      // Make sure Razorpay is loaded
+      if (window.Razorpay) {
+        const rzp1 = new window.Razorpay(options);
+        rzp1.open();
+      } else {
+        alert("Payment gateway not available. Please try again later.");
+      }
     } catch (error) {
       console.error("Booking failed:", error);
       alert(`Booking failed: ${error.message}`);
@@ -260,9 +470,12 @@ export default function Booking() {
 
   if (!room) {
     return (
-      <div className="text-center mt-5">
+      <div className="container text-center mt-5">
         <h2>Room not found</h2>
         <p>Please go back and choose a valid room.</p>
+        <button className="btn btn-primary mt-3" onClick={() => navigate("/")}>
+          Back to Home
+        </button>
       </div>
     );
   }
@@ -373,6 +586,7 @@ export default function Booking() {
                             className="btn btn-secondary"
                             id="room-decrement"
                             onClick={handleRoomDecrement}
+                            disabled={roomQuantity <= 0 || !isAvailable}
                           >
                             -
                           </button>
@@ -381,6 +595,7 @@ export default function Booking() {
                             className="form-control"
                             id="room-quantity"
                             min="0"
+                            max={room.numberOfRooms}
                             readOnly
                             value={roomQuantity}
                             onChange={handleChange}
@@ -391,11 +606,23 @@ export default function Booking() {
                             className="btn btn-secondary"
                             id="room-increment"
                             onClick={handleRoomIncrement}
+                            disabled={!isAvailable}
                           >
                             +
                           </button>
                         </div>
                       </div>
+                    </div>
+                    <div className="col-md-6">
+                      {availabilityMessage && (
+                        <div
+                          className={`alert ${
+                            isAvailable ? "alert-success" : "alert-danger"
+                          }`}
+                        >
+                          {availabilityMessage}
+                        </div>
+                      )}
                     </div>
                     <div className="col-md-3">
                       <label>Extra Bed</label>
@@ -464,6 +691,9 @@ export default function Booking() {
                                 className="btn btn-secondary"
                                 id="adult-increment"
                                 onClick={handleAdultsIncrement}
+                                disabled={
+                                  numberOfAdults >= room.capacity.adults
+                                }
                               >
                                 +
                               </button>
