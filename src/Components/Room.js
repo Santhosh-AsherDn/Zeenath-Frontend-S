@@ -8,9 +8,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { rooms } from "./roomsData";
 
 export default function Room() {
-  const { roomId } = useParams();
+  const { roomPath } = useParams();
   const navigate = useNavigate();
-  const room = rooms.find((r) => r.id.toString() === roomId);
+  const room = rooms.find((r) => r.path.toString() === roomPath);
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Room() {
     const checkInDate = e.target.checkInDate.value;
     const checkOutDate = e.target.checkOutDate.value;
     navigate(
-      `/booking?roomId=${room.id}&checkInDate=${checkInDate}&checkOutDate=${checkOutDate}`
+      `/booking?roomPath=${room.path}&checkInDate=${checkInDate}&checkOutDate=${checkOutDate}`
     );
   };
 
@@ -119,8 +119,9 @@ export default function Room() {
                     GST
                   </p>
                   <p>
-                    <strong>Extra Bed Rate:</strong> ₹{room.extraBedRate} ={" "}
-                    {room.gst}{" "}
+                    <strong>Extra Bed Rate:</strong> ₹{room.extraBedRate} +{" "}
+                    {room.gst}
+                    {" GST"}
                   </p>
                   <p>
                     <strong>{room.cancel}</strong>

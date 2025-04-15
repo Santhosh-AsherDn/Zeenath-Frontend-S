@@ -47,7 +47,7 @@ export default function Accomodation() {
                   <div className="hover_color">
                     <img
                       src={room.image}
-                      alt={room.name}
+                      alt={room.roomName}
                       style={{
                         height: "444px",
                         width: "100%",
@@ -56,14 +56,14 @@ export default function Accomodation() {
                     />
                     <div className="hover_color-inner">
                       <div className="hover_title">
-                        <h3>{room.name}</h3>
+                        <h3>{room.roomName}</h3>
                         <p>{room.description}</p>
                         {/* <Link to={room.path} className="viewmore-btn">
                           View More
                         </Link> */}
                         <button
                           className="viewmore-btn"
-                          onClick={() => navigate(`/room/${room.id}`)}
+                          onClick={() => navigate(`/room/${room.path}`)}
                         >
                           View More
                         </button>

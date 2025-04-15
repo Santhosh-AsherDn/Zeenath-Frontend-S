@@ -1,21 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //alter code
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { rooms } from "./roomsData";
 import "./css/booking.css";
 import Header from "./Header";
+// import Razorpay from "razorpay";
 export default function Booking() {
+  const navigate = useNavigate();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const roomId = queryParams.get("roomId");
+  const roomPath = queryParams.get("roomPath");
   const checkInDate = queryParams.get("checkInDate");
   const checkOutDate = queryParams.get("checkOutDate");
-  const room = rooms.find((r) => r.id === parseInt(roomId));
+  const room = rooms.find((r) => r.path === roomPath);
   const [roomQuantity, setRoomQuantity] = useState(0);
   const [bedQuantity, setBedQuantity] = useState(0);
   const [numberOfAdults, setNumberOfAdults] = useState(0);
   const [numberOfChildren, setNumberOfChildren] = useState(0);
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -44,21 +46,27 @@ export default function Booking() {
   // Calculate Total price
 
   const calculateTotal = () => {
-    const roomTotal = roomQuantity * room.rate * numberofNights;
-    const bedTotal = bedQuantity * room.extraBedRate * numberofNights;
+    // Convert all values to numbers
+    const roomRate = Number(room.rate);
+    const extraBedRate = Number(room.extraBedRate);
+    const gstPercentage = Number(room.gstPercentage);
+    const roomTotal = roomQuantity * roomRate * numberofNights;
+    const bedTotal = bedQuantity * extraBedRate * numberofNights;
     const subTotal = roomTotal + bedTotal;
-    const gstAmount = subTotal * (parseInt(room.gst) / 100);
+    const gstAmount = subTotal * (gstPercentage / 100);
+
     return {
       roomTotal,
       bedTotal,
       gstAmount,
+      gstPercentage,
       subTotal,
       total: subTotal + gstAmount,
     };
   };
 
   const totals = calculateTotal();
-  const [editIndex, setEditIndex] = useState(null);
+  // const [editIndex, setEditIndex] = useState(null);
 
   const handleRoomDecrement = () => {
     if (roomQuantity > 0) {
@@ -90,7 +98,7 @@ export default function Booking() {
   };
 
   const handleChildrenDecrement = () => {
-    if (numberOfAdults > 0) {
+    if (numberOfChildren > 0) {
       setNumberOfChildren(numberOfChildren - 1);
     }
   };
@@ -104,46 +112,160 @@ export default function Booking() {
     console.log(inputs);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (editIndex === null) {
-      setData([
-        ...data,
-        {
-          ...inputs,
-          NoofRoom: roomQuantity,
-          extraBed: bedQuantity,
-          adults: numberOfAdults,
-          children: numberOfChildren,
-        },
-      ]);
-    } else {
-      const updatedData = [...data];
-      updatedData[editIndex] = { ...inputs, NoofRoom: roomQuantity };
-      updatedData[editIndex] = { ...inputs, extraBed: bedQuantity };
-      updatedData[editIndex] = { ...inputs, adults: numberOfAdults };
-      updatedData[editIndex] = { ...inputs, children: numberOfChildren };
-      setData(updatedData);
-      setEditIndex(null);
+  const handleBooking = async () => {
+    if (!inputs.name || !inputs.email || !inputs.mobilenumber) {
+      alert("Please fill in all required fields.");
+      return;
     }
+    // const gstPercentage = parseInt(room.gsts);
+    const payload = {
+      name: inputs.name,
+      email: inputs.email,
+      mobilenumber: inputs.mobilenumber,
+      address: inputs.address || "",
+      roomId: room.id,
+      roomName: room.name,
+      checkInDate: checkInDate,
+      checkOutDate: checkOutDate,
+      numberofNights: numberofNights,
+      NoofRoom: roomQuantity,
+      extraBed: bedQuantity,
+      adults: numberOfAdults,
+      children: numberOfChildren,
+      subtotal: totals.subTotal,
+      gstPercentage: totals.gstPercentage,
+      gstAmount: totals.gstAmount,
+      total: totals.total,
+      amount: Math.round(totals.total * 100),
+      currency: "INR",
+      receipt: `order_${Date.now()}`,
+      notes: {
+        bookingDetails: JSON.stringify({
+          roomId: room.id,
+          checkInDate,
+          checkOutDate,
+          roomName: room.name,
+        }),
+      },
+    };
 
-    console.log(data);
+    // console.log("Sending payload:", payload); // debug log
+    try {
+      // Request for payment order details
 
-    setInputs({
-      name: "",
-      email: "",
-      mobilenumber: "",
-      address: "",
-      NoofRoom: "",
-      extraBed: "",
-      adults: "",
-      children: "",
-    });
-    setRoomQuantity(0);
-    setBedQuantity(0);
-    setNumberOfChildren(0);
-    setNumberOfAdults(0);
+      const res = await fetch(
+        "http://localhost:5000/api/payments/create-order",
+        {
+          method: "POST",
+          body: JSON.stringify(payload),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        console.error("Backend error response:", data);
+        throw new Error(data.message || "Failed to create booking");
+      }
+
+      // const { orderId, paymentData } = await res.json();
+
+      //Initialize RazorPay with the payment data
+      const options = {
+        key: data.paymentData.key,
+        amount: data.paymentData.amount,
+        currency: data.paymentData.currency,
+        order_id: data.orderId,
+        name: "Zeenath Taj Garden",
+        description: `Booking for ${room.name}`,
+        handler: async (response) => {
+          // Payments successful, send the payment  data to your server
+          try {
+            const verifications = await fetch(
+              "http://localhost:5000/api/payments/payment-success",
+              {
+                method: "POST",
+                body: JSON.stringify({
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_signature: response.razorpay_signature,
+                  email: inputs.email,
+                  bookingDetails: payload,
+                }),
+                headers: { "Content-Type": "application/json" },
+              }
+            );
+            if (!verifications.ok) {
+              throw new Error("Payment verification failed");
+            }
+
+            const booking = await verifications.json();
+
+            // redirect to success page with data
+
+            navigate("/payment-success", {
+              state: {
+                booking: {
+                  ...payload,
+                  _id: booking._id,
+                  razorpayPaymentId: response.razorpay_payment_id,
+                  status: "confirmed",
+                },
+              },
+            });
+
+            // const verificationData = await verificationResponse.json();
+
+            // if (!verificationResponse.ok) {
+            //   throw new Error(
+            //     verificationData.message || "Payment verification failed"
+            //   );
+            // }
+
+            // alert("Payment Successful! Booking Confirmed");
+          } catch (error) {
+            console.error("Payment Verification Failed:", error);
+            alert(
+              "Payment successful but verification failed. Please contact support."
+            );
+          }
+        },
+        modal: {
+          ondismiss: () => {
+            alert("Payment Cancelled. Please Try Again.");
+          },
+        },
+        prefill: {
+          name: inputs.name,
+          email: inputs.email,
+          contact: inputs.mobilenumber,
+        },
+        theme: {
+          color: "#F37254",
+        },
+      };
+
+      const rzp1 = new window.Razorpay(options);
+      rzp1.open();
+    } catch (error) {
+      console.error("Booking failed:", error);
+      alert(`Booking failed: ${error.message}`);
+    }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  if (!room) {
+    return (
+      <div className="text-center mt-5">
+        <h2>Room not found</h2>
+        <p>Please go back and choose a valid room.</p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -166,7 +288,7 @@ export default function Booking() {
           <div className="container" id="bookingform-bg-color">
             <div className="row justify-content-center">
               <div className="col-8">
-                <form onSubmit={handleSubmit} className="booking-form">
+                <form className="booking-form">
                   <div
                     className="BannerBookingSection"
                     style={{
@@ -176,7 +298,6 @@ export default function Booking() {
                     <div className="BookingNameSectionflexconatiner">
                       <img
                         src={require("../images/booking-form-images/Booking-DeluxeChalet.png")}
-                        
                         alt="booking-image"
                       />
                       <div className="BookingNameSection">
@@ -423,7 +544,7 @@ export default function Booking() {
                       </span>
                       {/* <span className="bookingPrice">INR 5500.00</span> */}
                       <span className="bookingPrice">
-                        INR {totals.roomTotal.toFixed(2)}.00
+                        INR {totals.roomTotal.toFixed(2)}
                       </span>
                     </div>
                     <div className="pricelistflex mb-4">
@@ -431,26 +552,26 @@ export default function Booking() {
                         Extra Bed x {numberofNights} night{" "}
                       </span>
                       <span className="bookingPrice">
-                        INR {totals.bedTotal.toFixed(2)}.00
+                        INR {totals.bedTotal.toFixed(2)}
                       </span>
                     </div>
                     <div className="pricelistflex mb-4">
                       <span className="bookingCottage">GST {room.gst}</span>
                       <span className="bookingPrice">
-                        INR {totals.gstAmount.toFixed(2)}00
+                        INR {totals.gstAmount.toFixed(2)}
                       </span>
                     </div>
                     <div className="pricelistflex mt-3 pt-3 border-bottom">
                       <strong className="bookingCottage">Sub Total</strong>
                       <strong className="bookingPrice">
-                        INR {totals.total.toFixed(2)}00
+                        INR {totals.total.toFixed(2)}
                       </strong>
                     </div>
                   </div>
                 </div>
 
                 <div className="ProceedTocheckoutFlex">
-                  <button className="ProceedTocheckout" onClick={handleSubmit}>
+                  <button className="ProceedTocheckout" onClick={handleBooking}>
                     Proceed to Check out
                   </button>
                 </div>

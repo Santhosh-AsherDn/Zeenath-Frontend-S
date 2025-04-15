@@ -8,6 +8,7 @@ import Dining from "./Components/Dining";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Booking from "./Components/Booking";
+import PaymentSuccess from "./Components/PaymentSuccess";
 import Home from "./Components/Home";
 import Room from "./Components/Room";
 import FunFilledActivities from "./Components/FunFilledActivities";
@@ -26,9 +27,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/dining" element={<Dining />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/header" element={<Header />} />
-          <Route path="/room/:roomId" element={<Room />} />
-
+          <Route path="/room/:roomPath" element={<Room />} />
           <Route
             path="/fun-filled-activites"
             element={<FunFilledActivities />}

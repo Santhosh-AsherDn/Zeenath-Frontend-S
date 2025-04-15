@@ -5,15 +5,16 @@ export const rooms = [
     description:
       "Premium Cottages are cosy and peaceful, making it an ideal retreat for a holiday.The cottages are furnished and designed with thoughtful care and attention.",
     image: "/images/premium-room/p-3.jpg",
-    path: "/premiumwh",
-    rate: "3500",
+    path: "premium-cottage-room",
+    rate: 3500,
     gst: "12%",
+    gstPercentage: 12,
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "200 square feet",
     capacity: "2 adults + 1 child",
-    numberOfRooms: "11",
+    numberOfRooms: 11,
     extraPerson: "1 Adult or Child",
     occupancy: "2 Adults",
     amenities: [
@@ -48,15 +49,16 @@ export const rooms = [
     description:
       "Every room at Zeenath Taj Garden offers luxury. Enjoy nature views from these super deluxe rooms which will add essence to your stay at Zeenath Taj Gardens.",
     image: "/images/super-deluxe-room/sd-3.jpg",
-    path: "/premiumwh",
-    rate: "4200",
+    path: "super-deluxe-room",
+    rate: 4200,
     gst: "12%",
+    gstPercentage: 12,
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "260 square feet",
     capacity: "2 adults + 1 child",
-    numberOfRooms: "5",
+    numberOfRooms: 5,
     extraPerson: "1 Adult",
     occupancy: "2 Adults + 1 Child",
     amenities: [
@@ -91,14 +93,15 @@ export const rooms = [
     description:
       "Premium Cottage with Hall comes with a large bedroom and attached closed seating area with windows overlooking the garden . All rooms are bath attached and come with LED TV and Free Wifi  and designed with thoughtful care and attention for a relaxing stay amidst the lush green surroundings.",
     image: "/images/premium-wh-room/ph-3.jpg",
-    path: "/premiumwh",
-    rate: "3900",
+    path: "premium-cottage-wh",
+    rate: 3900,
     gst: "12%",
+    gstPercentage: 12,
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
     size: "280 square feet",
     capacity: "2 adults + 1 child",
-    numberOfRooms: "3",
+    numberOfRooms: 3,
     extraPerson: "1 Adult",
     occupancy: "2 Adults + 1 Child",
     amenities: [
@@ -130,15 +133,16 @@ export const rooms = [
     description:
       "Deluxe Chalet features a spacious bedroom and a Verandah deck with a serene view of the garden and  is fully equipped with ameneties to make your stay pleasant and comfortable. The private sitout with a relaxing lounge chair paired with rattan cane bucket swing make it a a perfect setting for a lazy holiday!",
     image: "/images/deluxe-chalet-room/dc-5.jpg",
-    path: "/premiumwh",
-    rate: "5200",
+    path: "deluxe-chalet",
+    rate: 5200,
     gst: "12%",
+    gstPercentage: 12,
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "340 square feet",
     capacity: "2 adults + 1 child",
-    numberOfRooms: "8",
+    numberOfRooms: 8,
     extraPerson: "1 Adult",
     occupancy: "2 Adults + 1 Child",
     amenities: [
@@ -183,15 +187,16 @@ export const rooms = [
     description:
       "Well appointed deluxe rooms & luxurious suites with fascinating views & amenities perfect for your comfortable stay.Thoughtfully constructed suite to make your stay more pleasant at Zeenath Taj Garden.",
     image: "/images/super-deluxe-suite/sds-1.png",
-    path: "/premiumwh",
-    rate: "5200",
+    path: "super-deluxe-suite",
+    rate: 5200,
     gst: "12%",
+    gstPercentage: 12,
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "380 square feet",
     capacity: "2 adults + 1 child",
-    numberOfRooms: "1",
+    numberOfRooms: 1,
     extraPerson: "1 Adult",
     occupancy: "4 Adults + 1 Child",
     amenities: [
@@ -226,15 +231,16 @@ export const rooms = [
     description:
       "Well appointed deluxe rooms & luxurious suites with fascinating views & amenities perfect for your comfortable stay.Thoughtfully constructed suite to make your stay more pleasant at Zeenath Taj Garden.",
     image: "/images/deluxe-chalet-suite/dcs-1.jpg",
-    path: "/premiumwh",
-    rate: "7200",
+    path: "deluxe-chalet-suite",
+    rate: 7200,
     gst: "12%",
+    gstPercentage: 12,
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "460 square feet",
     capacity: "2 adults + 1 child",
-    numberOfRooms: "1",
+    numberOfRooms: 1,
     extraPerson: "1 Adult",
     occupancy: "4 Adults + 1 Child",
     amenities: [
@@ -282,15 +288,16 @@ export const rooms = [
     description:
       "Premium Cottages feature a queen size bed with colourful furnishings that add a cozy  touch to the interiors for a relaxing stay . All rooms are bath attached with LED TV and Free Wifi.Wake up to the chirping of birds  to refresh your mind for that well needed break.",
     image: "/images/main-image/sdc-main.png",
-    path: "/room/7",
-    rate: "8200",
+    path: "super-deluxe-cottage",
+    rate: 8200,
     gst: "12%",
+    gstPercentage: 12,
     extraBedRate: 600,
     cancel: "Free cancellation 72 hours prior to check in",
 
     size: "200 square feet",
     capacity: "2 adults + 1 child",
-    numberOfRooms: "11",
+    numberOfRooms: 11,
     extraPerson: "1 Adult or Child",
     occupancy: "2 Adults",
     amenities: [

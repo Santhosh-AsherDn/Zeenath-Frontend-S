@@ -261,7 +261,7 @@ export default function Home() {
                   <div className="hover_color">
                     <img
                       src={room.image}
-                      alt={room.name}
+                      alt={room.roomName}
                       style={{
                         height: "444px",
                         width: "100%",
@@ -270,7 +270,7 @@ export default function Home() {
                     />
                     <div className="hover_color-inner">
                       <div className="hover_title">
-                        <h3>{room.name}</h3>
+                        <h3>{room.roomName}</h3>
                         <p>{room.description}</p>
                         {/* <Link to={room.path} className="viewmore-btn">
                                 View More
@@ -400,10 +400,14 @@ export default function Home() {
               >
                 <h2 className="mb-3">Fun Filled Activities</h2>
                 <p>
-                  Step into your own private space within our lush paradise with
-                  our seven exquisite accommodations options. Book your escape
-                  today and let Zeenath Taj Gardens redefine your perception of
-                  luxury and tranquility.
+                  Zeenath Garden is the perfect getaway for fun and relaxation
+                  amidst nature. Guests can enjoy bonfire nights, outdoor games
+                  like badminton and archery, nature walks, and scenic treks.
+                  There’s a kids’ play area, pet-friendly grounds, and indoor
+                  games like carrom and chess. Don’t miss the chance to stroll
+                  through fruit orchards and spot exotic birds. With cozy picnic
+                  spots and hammocks in lush green surroundings, Zeenath Garden
+                  promises a refreshing, activity-filled experience for all.
                 </p>
               </div>
             </div>
@@ -420,7 +424,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="fun-filled-activities-a">
-                <p className="fun-activity">Indoor Games</p>
+                  <p className="fun-activity">Indoor Games</p>
                 </div>
               </div>
               <div
