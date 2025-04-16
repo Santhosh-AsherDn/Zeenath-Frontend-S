@@ -29,7 +29,7 @@ export default function Booking() {
     email: "",
     mobilenumber: "",
     address: "",
-    NoofRoom: "1", // Default to 1 room
+    NoofRoom: "", // Default to 1 room
     extraBed: "0",
     adults: room?.capacity?.adults > 0 ? "1" : "0", // Default to 1 adult if possible
     children: "0",

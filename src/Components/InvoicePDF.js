@@ -191,7 +191,7 @@ export default function InvoicePDF({ booking }) {
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.hotelName}>Zeenath Taj Garden</Text>
-          <Text style={styles.invoiceTitle}>HOTEL INVOICE</Text>
+          <Text style={styles.invoiceTitle}>INVOICE</Text>
         </View>
 
         {/* From & To */}

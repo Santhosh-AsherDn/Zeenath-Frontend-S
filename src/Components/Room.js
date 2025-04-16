@@ -69,6 +69,9 @@ export default function Room() {
     const startDate = new Date(checkInDate);
     const endDate = new Date(checkOutDate);
 
+    console.log("Start Date:", startDate);
+    console.log("End Date:", endDate);
+
     if (startDate >= endDate) {
       setDateError("Check-out date must be after check-in date");
       return;
@@ -267,6 +270,8 @@ export default function Room() {
                       min={currentDate}
                       required
                       id="checkInDate"
+                      value={checkInDate}
+                      onChange={handleDateChange}
                     />
                   </div>
                   <div className="check-out align-items-center gap-2">
@@ -276,6 +281,8 @@ export default function Room() {
                       min={currentDate}
                       required
                       id="checkOutDate"
+                      value={checkOutDate}
+                      onChange={handleDateChange}
                     />
                   </div>
                   <button type="submit" className="diningbooknowbtn">
