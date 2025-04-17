@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { rooms } from "./roomsData";
 import "./css/booking.css";
 import Header from "./Header";
-
+import sendInvoiceToBackend from "./SendInvoice";
 export default function Booking() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -210,7 +210,7 @@ export default function Booking() {
   const handleAdultsIncrement = () => {
     if (!room) return;
 
-    const maxAdults = room.capacity.adults * roomQuantity;
+    const maxAdults = room.capacity.adults * roomQuantity; // e.g., 2 adults per room
     if (numberOfAdults < maxAdults) {
       const newValue = numberOfAdults + 1;
       setNumberOfAdults(newValue);
@@ -231,8 +231,7 @@ export default function Booking() {
   const handleChildrenIncrement = () => {
     if (!room) return;
 
-    // Usually allow 1 child per room booked
-    const maxChildren = roomQuantity;
+    const maxChildren = room.capacity.children * roomQuantity; // e.g., 1 child per room
     if (numberOfChildren < maxChildren) {
       const newValue = numberOfChildren + 1;
       setNumberOfChildren(newValue);
@@ -417,6 +416,28 @@ export default function Booking() {
 
             const booking = await verificationResponse.json();
 
+            // // Call sendInvoiceToBackend here
+            // await sendInvoiceToBackend({
+            //   ...payload,
+            //   bookingId: booking.bookingId,
+            //   razorpayPaymentId: response.razorpay_payment_id,
+            //   status: "confirmed",
+            // });
+
+            // After receiving success response from verifyPayment
+            const completeBooking = {
+              ...payload,
+              _id: booking.bookingId,
+              razorpayPaymentId: response.razorpay_payment_id,
+              razorpayOrderId: response.razorpay_order_id,
+              razorpaySignature: response.razorpay_signature,
+              status: "confirmed",
+              paymentDate: new Date().toISOString()
+            };
+        
+            // Generate and send invoice
+            await sendInvoiceToBackend(completeBooking);
+
             // Navigate to success page with data
             navigate("/payment-success", {
               state: {
@@ -527,7 +548,7 @@ export default function Booking() {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Name"
+                        placeholder="Enter Your Name"
                         name="name"
                         onChange={handleChange}
                         value={inputs.name}
@@ -541,7 +562,7 @@ export default function Booking() {
                       <input
                         type="email"
                         className="form-control"
-                        placeholder="abcdefghi@gmail.com"
+                        placeholder="Enter Your Email ID"
                         name="email"
                         onChange={handleChange}
                         value={inputs.email}
@@ -555,7 +576,7 @@ export default function Booking() {
                       <input
                         type="tel"
                         className="form-control"
-                        placeholder="9551091354"
+                        placeholder="9876543210"
                         name="mobilenumber"
                         onChange={handleChange}
                         value={inputs.mobilenumber}
@@ -569,7 +590,7 @@ export default function Booking() {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="NO 1, 1st Street, Chandru Apartment, Porur, Chennai-82."
+                        placeholder="Enter Your Address"
                         name="address"
                         onChange={handleChange}
                         value={inputs.address}
@@ -692,7 +713,8 @@ export default function Booking() {
                                 id="adult-increment"
                                 onClick={handleAdultsIncrement}
                                 disabled={
-                                  numberOfAdults >= room.capacity.adults
+                                  numberOfAdults >=
+                                  room.capacity.adults * roomQuantity
                                 }
                               >
                                 +

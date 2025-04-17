@@ -278,7 +278,7 @@ export default function Room() {
                     <p className="mb-0">Check Out</p>
                     <input
                       type="date"
-                      min={currentDate}
+                      min={checkInDate}
                       required
                       id="checkOutDate"
                       value={checkOutDate}

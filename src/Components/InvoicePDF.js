@@ -1,4 +1,11 @@
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import {
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+  Image,
+} from "@react-pdf/renderer";
 
 // Currency formatter
 const formatCurrency = (amount) =>
@@ -80,29 +87,48 @@ function numberToWords(num) {
 // Styles
 const styles = StyleSheet.create({
   page: {
-    padding: 30,
+    padding: 40,
     fontSize: 11,
-    fontFamily: "Helvetica",
     lineHeight: 1.5,
+    backgroundColor: "#fff",
   },
   header: {
     textAlign: "center",
-    marginBottom: 20,
+    marginBottom: 10,
   },
   hotelName: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "bold",
-    marginBottom: 5,
+  },
+  contactInfo: {
+    fontSize: 10,
+    marginTop: 4,
   },
   invoiceTitle: {
     fontSize: 14,
-    marginTop: 10,
+    marginTop: 5,
+    padding: 20,
     textDecoration: "underline",
   },
   sectionRow: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    marginVertical: 8,
+    justifyContent: "space-around",
+    padding: 5,
+    borderTop: "1px solid #ccc",
+    marginTop: 20,
+  },
+  section: {
+    width: "48%",
+    marginTop: 10,
+  },
+  sectionTitle: {
+    fontWeight: "bold",
+    marginBottom: 8,
+    fontSize: 12,
+    textDecoration: "underline",
+  },
+  rowText: {
+    marginBottom: 4,
   },
   box: {
     padding: 10,
@@ -110,23 +136,38 @@ const styles = StyleSheet.create({
     width: "48%",
     borderRadius: 4,
   },
-  bold: {
-    fontWeight: "bold",
-  },
   tableHeader: {
     flexDirection: "row",
-    borderBottom: "1px solid #000",
-    backgroundColor: "#e0e0e0",
-    paddingVertical: 6,
+    backgroundColor: "#f1f1f1",
+    padding: 8,
     marginTop: 20,
+    fontWeight: "bold",
   },
   tableRow: {
     flexDirection: "row",
+    padding: 8,
     borderBottom: "1px solid #ccc",
-    paddingVertical: 6,
   },
-  col: { flex: 1, textAlign: "center" },
-  colWide: { flex: 3 },
+  col: {
+    width: "25%",
+  },
+  wideCol: {
+    width: "40%",
+  },
+  amountRow: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginTop: 6,
+  },
+  amountLabel: {
+    width: "75%",
+    textAlign: "right",
+    fontWeight: "bold",
+  },
+  amountValue: {
+    width: "46%",
+    textAlign: "right",
+  },
   summary: {
     marginTop: 20,
     alignSelf: "flex-end",
@@ -145,14 +186,17 @@ const styles = StyleSheet.create({
     backgroundColor: "#f9f9f9",
     borderRadius: 4,
   },
-  paidStamp: {
-    position: "absolute",
-    top: 300,
-    left: 200,
-    fontSize: 40,
-    color: "#bfbfbf",
-    transform: "rotate(-20deg)",
-    opacity: 0.3,
+  bold: {
+    fontWeight: "bold",
+  },
+  paidStatus: {
+    marginTop: 50,
+    fontSize: 11,
+  },
+  amountInWords: {
+    marginTop: 20,
+    fontStyle: "italic",
+    fontSize: 10,
   },
   footer: {
     position: "absolute",
@@ -166,14 +210,16 @@ export default function InvoicePDF({ booking }) {
   const {
     _id,
     name,
+    NoofRoom,
     email,
     mobilenumber,
+    address,
+    razorpayPaymentId,
     roomName,
     checkInDate,
     checkOutDate,
     numberofNights,
     subtotal,
-    gst,
     gstAmount,
     total,
     status,
@@ -182,88 +228,109 @@ export default function InvoicePDF({ booking }) {
 
   const checkIn = new Date(checkInDate).toLocaleDateString();
   const checkOut = new Date(checkOutDate).toLocaleDateString();
-  const invoiceId = _id || "N/A";
+  const date = new Date().toLocaleDateString();
+  // const invoiceId = _id || "N/A";
   const receiptId = `REC-${receipt}`;
 
   return (
     <Document>
-      <Page style={styles.page}>
+      <Page size="A4" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.hotelName}>Zeenath Taj Garden</Text>
+          <View
+            style={{ alignItems: "center", marginBottom: 5, marginTop: -10 }}
+          >
+            <Image
+              src="/images/zeenath-logo.png"
+              style={{
+                width: "50px",
+                height: "50px",
+                margin: "5px",
+              }}
+              alt="Hotel Logo"
+            />
+          </View>
+          <Text style={styles.hotelName}>ZEENATH TAJ GARDEN</Text>
           <Text style={styles.invoiceTitle}>INVOICE</Text>
+
+          <Text style={styles.contactInfo}>
+            Kottaiyur Village, Yelagiri Hills, Yelagiri, Tamil Nadu-635853.
+          </Text>
+          <Text style={styles.contactInfo}>
+            Phone: 04179-245 231 | Mobile: 9715657458 / 9840083576 / 9840029445
+          </Text>
+          <Text style={styles.contactInfo}>
+            Email: info@zeenathtajgardens.com
+          </Text>
         </View>
 
         {/* From & To */}
         <View style={styles.sectionRow}>
-          <View style={styles.box}>
-            <Text style={styles.bold}>FROM</Text>
-            <Text>Zeenath Taj Garden (Residential)</Text>
-            <Text>Main Street, Yelagiri Hills</Text>
-            <Text>Tamil Nadu, India</Text>
-            <Text>+91 98765 43210</Text>
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>INVOICE DETAILS</Text>
+            <Text style={styles.rowText}>Invoice No: {_id}</Text>
+            <Text style={styles.rowText}>Date: {date}</Text>
+            <Text style={styles.rowText}>Check-In: {checkIn}</Text>
+            <Text style={styles.rowText}>Check-Out: {checkOut}</Text>
+            <Text style={styles.rowText}>Receipt No: {receiptId}</Text>
+            <Text style={styles.rowText}>Booked Rooms: {NoofRoom}</Text>
           </View>
 
-          <View style={styles.box}>
-            <Text style={styles.bold}>BILL TO</Text>
-            <Text>{name || "N/A"}</Text>
-            <Text>{email || "N/A"}</Text>
-            <Text>{mobilenumber || "N/A"}</Text>
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>GUEST DETAILS</Text>
+            <Text style={styles.rowText}>Name: {name}</Text>
+            <Text style={styles.rowText}>Email: {email}</Text>
+            <Text style={styles.rowText}>Phone: {mobilenumber}</Text>
+            <Text style={styles.rowText}>Address: {address}</Text>
           </View>
         </View>
 
         {/* Details */}
-        <View style={styles.sectionRow}>
-          <View style={styles.box}>
-            <Text style={styles.bold}>DETAILS</Text>
-            <Text>DATE: {checkOut}</Text>
-            <Text>INVOICE NO: {invoiceId}</Text>
-            <Text>RECEIPT NO: {receiptId}</Text>
-            <Text>CHECK-IN: {checkIn}</Text>
-            <Text>CHECK-OUT: {checkOut}</Text>
-          </View>
-        </View>
-
-        {/* Table Header */}
         <View style={styles.tableHeader}>
-          <Text style={[styles.colWide, styles.bold]}>DESCRIPTION</Text>
-          <Text style={[styles.col, styles.bold]}>NIGHTS</Text>
-          <Text style={[styles.col, styles.bold]}>RATE</Text>
-          <Text style={[styles.col, styles.bold]}>AMOUNT</Text>
+          <Text style={styles.wideCol}>Description</Text>
+          <Text style={styles.col}>Nights</Text>
+          <Text style={styles.col}>Rate</Text>
+          <Text style={styles.col}>Amount</Text>
         </View>
 
-        {/* Table Row */}
         <View style={styles.tableRow}>
-          <Text style={styles.colWide}>
-            Room Booking - {roomName || "Room"}
-          </Text>
+          <Text style={styles.wideCol}>{roomName || "Room"}</Text>
           <Text style={styles.col}>
             {String(numberofNights).padStart(2, "0")}
           </Text>
+
           <Text style={styles.col}>
             {formatCurrency(subtotal / numberofNights)}
           </Text>
           <Text style={styles.col}>{formatCurrency(subtotal)}</Text>
         </View>
 
-        {/* Summary */}
-        <View style={styles.summary}>
-          <View style={styles.summaryRow}>
-            <Text>SUBTOTAL</Text>
-            <Text>{formatCurrency(subtotal)}</Text>
-          </View>
-          <View style={styles.summaryRow}>
-            <Text>GST ({gst ?? 0}%)</Text>
-            <Text>{formatCurrency(gstAmount)}</Text>
-          </View>
-          <View style={styles.summaryRow}>
-            <Text style={styles.bold}>TOTAL</Text>
-            <Text style={styles.bold}>{formatCurrency(total)}</Text>
-          </View>
+        <View style={styles.tableRow}>
+          <Text style={styles.wideCol}>Subtotal</Text>
+          <Text style={styles.amountValue}>{formatCurrency(subtotal)}</Text>
         </View>
 
-        {/* Notes */}
-        <Text style={styles.notes}>
+        <View style={styles.tableRow}>
+          <Text style={styles.wideCol}>GST (12%)</Text>
+          <Text style={styles.amountValue}>{formatCurrency(gstAmount)}</Text>
+        </View>
+
+        <View style={styles.tableHeader}>
+          <Text style={[styles.wideCol, styles.bold]}>Total</Text>
+          <Text style={[styles.amountValue, styles.bold]}>
+            {formatCurrency(total)}
+          </Text>
+        </View>
+
+        <View style={styles.paidStatus}>
+          <Text>
+            Payment Status: <Text style={{ color: "green" }}>{status}</Text>
+          </Text>
+          <Text>Payment ID: {razorpayPaymentId}</Text>
+        </View>
+
+        {/* Amount in Words */}
+        <Text style={styles.amountInWords}>
           Amount in Words: {numberToWords(total)}
         </Text>
 

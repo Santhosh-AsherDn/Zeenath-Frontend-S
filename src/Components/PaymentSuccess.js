@@ -66,6 +66,11 @@ export default function PaymentSuccess() {
 
       <div className="invoice-preview">
         <div className="hotel-info">
+          <img
+            src="./images/zeenath-logo.svg"
+            alt="Zeenath Taj Garden"
+            style={{ width: "100px", margin: "20px", height: "100px" }}
+          />
           <h2>ZEENATH TAJ GARDEN</h2>
           <p>Kottaiyur Village, Yelagiri Hills, Yelagiri,</p>
           <p>Tamil Nadu-635853.</p>
@@ -99,6 +104,9 @@ export default function PaymentSuccess() {
                 month: "long",
                 year: "numeric",
               })}
+            </p>
+            <p>
+              <strong>Booked Rooms:</strong> {booking.NoofRoom}
             </p>
           </div>
 

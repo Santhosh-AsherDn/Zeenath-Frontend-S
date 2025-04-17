@@ -261,7 +261,7 @@ export default function Home() {
                   <div className="hover_color">
                     <img
                       src={room.image}
-                      alt={room.roomName}
+                      alt={room.name}
                       style={{
                         height: "444px",
                         width: "100%",
@@ -270,8 +270,17 @@ export default function Home() {
                     />
                     <div className="hover_color-inner">
                       <div className="hover_title">
-                        <h3>{room.roomName}</h3>
-                        <p>{room.description}</p>
+                        <h3>{room.name}</h3>
+                        <p
+                          style={{
+                            WebkitLineClamp: 4,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            display: "-webkit-box",
+                          }}
+                        >
+                          {room.description}
+                        </p>
                         {/* <Link to={room.path} className="viewmore-btn">
                                 View More
                               </Link> */}
