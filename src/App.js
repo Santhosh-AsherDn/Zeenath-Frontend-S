@@ -1,9 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Accomodation from "./Components/Accomodation";
 import Contact from "./Components/Contact";
-// import DeluxeChalet from "./Components/DeluxeChalet";
-// import SuperDeluxe from "./Components/SuperDeluxe";
-// import PremiumWH from "./Components/PremiumWH";
 import Dining from "./Components/Dining";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -21,9 +18,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/accomodation" element={<Accomodation />} />
-          {/* <Route path="/deluxechalet" element={<DeluxeChalet />} /> */}
-          {/* <Route path="/superdeluxe" element={<SuperDeluxe />} /> */}
-          {/* <Route path="/premiumwh" element={<PremiumWH />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/dining" element={<Dining />} />
           <Route path="/booking" element={<Booking />} />

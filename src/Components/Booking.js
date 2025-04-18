@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// import Razorpay from 'razorpay';
 import { rooms } from "./roomsData";
 import "./css/booking.css";
 import Header from "./Header";
@@ -175,7 +178,7 @@ export default function Booking() {
       setRoomQuantity(newValue);
       setInputs((prev) => ({ ...prev, NoofRoom: newValue.toString() }));
     } else {
-      alert(`Only ${maxAvailableRooms} rooms available for selected dates`);
+      toast(`Only ${maxAvailableRooms} rooms available for selected dates`);
     }
   };
 
@@ -194,7 +197,7 @@ export default function Booking() {
       setBedQuantity(newValue);
       setInputs((prev) => ({ ...prev, extraBed: newValue.toString() }));
     } else {
-      alert("Maximum one extra bed per room allowed");
+      toast("Maximum one extra bed per room allowed");
     }
   };
 
@@ -216,7 +219,7 @@ export default function Booking() {
       setNumberOfAdults(newValue);
       setInputs((prev) => ({ ...prev, adults: newValue.toString() }));
     } else {
-      alert(`Maximum ${maxAdults} adults allowed for ${roomQuantity} room(s)`);
+      toast(`Maximum ${maxAdults} adults allowed for ${roomQuantity} room(s)`);
     }
   };
 
@@ -237,7 +240,7 @@ export default function Booking() {
       setNumberOfChildren(newValue);
       setInputs((prev) => ({ ...prev, children: newValue.toString() }));
     } else {
-      alert(
+      toast(
         `Maximum ${maxChildren} children allowed for ${roomQuantity} room(s)`
       );
     }
@@ -277,31 +280,36 @@ export default function Booking() {
   };
 
   const handleBooking = async () => {
-    if (!inputs.name || !inputs.email || !inputs.mobilenumber) {
-      alert(
-        "Please fill in all required fields: Name, Email, and Mobile Number."
+    if (
+      !inputs.name ||
+      !inputs.email ||
+      !inputs.mobilenumber ||
+      !inputs.address
+    ) {
+      toast(
+        "Please fill in all required fields: Name, Email, Mobile Number and Address"
       );
       return;
     }
 
     if (!room) {
-      alert("Room information not available. Please try again.");
+      toast("Room information not available. Please try again.");
       return;
     }
 
     if (roomQuantity <= 0) {
-      alert("Please select at least one room.");
+      toast("Please select at least one room.");
       return;
     }
 
     if (numberOfAdults <= 0) {
-      alert("Please select at least one adult.");
+      toast("Please select at least one adult.");
       return;
     }
 
     const maxAdults = room.capacity.adults * roomQuantity;
     if (numberOfAdults > maxAdults) {
-      alert(`Maximum ${maxAdults} adults allowed for ${roomQuantity} room(s)`);
+      toast(`Maximum ${maxAdults} adults allowed for ${roomQuantity} room(s)`);
       return;
     }
 
@@ -357,7 +365,7 @@ export default function Booking() {
         !availabilityResponse.ok ||
         availabilityData.availableRooms < roomQuantity
       ) {
-        alert(
+        toast(
           `Only ${availabilityData.availableRooms} rooms available. Please adjust your selection.`
         );
         setMaxAvailableRooms(availabilityData.availableRooms);
@@ -401,7 +409,25 @@ export default function Booking() {
                   razorpay_order_id: response.razorpay_order_id,
                   razorpay_signature: response.razorpay_signature,
                   email: inputs.email,
-                  bookingDetails: payload,
+                  bookingDetails: {
+                    name: inputs.name,
+                    email: inputs.email,
+                    mobilenumber: inputs.mobilenumber,
+                    address: inputs.address,
+                    roomId: room.id,
+                    roomName: room.name,
+                    checkInDate: checkInDate,
+                    checkOutDate: checkOutDate,
+                    numberofNights: numberofNights,
+                    NoofRoom: roomQuantity,
+                    extraBed: bedQuantity,
+                    adults: numberOfAdults,
+                    children: numberOfChildren,
+                    subtotal: totals.subTotal,
+                    gstAmount: totals.gstAmount,
+                    gstPercentage: totals.gstPercentage,
+                    total: totals.total,
+                  },
                 }),
                 headers: { "Content-Type": "application/json" },
               }
@@ -416,14 +442,6 @@ export default function Booking() {
 
             const booking = await verificationResponse.json();
 
-            // // Call sendInvoiceToBackend here
-            // await sendInvoiceToBackend({
-            //   ...payload,
-            //   bookingId: booking.bookingId,
-            //   razorpayPaymentId: response.razorpay_payment_id,
-            //   status: "confirmed",
-            // });
-
             // After receiving success response from verifyPayment
             const completeBooking = {
               ...payload,
@@ -431,27 +449,22 @@ export default function Booking() {
               razorpayPaymentId: response.razorpay_payment_id,
               razorpayOrderId: response.razorpay_order_id,
               razorpaySignature: response.razorpay_signature,
-              status: "confirmed",
-              paymentDate: new Date().toISOString()
+              status: "Confirmed",
+              paymentDate: new Date().toISOString(),
             };
-        
+
             // Generate and send invoice
             await sendInvoiceToBackend(completeBooking);
 
             // Navigate to success page with data
             navigate("/payment-success", {
               state: {
-                booking: {
-                  ...payload,
-                  _id: booking.bookingId,
-                  razorpayPaymentId: response.razorpay_payment_id,
-                  status: "confirmed",
-                },
+                booking: completeBooking,
               },
             });
           } catch (error) {
             console.error("Payment Verification Failed:", error);
-            alert(
+            toast(
               "Payment successful but verification failed. Please contact support with your payment ID: " +
                 response.razorpay_payment_id
             );
@@ -459,7 +472,7 @@ export default function Booking() {
         },
         modal: {
           ondismiss: () => {
-            alert("Payment Cancelled. Please Try Again.");
+            toast("Payment Cancelled. Please Try Again.");
           },
         },
         prefill: {
@@ -477,11 +490,11 @@ export default function Booking() {
         const rzp1 = new window.Razorpay(options);
         rzp1.open();
       } else {
-        alert("Payment gateway not available. Please try again later.");
+        toast("Payment gateway not available. Please try again later.");
       }
     } catch (error) {
       console.error("Booking failed:", error);
-      alert(`Booking failed: ${error.message}`);
+      toast(`Booking failed: ${error.message}`);
     }
   };
 
@@ -503,6 +516,18 @@ export default function Booking() {
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div id="BookingId">
         {/* <!-- banner section start --> */}
         <section className="deluxe-chalet-banner1">
@@ -712,10 +737,6 @@ export default function Booking() {
                                 className="btn btn-secondary"
                                 id="adult-increment"
                                 onClick={handleAdultsIncrement}
-                                disabled={
-                                  numberOfAdults >=
-                                  room.capacity.adults * roomQuantity
-                                }
                               >
                                 +
                               </button>

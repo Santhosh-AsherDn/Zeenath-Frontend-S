@@ -87,7 +87,10 @@ export default function Footer() {
                     <p>Connect with Us</p>
                     <ul className="list-unstyled mb-3" id="social-link-icons">
                       <li>
-                        <a href="/contact" className="social-link">
+                        <a
+                          href="https://www.facebook.com/zeenathtajgardens/"
+                          className="social-link"
+                        >
                           <img
                             src={require("../images/shapes/Vector.svg").default}
                             alt=""
@@ -95,7 +98,10 @@ export default function Footer() {
                         </a>
                       </li>
                       <li>
-                        <a href="/contact" className="social-link">
+                        <a
+                          href="https://www.instagram.com/zeenattajgardens/"
+                          className="social-link"
+                        >
                           <img
                             src={
                               require("../images/shapes/Vector (1).svg").default
@@ -105,7 +111,10 @@ export default function Footer() {
                         </a>
                       </li>
                       <li>
-                        <a href="/contact" className="social-link">
+                        <a
+                          href="https://youtube.com/@zeenattaj2928?feature=shared"
+                          className="social-link"
+                        >
                           <img
                             src={
                               require("../images/shapes/Vector (2).svg").default
@@ -115,7 +124,10 @@ export default function Footer() {
                         </a>
                       </li>
                       <li>
-                        <a href="/contact" className="social-link">
+                        <a
+                          href="https://in.linkedin.com/in/zeenath-taj-gardens-587398138"
+                          className="social-link"
+                        >
                           <img
                             src={
                               require("../images/shapes/Vector (3).svg").default

@@ -247,7 +247,7 @@ export default function InvoicePDF({ booking }) {
                 height: "50px",
                 margin: "5px",
               }}
-              alt="Hotel Logo"
+              alt="Zeenath Taj Garden Logo"
             />
           </View>
           <Text style={styles.hotelName}>ZEENATH TAJ GARDEN</Text>

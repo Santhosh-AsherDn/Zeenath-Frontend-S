@@ -5,17 +5,11 @@ import "aos/dist/aos.css";
 import "./css/home.css";
 import { rooms } from "./roomsData";
 import Header from "./Header";
-// import Responsive from "./Testimonal";
-// import Modal from "react-bootstrap/Modal";
-// import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 
 export default function Home() {
-  // const [show, setShow] = useState(false);
-  // const handleClose = () => setShow(false);
+ 
   const navigate = useNavigate();
-
-  // const handleShow = () => setShow(true);
   const handleShow = () => {
     navigate("/accomodation");
   };
@@ -126,21 +120,8 @@ export default function Home() {
               </div>
             </Carousel.Caption>
           </Carousel.Item>
-          {/* <Modal show={show} onHide={handleClose} centered>
-            <Modal.Header closeButton>
-              <Modal.Title>Book Now</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <p>This is your booking content, or you can put a form here.</p>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal> */}
+    
         </Carousel>
-
         <section className="smallstrip">
           <div className="container">
             <div className="row d-flex justify-content-center align-items-center">
@@ -251,7 +232,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="row">
               {rooms.map((room) => (
                 <div
@@ -281,9 +261,6 @@ export default function Home() {
                         >
                           {room.description}
                         </p>
-                        {/* <Link to={room.path} className="viewmore-btn">
-                                View More
-                              </Link> */}
                         <button className="viewmore-btn" onClick={handleShow}>
                           View More
                         </button>

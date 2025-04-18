@@ -18,9 +18,6 @@ export default function Contact() {
           </section>
           {/* <!-- banner section end -->
 
-
-
-
         <!-- contact us box section start --> */}
           <section className="contact-box">
             <div className="container contactus-box">

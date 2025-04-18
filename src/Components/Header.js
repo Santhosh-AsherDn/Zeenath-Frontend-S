@@ -21,9 +21,9 @@ export default function Header() {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    // Check if scrolling down and scroll position is beyond a certain threshold
+
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // Scroll down and past a certain point (100px)
+   
       setIsSticky(true);
     } else {
       // Scroll up or hasn't scrolled past the threshold
