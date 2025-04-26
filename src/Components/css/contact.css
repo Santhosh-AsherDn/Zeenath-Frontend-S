@@ -18,7 +18,7 @@ a {
   font-family: "PT Serif", serif;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 1200px) {
   .contactus-img img {
     width: 100%;
   }
@@ -53,17 +53,24 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
+ 
   /* Styles for tablets */
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* Styles for desktops */
+  #ContactPageId .nav-link {
+    color: #425f2f !important;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: poppins;
+}
 }
 
 @media (min-width: 1200px) {
   .contactfullpage-bg {
-    background-image: url(/src/images/contactus-page/contactus-bg.png);
+    background-image: url(../../../public/images/contactus-page/contactus-bg.png);
   }
 
   #ContactPageId .nav-link {
@@ -73,7 +80,7 @@ a {
     font-family: poppins;
   }
 
-  .navbar {
+  /* .navbar {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -84,23 +91,23 @@ a {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0rem 1rem !important;
-  }
+  } */
 
-  #zeenath-logo-position {
+  /* #zeenath-logo-position {
     position: relative;
-  }
+  } */
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -50px;
     left: 115px;
     width: 170px;
-  }
+  } */
 
   @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
+    /* .navbar-expand-lg .navbar-nav .nav-link {
       padding-right: 0.5rem;
-    }
+    } */
   }
 
   /* NAVIGATION new style */
@@ -160,11 +167,10 @@ a {
     opacity: 1;
   }
 
-  @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
-      flex-direction: row;
-      gap: 50px;
-      padding-top: 15px;
+  @media (max-width: 1024px) {
+    .contactus-box {
+      background-color: #425f2f;
+      padding: 40px 70px;
     }
   }
 
@@ -239,27 +245,27 @@ a {
   }
 }
 
-#ContactId header .navbar-nav .nav-item .nav-link {
+/* #ContactId header .navbar-nav .nav-item .nav-link {
   color: #425f2f !important;
-}
+} */
 #ContactId nav.stroke ul li a:after,
 nav.fill ul li a:after {
   background: #425f2f;
 }
 
-@media (max-width: 700px) {
-  #ContactId header .navbar-nav .nav-item .nav-link {
+@media (max-width: 760px) {
+  /* #ContactId header .navbar-nav .nav-item .nav-link {
     color: #fff !important;
-  }
+  } */
 
   #ContactId .activeline:nth-child(5)::before {
     background: #fff;
   }
 
-  #ContactId .navbar-toggler {
+  /* #ContactId .navbar-toggler {
     background-color: #425f2f;
     border: 2px solid #425f2f;
-  }
+  } */
 
   .contact-box {
     background-color: #425f2f;
@@ -270,6 +276,10 @@ nav.fill ul li a:after {
     padding: 10px;
     padding-top: 22px;
     padding-bottom: 40px;
+  }
+  .contactus-box {
+    background-color: #425f2f;
+    /* padding: 40px 70px; */
   }
 
   .mobileFlexDiv {

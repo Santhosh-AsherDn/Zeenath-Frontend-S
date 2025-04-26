@@ -41,7 +41,6 @@ export const rooms = [
       "../images/premium-room/p-1.jpg",
       "../images/premium-room/p-2.jpg",
       "../images/premium-room/p-3.jpg",
-      "../images/premium-room/p-4.jpg",
       "../images/premium-room/p-5.jpg",
       "../images/premium-room/p-6.jpg",
     ],
@@ -185,7 +184,7 @@ export const rooms = [
       },
     ],
     gallery: [
-      "/src/images/deluxe-chalet-room/dc-1.jpg",
+      "/images/deluxe-chalet-room/dc-1.jpg",
       "/images/deluxe-chalet-room/dc-2.jpg",
       "/images/deluxe-chalet-room/dc-3.jpg",
       "/images/deluxe-chalet-room/dc-4.jpg",

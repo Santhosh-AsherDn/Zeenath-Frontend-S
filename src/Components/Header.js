@@ -1,74 +1,53 @@
 import { Link, useLocation } from "react-router-dom";
-import "./css/header.css";
 import { useState, useEffect } from "react";
+import "./css/header.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
-  const getActiveClass = (path) => {
-    return location.pathname === path ? "nav-item activeline" : "nav-item";
-  };
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen); // Toggle state
-  };
-
   const [isSticky, setIsSticky] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Function to handle scroll event
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+  const toggleNavbar = () => setIsOpen(!isOpen);
 
+  const getActiveClass = (path) =>
+    location.pathname === path ? "nav-item activeline" : "nav-item";
 
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-   
-      setIsSticky(true);
-    } else {
-      // Scroll up or hasn't scrolled past the threshold
-      setIsSticky(false);
-    }
-
-    setLastScrollY(currentScrollY); // Update the last scroll position
-  };
-
-  // Add scroll event listener when component mounts
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener when component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+      setLastScrollY(currentScrollY);
     };
-  }, [handleScroll]);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <header id="headerId" className={`header ${isSticky ? "sticky" : ""}`}>
+      <Link to="/" className="navbar-brand" id="zeenath-logo-position">
+        <img src="/images/zeenath-logo.svg" alt="Zeenath Logo" />
+      </Link>
+
       <nav className="navbar navbar-expand-lg navbar-light">
-        <Link to="/" className="navbar-brand" id="zeenath-logo-position">
-          <img src={require("../images/zeenath-logo.svg").default} alt="Zeenath Logo" />
-        </Link>
         <button
           className={`navbar-toggler ${isOpen ? "open" : ""}`}
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation"
           onClick={toggleNavbar}
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
           <span className="close-icon">×</span>
         </button>
-        <div
-          className={`navbar-collapse ${isOpen ? "show" : ""}`}
-          id="navbarNav"
-        >
+
+        <div className={`navbar-collapse ${isOpen ? "show" : ""}`}>
           <nav className="stroke">
             <ul className="navbar-nav">
-              <li className={getActiveClass("")}>
+              <li className={getActiveClass("/")}>
                 <Link
                   to="/"
                   className="nav-link"
@@ -104,7 +83,7 @@ export default function Header() {
                   Activity & Facilities
                 </Link>
               </li>
-              <li className={`green ${getActiveClass("/contact")}`}>
+              <li className={getActiveClass("/contact")}>
                 <Link
                   to="/contact"
                   className="nav-link"

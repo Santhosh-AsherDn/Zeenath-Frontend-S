@@ -9,9 +9,14 @@ export default function Accomodation() {
   return (
     <>
       <div id="DiningId">
-        {/* Header and Banner Section */}
-        <section className="banner-bg-img">
+        <section
+          class="deluxe-chalet-banner"
+          style={{
+            backgroundImage: `url("/images/home-page/home-banner.png")`,
+          }}
+        >
           <Header />
+          {/* <!-- header end --> */}
           <div className="container">
             <div className="row">
               <div className="col-xlg-10 col-lg-10 col-md-10 col-sm-12">

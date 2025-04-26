@@ -4,17 +4,17 @@
   padding-bottom: 0 !important;
 }
 .contactfullpage-bg {
-  background-image: url(/src/images/contactus-page/contactus-bg.png);
+  background-image: url(../../../public/images/contactus-page/contactus-bg.png);
 }
 
-.nav-link {
+/* .nav-link {
   color: #ffffff !important;
   font-size: 18px !important;
   font-weight: 500 !important;
   font-family: poppins;
-}
+} */
 
-.navbar {
+/* .navbar {
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -24,19 +24,19 @@
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0rem 1rem !important;
-}
+  padding: 0rem 0rem !important;
+} */
 
-#zeenath-logo-position {
+/* #zeenath-logo-position {
   position: relative;
-}
+} */
 
-#zeenath-logo-position img {
+/* #zeenath-logo-position img {
   position: absolute;
   top: -50px;
   left: 115px;
   width: 170px;
-}
+} */
 
 .alert-success {
   color: #155724;
@@ -55,9 +55,9 @@
 }
 
 @media (min-width: 992px) {
-  .navbar-expand-lg .navbar-nav .nav-link {
+  /* .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0.5rem;
-  }
+  } */
 }
 
 /* NAVIGATION new style */
@@ -117,11 +117,11 @@ nav.fill ul li a:hover:after {
 }
 
 @media (min-width: 992px) {
-  .navbar-expand-lg .navbar-nav {
+  /* .navbar-expand-lg .navbar-nav {
     flex-direction: row;
     gap: 50px;
     padding-top: 15px;
-  }
+  } */
 }
 
 .booking-form-section {
@@ -129,7 +129,7 @@ nav.fill ul li a:hover:after {
 }
 
 #bookingform-bg-color {
-  background-image: url(/src/images/booking-form-images/contactus-bg.png);
+  background-image: url(../../../public/images/booking-form-images/contactus-bg.png);
   padding: 40px 0;
 }
 
@@ -482,20 +482,20 @@ nav.fill ul li a:after {
   align-items: center;
 }
 
-@media (min-width: 400px) and (max-width: 700px) {
-  .navbar-expand-lg .navbar-nav {
+@media (min-width: 500px) and (max-width: 990px) {
+  /* .navbar-expand-lg .navbar-nav {
     flex-direction: column;
     gap: 5px;
     padding-top: 15px;
     align-items: flex-start;
-  }
+  } */
 
   .booking-form-section {
     margin-top: 100px;
   }
 
   #bookingform-bg-color {
-    background-image: url(/src/images/booking-form-images/contactus-bg.png);
+    background-image: url(../../../public/images/booking-form-images/contactus-bg.png);
     padding: 40px 0;
   }
 
@@ -673,7 +673,7 @@ nav.fill ul li a:after {
   .bookingcONTENTcHALET {
     font-family: PT Serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 1%;
     color: #fff;
@@ -689,11 +689,11 @@ nav.fill ul li a:after {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
   }
-  .navbar-expand-lg .navbar-nav {
+  /* .navbar-expand-lg .navbar-nav {
     flex-direction: column;
     gap: 5px;
     padding-top: 15px;
-  }
+  } */
   #room1details {
     margin-top: 30px;
     background-color: #f1f4f3;
@@ -734,14 +734,14 @@ nav.fill ul li a:after {
     display: flex;
     gap: 30px;
   }
-  .nav-link {
+  /* .nav-link {
     color: #ffffff !important;
     font-size: 18px !important;
     font-weight: 500 !important;
     font-family: poppins;
-  }
+  } */
 
-  .navbar {
+  /* .navbar {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -751,30 +751,121 @@ nav.fill ul li a:after {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0rem 1rem !important;
-  }
+    padding: 0rem 0rem !important;
+  } */
 
   #zeenath-logo-position {
     position: relative;
   }
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -50px;
     left: 115px;
     width: 170px;
-  }
-  #BookingId header .navbar-nav .nav-item .nav-link {
+  } */
+  /* #BookingId header .navbar-nav .nav-item .nav-link {
     color: #ffffff !important;
-  }
-  #BookingId header .navbar-nav .nav-item .nav-link {
+  } */
+  /* #BookingId header .navbar-nav .nav-item .nav-link {
     color: #425f2f !important;
   }
   #BookingId nav.stroke ul li a:after,
   nav.fill ul li a:after {
     background: #425f2f;
-  }
+  } */
   .contactfullpage-bg {
-    background-image: url(/src/images/contactus-page/contactus-bg.png);
+    background-image: url(../../../public/images/contactus-page/contactus-bg.png);
+  }
+}
+
+@media (min-width: 898px) and (max-width: 1200px) {
+  .bookingcONTENTcHALET {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: #fff;
+    width: 50%;
+    margin-left: -20px;
+    border: 1px #ffffff;
+  }
+}
+@media (min-width: 350px) and (max-width: 499px) {
+  .bookingcONTENTcHALET {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: #fff;
+    width: 50%;
+    margin-left: -20px;
+    border: 1px #ffffff;
+  }
+  .bookingdetails h2 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 26px;
+    position: absolute;
+    background-color: #637557;
+    left: 50px;
+    padding: 20px;
+    color: #fff;
+    width: 295px;
+  }
+
+  .BannerBookingSection {
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 76%;
+    display: flex;
+    align-items: center;
+    width: 220px;
+  }
+  #BookingId header .navbar-nav .nav-item .nav-link {
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 349px) {
+  .bookingcONTENTcHALET {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: #fff;
+    width: 50%;
+    margin-left: -20px;
+    border: 1px #ffffff;
+  }
+  .bookingdetails h2 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 26px;
+    position: absolute;
+    background-color: #637557;
+    left: 12px;
+    padding: 20px;
+    color: #fff;
+    width: 295px;
+  }
+
+  .BannerBookingSection {
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 76%;
+    display: flex;
+    align-items: center;
+    width: 220px;
+  }
+  #BookingId header .navbar-nav .nav-item .nav-link {
+    color: #ffffff !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  #BookingId header .navbar-nav .nav-item .nav-link {
+    color: #ffffff !important;
   }
 }

@@ -118,7 +118,7 @@ export default function Room() {
                   <div className="diningparalis1">
                     <p>
                       <img
-                        src={require("../images/icon/diningaboutimg-1.png")}
+                        src="/images/icon/diningaboutimg-1.png"
                         alt=""
                         style={{ marginRight: "8px" }}
                       />
@@ -128,7 +128,7 @@ export default function Room() {
                   <div className="diningparalis1">
                     <p>
                       <img
-                        src={require("../images/icon/diningaboutimg-2.png")}
+                        src="/images/icon/diningaboutimg-2.png"
                         alt=""
                         style={{ marginRight: "8px" }}
                       />
@@ -143,7 +143,7 @@ export default function Room() {
                     <div className="diningparalis1">
                       <p>
                         <img
-                          src={require("../images/icon/diningaboutimg-3.png")}
+                          src="/images/icon/diningaboutimg-3.png"
                           alt=""
                           style={{ marginRight: "8px" }}
                         />
@@ -154,7 +154,7 @@ export default function Room() {
                   <div className="diningparalis1">
                     <p>
                       <img
-                        src={require("../images/icon/diningaboutimg-4.png")}
+                        src="/images/icon/diningaboutimg-4.png"
                         alt=""
                         style={{ marginRight: "8px" }}
                       />

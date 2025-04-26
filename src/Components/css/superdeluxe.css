@@ -20,7 +20,7 @@ a {
 
 /* small scree css start */
 
-@media (max-width: 700px) {
+@media (max-width: 991px) {
   .dining-banner-img {
     width: 100%;
   }
@@ -119,12 +119,12 @@ a {
     padding-bottom: 50px;
     font-weight: 400;
   }
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -15px !important;
     left: 0px !important;
     width: 100px !important;
-  }
+  } */
   .diningaboutpara {
     font-size: 16px;
   }
@@ -206,7 +206,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/src/images/ArrowPrev.svg") !important;
+    background-image: url(../../../public/images/ArrowPrev.svg) !important;
     top: 44%;
   }
   #SuperDeluxeGallery2 .carousel-control-next {
@@ -217,7 +217,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/src/images/ArrowNext.svg") !important;
+    background-image: url(../../../public/images/ArrowNext.svg) !important;
     top: 44%;
   }
   .carousel-control-next-icon {
@@ -314,7 +314,7 @@ a {
   .flex1 {
     display: flex;
     justify-content: left;
-    gap: 90px;
+    gap: 5%;
   }
 
   .flex2 {
@@ -323,8 +323,8 @@ a {
   }
 
   .diningaboutimg img {
-    width: 600px;
-    height: 500px;
+    width: 100%;
+    height: 450px;
   }
 
   /* Ameneties section start */
@@ -437,10 +437,10 @@ a {
 
   .callbtnno {
     background-color: #425f2f;
-    width: 495px;
+    width: 100%;
     padding: 10px;
     text-align: center;
-    margin-left: 77px;
+    margin-left: 7px;
   }
 
   #checkincheckout {
@@ -520,7 +520,7 @@ a {
   .flex1 {
     display: flex;
     justify-content: left;
-    gap: 90px;
+    gap: 5%;
   }
 
   .flex2 {
@@ -702,9 +702,9 @@ a {
   padding-bottom: 50px;
 }
 
-#SuperDeluxeId header .navbar-nav .nav-item .nav-link {
+/* #SuperDeluxeId header .navbar-nav .nav-item .nav-link {
   color: #fff !important;
-}
+} */
 
 /* Css */
 
@@ -721,12 +721,12 @@ a {
 }
 
 #SuperDeluxeGallery2 .carousel-control-prev-icon {
-  background-image: url("/src/images/ArrowPrev.svg");
+  background-image: url(../../../public/images/ArrowPrev.svg);
   width: 50px;
   height: 50px;
 }
 #SuperDeluxeGallery2 .carousel-control-next-icon {
-  background-image: url("/src/images/ArrowNext.svg");
+  background-image: url(../../../public/images/ArrowNext.svg);
   width: 50px;
   height: 50px;
 }
@@ -777,7 +777,7 @@ a {
   .flex1 {
     display: flex;
     justify-content: left;
-    gap: 90px;
+    gap: 10%;
   }
 
   .flex2 {
@@ -959,9 +959,9 @@ a {
   padding-bottom: 50px;
 }
 
-#SuperDeluxeId header .navbar-nav .nav-item .nav-link {
+/* #SuperDeluxeId header .navbar-nav .nav-item .nav-link {
   color: #fff !important;
-}
+} */
 
 /* Css */
 
@@ -978,14 +978,14 @@ a {
 }
 
 #SuperDeluxeGallery2 .carousel-control-prev-icon {
-  background-image: url("/src/images/ArrowPrev.svg");
+  background-image: url(../../../public/images/ArrowPrev.svg);
   width: 50px;
   height: 50px;
   background-color: #425f2f;
   border-radius: 50%;
 }
 #SuperDeluxeGallery2 .carousel-control-next-icon {
-  background-image: url("/src/images/ArrowNext.svg");
+  background-image: url(../../../public/images/ArrowNext.svg);
   width: 50px;
   height: 50px;
   background-color: #425f2f;
@@ -1049,7 +1049,7 @@ a {
   .flex1 {
     display: flex;
     justify-content: left;
-    gap: 90px;
+    gap: 10%;
   }
 
   .flex2 {
@@ -1231,9 +1231,9 @@ a {
   padding-bottom: 50px;
 }
 
-#SuperDeluxeId header .navbar-nav .nav-item .nav-link {
+/* #SuperDeluxeId header .navbar-nav .nav-item .nav-link {
   color: #fff !important;
-}
+} */
 
 /* Css */
 
@@ -1251,12 +1251,12 @@ a {
 }
 
 #SuperDeluxeGallery2 .carousel-control-prev-icon {
-  background-image: url("/src/images/ArrowPrev.svg");
+  background-image: url(../../../public/images/ArrowPrev.svg);
   width: 50px;
   height: 50px;
 }
 #SuperDeluxeGallery2 .carousel-control-next-icon {
-  background-image: url("/src/images/ArrowNext.svg");
+  background-image: url(../../../public/images/ArrowNext.svg);
   width: 50px;
   height: 50px;
 }
@@ -1265,7 +1265,7 @@ a {
   display: none;
 }
 #SuperDeluxeGallery2 .carousel-item img {
-  height: 600px;
+  height: 50%;
   width: 100%;
   object-fit: cover;
 }
@@ -1284,7 +1284,7 @@ a {
   align-items: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 991px) {
   #SuperDeluxeId .nav-link {
     color: #fff !important;
   }
@@ -1298,10 +1298,7 @@ a {
   }
 }
 
-@media (max-width: 700px) {
-}
-
-@media (min-width: 400px) and (max-width: 700px) {
+@media (min-width: 300px) and (max-width: 991px) {
   .dining-banner-img {
     background-position: center;
     background-repeat: no-repeat;
@@ -1329,14 +1326,14 @@ a {
     width: 100%;
   }
   #SuperDeluxeGallery2 .carousel-control-prev-icon {
-    background-image: url("/src/images/ArrowPrev.svg");
+    background-image: url(../../../public/images/ArrowPrev.svg);
     width: 50px;
     height: 50px;
     background-color: #425f2f;
     border-radius: 50%;
   }
   #SuperDeluxeGallery2 .carousel-control-next-icon {
-    background-image: url("/src/images/ArrowNext.svg");
+    background-image: url(../../../public/images/ArrowNext.svg);
     width: 50px;
     height: 50px;
     background-color: #0a0a0a;

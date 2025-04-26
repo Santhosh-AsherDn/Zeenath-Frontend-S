@@ -20,16 +20,16 @@
   padding: 0rem 1rem !important;
 }
 
-#zeenath-logo-position {
+/* #zeenath-logo-position img {
   position: relative;
-}
+} */
 
-#zeenath-logo-position img {
+/* #zeenath-logo-position img img {
   position: absolute;
   top: -50px;
   left: 115px;
   width: 170px;
-}
+} */
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -95,20 +95,20 @@ nav.fill ul li a:hover:after {
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
-    gap: 50px;
+    gap: 30px;
     padding-top: 15px;
   }
 }
 
-@media (max-width: 700px) {
-  #zeenath-logo-position img {
+@media (max-width: 991px) {
+  /* #zeenath-logo-position img img {
     position: absolute;
     top: -50px;
     left: 15px;
     margin-left: -30px;
     width: 50%;
     height: 50px;
-  }
+  } */
 
   #headerId .navbar {
     padding: 1rem !important;
@@ -197,13 +197,87 @@ nav.fill ul li a:hover:after {
     justify-content: flex-end !important;
   }
 
-  .navbar-nav {
+  /* .navbar-nav {
     margin-left: 200px;
-  }
+  } */
 }
 
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
   box-shadow: none !important;
+}
+
+#zeenath-logo-position {
+  position: relative;
+  z-index: 1000; /* Ensures logo stays above other elements */
+}
+
+#zeenath-logo-position img {
+  display: block;
+  position: absolute;
+  /* Default mobile size */
+  width: 60px;
+  height: auto;
+  margin-left: 0.5rem;
+  margin-top: 0px;
+}
+
+/* Small tablets (≥ 480px) */
+@media (min-width: 480px) {
+  #zeenath-logo-position img {
+    width: 60.44px;
+    margin-left: 1rem;
+    height: auto;
+    margin-top: 0px;
+  }
+}
+
+/* Tablets (≥ 640px) */
+@media (min-width: 640px) {
+  #zeenath-logo-position img {
+    width: 60.44px;
+    margin-left: 1rem;
+    height: auto;
+    margin-top: 0px;
+  }
+}
+
+/* Small laptops (≥ 768px) */
+@media (min-width: 768px) {
+  #zeenath-logo-position img {
+    width: 80.44px;
+    margin-left: 2rem;
+    height: auto;
+    margin-top: 0px;
+  }
+}
+
+/* Medium desktops (≥ 1024px) */
+@media (min-width: 1024px) {
+  #zeenath-logo-position img {
+    width: 100.44px;
+    margin-left: 3rem;
+    height: auto;
+    margin-top: 0px;
+  }
+}
+
+/* Large desktops (≥ 1280px) */
+@media (min-width: 1280px) {
+  #zeenath-logo-position img {
+    width: 140.44px;
+    margin-left: 4rem;
+    height: auto;
+    margin-top: 0px;
+  }
+}
+
+/* Extra large screens (≥ 1536px) */
+@media (min-width: 1536px) {
+  #zeenath-logo-position img {
+    width: 183.44px;
+    margin-left: 5rem;
+    margin-top: 0px;
+  }
 }

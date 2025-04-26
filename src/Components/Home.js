@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./css/home.css";
@@ -8,7 +9,24 @@ import Header from "./Header";
 import Carousel from "react-bootstrap/Carousel";
 
 export default function Home() {
- 
+  const [temperature, setTemperature] = useState(null);
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/weather/yelagiri"
+        );
+        setTemperature(response.data.temperature);
+      } catch (error) {
+        console.error("Failed to fetch weather:", error);
+      }
+    };
+
+    fetchWeather();
+    const interval = setInterval(fetchWeather, 10 * 60 * 1000); //refresh every 10 mins
+    return () => clearInterval(interval);
+  }, []);
+
   const navigate = useNavigate();
   const handleShow = () => {
     navigate("/accomodation");
@@ -27,12 +45,12 @@ export default function Home() {
         <Carousel>
           <Carousel.Item interval={3000}>
             <img
-              src={require("../images/banner/Home1.png")}
+              src="/images/banner/Home1.png"
               alt="First slide"
               className="d-block w-100 h-50"
             />
             <Carousel.Caption>
-              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center z-index-99">
                 <h1 className="titleofhomebanner">
                   EXPERIENCE NATURE’S <br />
                   ABUNDANCE WITH LUXURY
@@ -46,12 +64,13 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src={require("../images/banner/Home2.png")}
+              src="/images/banner/Home2.png"
               alt="First slide"
               className="d-block w-100 h-50"
+              id="imageslider-image"
             />
             <Carousel.Caption>
-              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center z-index-99">
                 <h1 className="titleofhomebanner">
                   EXPERIENCE NATURE’S <br />
                   ABUNDANCE WITH LUXURY
@@ -65,12 +84,13 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src={require("../images/banner/Home3.png")}
+              src="/images/banner/Home3.png"
               alt="First slide"
               className="d-block w-100 h-50"
+              id="imageslider-image"
             />
             <Carousel.Caption>
-              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center z-index-99">
                 <h1 className="titleofhomebanner">
                   EXPERIENCE NATURE’S <br />
                   ABUNDANCE WITH LUXURY
@@ -84,12 +104,13 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src={require("../images/banner/Home4.png")}
+              src="/images/banner/Home4.png"
               alt="First slide"
               className="d-block w-100 h-50"
+              id="imageslider-image"
             />
             <Carousel.Caption>
-              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center z-index-99">
                 <h1 className="titleofhomebanner">
                   EXPERIENCE NATURE’S <br />
                   ABUNDANCE WITH LUXURY
@@ -103,12 +124,13 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item interval={3000}>
             <img
-              src={require("../images/banner/Home5.png")}
+              src="/images/banner/Home5.png"
               alt="First slide"
               className="d-block w-100 h-50"
+              id="imageslider-image"
             />
             <Carousel.Caption>
-              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center">
+              <div className="col-xlg-12 col-lg-12 col-md-12 col-sm-12 text-center z-index-99">
                 <h1 className="titleofhomebanner">
                   EXPERIENCE NATURE’S <br />
                   ABUNDANCE WITH LUXURY
@@ -120,7 +142,6 @@ export default function Home() {
               </div>
             </Carousel.Caption>
           </Carousel.Item>
-    
         </Carousel>
         <section className="smallstrip">
           <div className="container">
@@ -128,10 +149,7 @@ export default function Home() {
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-4">
                 <div className="strippara">
                   <img
-                    src={
-                      require("../images/shapes/streamline_pet-paw-solid.svg")
-                        .default
-                    }
+                    src="/images/shapes/streamline_pet-paw-solid.svg"
                     alt=""
                   />
                   <p>Pet friendly</p>
@@ -140,21 +158,17 @@ export default function Home() {
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-4">
                 <div className="strippara">
                   <img
-                    src={
-                      require("../images/shapes/solar_temperature-line-duotone.svg")
-                        .default
-                    }
-                    alt=""
+                    src="/images/shapes/solar_temperature-line-duotone.svg"
+                    alt="Temperature Icon"
                   />
-                  <p>29°C</p>
+                  <p>
+                    {temperature !== null ? `${temperature}°C` : "Loading..."}
+                  </p>
                 </div>
               </div>
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-4">
                 <div className="strippara">
-                  <img
-                    src={require("../images/shapes/fa_mobile.svg").default}
-                    alt=""
-                  />
+                  <img src="/images/shapes/fa_mobile.svg" alt="" />
                   <p> 9751657458 | 9840083576 | 9840029445</p>
                 </div>
               </div>
@@ -200,10 +214,7 @@ export default function Home() {
                 data-aos-duration="500"
               >
                 <div className="homeaboutimg">
-                  <img
-                    src={require("../images/home-page/home-about-img.png")}
-                    alt=""
-                  />
+                  <img src="/images/home-page/home-about-img.png" alt="" />
                 </div>
               </div>
             </div>
@@ -216,7 +227,7 @@ export default function Home() {
         <section className="accommodation-section-home">
           <div className="container">
             <div className="row">
-              <div className=" col-xl-12 col-lg-12 col-md-6 col-sm-12 text-center mb-5">
+              <div className=" col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center mb-5">
                 <div
                   className="accommodation-para"
                   data-aos="fade-up"
@@ -294,10 +305,7 @@ export default function Home() {
                 data-aos-duration="500"
               >
                 <div className="dining-img-1 text-center">
-                  <img
-                    src={require("../images/home-page/home-dining-img.png")}
-                    alt=""
-                  />
+                  <img src="/images/home-page/home-dining-img.png" alt="" />
                   <div className="dining-popup">
                     <div className="inner-dining-popup">
                       <h4>Complimentary Breakfast</h4>
@@ -323,10 +331,7 @@ export default function Home() {
                 data-aos-duration="700"
               >
                 <div className="dining-img-1 text-center">
-                  <img
-                    src={require("../images/home-page/home-dining-img-2.png")}
-                    alt=""
-                  />
+                  <img src="/images/home-page/home-dining-img-2.png" alt="" />
                   <div className="dining-popup">
                     <div className="inner-dining-popup">
                       <h4>Complimentary Breakfast</h4>
@@ -354,7 +359,7 @@ export default function Home() {
         <section
           className="diningthiredimg"
           style={{
-            backgroundImage: `url(${require("../images/home-page/home-dining-img-3.png")})`,
+            backgroundImage: `url("/images/home-page/home-dining-img-3.png")`,
           }}
         >
           <div className="dining-popup2">
@@ -405,7 +410,7 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src={require("../images/home-page/FunfilledActivities-1.png")}
+                    src="/images/home-page/FunfilledActivities-1.png"
                     alt=""
                   />
                 </div>
@@ -420,12 +425,12 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src={require("../images/home-page/trip.png")}
+                    src="/images/home-page/trip.png"
                     alt=""
-                    style={{
-                      height: "382.68px",
-                      objectFit: "cover",
-                    }}
+                    // style={{
+                    //   height: "317.68px",
+                    //   objectFit: "cover",
+                    // }}
                   />
                 </div>
                 <div className="fun-filled-activities-a">
@@ -439,7 +444,7 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src={require("../images/home-page/FunfilledActivities-3.png")}
+                    src="/images/home-page/FunfilledActivities-3.png"
                     alt=""
                   />
                 </div>
@@ -454,7 +459,7 @@ export default function Home() {
               >
                 <div className="fun-filled-activities-imgs">
                   <img
-                    src={require("../images/home-page/FunfilledActivities-4.png")}
+                    src="/images/home-page/FunfilledActivities-4.png"
                     alt=""
                   />
                 </div>
@@ -474,7 +479,7 @@ export default function Home() {
               <div className="col-xlg-6 col-lg-6 col-md-6 col-sm-12">
                 {/* <div className="flora-faunaimg"> */}
                 <img
-                  src={require("../images/home-page/flora-fauna-img.png")}
+                  src="/images/home-page/flora-fauna-img.png"
                   alt=""
                   className="smallscreenimgforflorafauna"
                 />
@@ -507,7 +512,7 @@ export default function Home() {
         <section
           className="hometestimonalsec"
           style={{
-            backgroundImage: `url(${require("../images/home-page/testimonals-bg.png")})`,
+            backgroundImage: `url("/images/home-page/testimonals-bg.png")`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -523,18 +528,13 @@ export default function Home() {
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
                 <div className="testimonal-section-box">
                   <div className="commaone">
-                    <img
-                      src={require("../images/home-page/comma-1.svg").default}
-                      alt=""
-                    />
+                    <img src="/images/home-page/comma-1.svg" alt="" />
                   </div>
                   <div className="testimonal-section-borderline">
                     <div className="testimonial-profile">
                       <div className="profile-img">
                         <img
-                          src={
-                            require("../images/home-page/profile-1.svg").default
-                          }
+                          src="/images/home-page/profile-1.svg"
                           alt="Jennifer Chris Profile"
                           className="profile-img"
                         />
@@ -560,33 +560,25 @@ export default function Home() {
                   <div className="source">
                     <span>Source : </span>
                     <img
-                      src={require("../images/home-page/google-review.png")}
+                      src="/images/home-page/google-review.png"
                       alt="Google Review"
                     />
                   </div>
                   <div className="commatwo">
-                    <img
-                      src={require("../images/home-page/comma-2.svg").default}
-                      alt=""
-                    />
+                    <img src="/images/home-page/comma-2.svg" alt="" />
                   </div>
                 </div>
               </div>
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
                 <div className="testimonal-section-box">
                   <div className="commaone">
-                    <img
-                      src={require("../images/home-page/comma-1.svg").default}
-                      alt=""
-                    />
+                    <img src="/images/home-page/comma-1.svg" alt="" />
                   </div>
                   <div className="testimonal-section-borderline">
                     <div className="testimonial-profile">
                       <div className="profile-img">
                         <img
-                          src={
-                            require("../images/home-page/profile-2.svg").default
-                          }
+                          src="/images/home-page/profile-2.svg"
                           alt="Jennifer Chris Profile"
                           className="profile-img"
                         />
@@ -612,33 +604,25 @@ export default function Home() {
                   <div className="source">
                     <span>Source : </span>
                     <img
-                      src={require("../images/home-page/booking.png")}
+                      src="/images/home-page/booking.png"
                       alt="Google Review"
                     />
                   </div>
                   <div className="commatwo">
-                    <img
-                      src={require("../images/home-page/comma-2.svg").default}
-                      alt=""
-                    />
+                    <img src="/images/home-page/comma-2.svg" alt="" />
                   </div>
                 </div>
               </div>
               <div className="col-xlg-4 col-lg-4 col-md-4 col-sm-12">
                 <div className="testimonal-section-box">
                   <div className="commaone">
-                    <img
-                      src={require("../images/home-page/comma-1.svg").default}
-                      alt=""
-                    />
+                    <img src="/images/home-page/comma-1.svg" alt="" />
                   </div>
                   <div className="testimonal-section-borderline">
                     <div className="testimonial-profile">
                       <div className="profile-img">
                         <img
-                          src={
-                            require("../images/home-page/profile-3.svg").default
-                          }
+                          src="/images/home-page/profile-3.svg"
                           alt="Jennifer Chris Profile"
                           className="profile-img"
                         />
@@ -664,15 +648,12 @@ export default function Home() {
                   <div className="source">
                     <span>Source : </span>
                     <img
-                      src={require("../images/home-page/google-review.png")}
+                      src="/images/home-page/google-review.png"
                       alt="Google Review"
                     />
                   </div>
                   <div className="commatwo">
-                    <img
-                      src={require("../images/home-page/comma-2.svg").default}
-                      alt=""
-                    />
+                    <img src="/images/home-page/comma-2.svg" alt="" />
                   </div>
                 </div>
               </div>

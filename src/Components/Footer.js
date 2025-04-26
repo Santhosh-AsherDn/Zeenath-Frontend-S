@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="col-md-3">
                   <Link to="/">
                     <div className="footer-logo">
-                      <img src={require("../images/zeenath-logo.svg")} alt="" />
+                      <img src="/images/zeenath-logo.svg" alt="Zeenath Logo" />
                     </div>
                   </Link>
                 </div>
@@ -42,10 +42,7 @@ export default function Footer() {
                     <ul className="list-unstyled" id="footer-addres-gap">
                       <li>
                         <img
-                          src={
-                            require("../images/shapes/fluent_location-16-filled.svg")
-                              .default
-                          }
+                          src="/images/shapes/fluent_location-16-filled.svg"
                           alt=""
                         />
                         ZEENATH TAJ GARDENS,
@@ -58,24 +55,13 @@ export default function Footer() {
                       </li>
                       <li>
                         <a href="callto:9751657458">
-                          <img
-                            src={
-                              require("../images/shapes/fa_mobile.svg").default
-                            }
-                            alt=""
-                          />
+                          <img src="/images/shapes/fa_mobile.svg" alt="" />
                           9751657458 | 9840083576 | 9840029445
                         </a>
                       </li>
                       <li>
                         <a href="mailto:info@zeenathtaigardens.com">
-                          <img
-                            src={
-                              require("../images/shapes/famicons_mail.svg")
-                                .default
-                            }
-                            alt=""
-                          />
+                          <img src="/images/shapes/famicons_mail.svg" alt="" />
                           info@zeenathtajgardens.com
                         </a>
                       </li>
@@ -91,10 +77,7 @@ export default function Footer() {
                           href="https://www.facebook.com/zeenathtajgardens/"
                           className="social-link"
                         >
-                          <img
-                            src={require("../images/shapes/Vector.svg").default}
-                            alt=""
-                          />
+                          <img src="/images/shapes/Vector.svg" alt="" />
                         </a>
                       </li>
                       <li>
@@ -102,12 +85,7 @@ export default function Footer() {
                           href="https://www.instagram.com/zeenattajgardens/"
                           className="social-link"
                         >
-                          <img
-                            src={
-                              require("../images/shapes/Vector (1).svg").default
-                            }
-                            alt=""
-                          />
+                          <img src="/images/shapes/Vector (1).svg" alt="" />
                         </a>
                       </li>
                       <li>
@@ -115,12 +93,7 @@ export default function Footer() {
                           href="https://youtube.com/@zeenattaj2928?feature=shared"
                           className="social-link"
                         >
-                          <img
-                            src={
-                              require("../images/shapes/Vector (2).svg").default
-                            }
-                            alt=""
-                          />
+                          <img src="/images/shapes/Vector (2).svg" alt="" />
                         </a>
                       </li>
                       <li>
@@ -128,12 +101,7 @@ export default function Footer() {
                           href="https://in.linkedin.com/in/zeenath-taj-gardens-587398138"
                           className="social-link"
                         >
-                          <img
-                            src={
-                              require("../images/shapes/Vector (3).svg").default
-                            }
-                            alt=""
-                          />
+                          <img src="/images/shapes/Vector (3).svg" alt="" />
                         </a>
                       </li>
                     </ul>

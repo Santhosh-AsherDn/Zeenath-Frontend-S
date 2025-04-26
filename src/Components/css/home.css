@@ -28,7 +28,11 @@ a {
   left: 27px !important;
   font-weight: 700 !important;
 }
-@media (max-width: 700px) {
+/* .titleofhomebanner {
+  z-index: 99;
+} */
+
+@media (max-width: 991px) {
   br {
     display: none !important;
   }
@@ -54,7 +58,7 @@ a {
     font-weight: 700;
   }
   .index-banner-section {
-    background-image: url(/src/images/home-page/home-banner.png);
+    background-image: url(../../../public/images/home-page/home-banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -154,11 +158,11 @@ a {
     left: 6px;
   }
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -114px;
     width: 150px;
-  }
+  } */
   .smallstrip {
     background-color: #637557;
     color: #fff;
@@ -298,8 +302,9 @@ a {
     position: absolute;
     text-align: center;
     background-color: #ffffff;
-    width: 96%;
+    width: auto;
     bottom: 18px;
+    height: auto;
     left: 2%;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -330,6 +335,7 @@ a {
   }
   .smallscreenimgforflorafauna {
     width: 100%;
+    height: 100%;
   }
   .homeaboutsectiontext h2 {
     font-size: 24px;
@@ -356,6 +362,8 @@ a {
     padding: 50px 15px 30px;
     margin-bottom: 30px;
     color: #fff;
+    height: 95%;
+    width: 100%;
   }
   .testimonal-section-borderline {
     border: 2px solid #ffffff;
@@ -422,6 +430,7 @@ a {
 
   .titleofhomebanner {
     font-size: 22px;
+    z-index: 99;
   }
 
   .strippara p {
@@ -448,11 +457,66 @@ a {
     width: 100% !important;
     height: 300px !important;
   }
+
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: auto;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-right: 25px;
+    width: auto;
+    bottom: 20px;
+    left: 45%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .banner-bg-img {
-    background-image: url(/src/images/home-page/home-banner.png);
+    background-image: url(../../../public/images/home-page/home-banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -464,7 +528,7 @@ a {
     color: #ffffff;
     font-size: 50px;
     font-weight: 400;
-    padding-top: 260px;
+    padding-top: 150px;
   }
 
   /* Accommodation section css start  */
@@ -481,6 +545,59 @@ a {
     font-size: 20px;
   }
 
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
   /* footer section css start */
 
   .footer-logo img {
@@ -545,7 +662,7 @@ a {
 
   .socialmeida p {
     font-size: 20px;
-    padding-left: 30px;
+    padding-left: 58px;
     font-family: "Philosopher", sans-serif;
   }
 
@@ -627,7 +744,7 @@ a {
   }
 
   .homeaboutimg img {
-    width: 550px;
+    width: 100%;
   }
 
   /* Elegant Accommodation Choices start */
@@ -822,7 +939,7 @@ a {
   }
 
   .dining-img-1 img {
-    width: 545px;
+    width: 100%;
   }
 
   .dining-img-text {
@@ -867,7 +984,7 @@ a {
   }
 
   .fun-filled-activities img {
-    width: 550px;
+    width: 100%;
   }
 
   .fun-filled-activities-a {
@@ -974,11 +1091,11 @@ a {
   }
 
   @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
+    /* .navbar-expand-lg .navbar-nav {
       flex-direction: row;
       gap: 50px;
       padding-top: 15px;
-    }
+    } */
   }
 
   .hometestimonalsec h2 {
@@ -987,12 +1104,12 @@ a {
     font-weight: 400;
   }
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -50px;
     left: 115px;
     width: 170px;
-  }
+  } */
 
   /* testimonals section css */
 
@@ -1065,6 +1182,62 @@ a {
     padding: 1px;
   }
 
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-right: 25px;
+    width: auto;
+    bottom: 275px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: auto;
+    margin-right: 25px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
+
   /* From Uiverse.io by vikiWayne */
   .button {
     border: none;
@@ -1082,7 +1255,7 @@ a {
     font-family: poppins;
     width: 200px;
     background-color: #bd8d45;
-    margin-top: 40px;
+    margin-top: 10px;
     width: 200px;
     padding: 10px;
     font-weight: 400;
@@ -1116,7 +1289,7 @@ a {
 
 @media (min-width: 1200px) {
   .banner-bg-img {
-    background-image: url(/src/images/home-page/home-banner.png);
+    background-image: url(../../../public/images/home-page/home-banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1210,7 +1383,7 @@ a {
 
   .socialmeida p {
     font-size: 20px;
-    padding-left: 30px;
+    padding-left: 58px;
     font-family: "Philosopher", sans-serif;
   }
 
@@ -1292,7 +1465,7 @@ a {
   }
 
   .homeaboutimg img {
-    width: 550px;
+    width: 100%;
   }
 
   /* Elegant Accommodation Choices start */
@@ -1487,7 +1660,7 @@ a {
   }
 
   .dining-img-1 img {
-    width: 545px;
+    width: 100%;
   }
 
   .dining-img-text {
@@ -1532,7 +1705,7 @@ a {
   }
 
   .fun-filled-activities img {
-    width: 550px;
+    width: 100%;
   }
 
   .fun-filled-activities-a {
@@ -1643,11 +1816,11 @@ a {
   }
 
   @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
+    /* .navbar-expand-lg .navbar-nav {
       flex-direction: row;
       gap: 50px;
       padding-top: 15px;
-    }
+    } */
   }
 
   .hometestimonalsec h2 {
@@ -1656,12 +1829,12 @@ a {
     font-weight: 400;
   }
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -50px;
     left: 115px;
     width: 170px;
-  }
+  } */
   /* testimonals section css */
 
   .hometestimonalsec {
@@ -1848,7 +2021,7 @@ a {
 
 @media (min-width: 1300px) {
   .banner-bg-img {
-    background-image: url(/src/images/home-page/home-banner.png);
+    background-image: url(../../../public/images/home-page/home-banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1942,7 +2115,7 @@ a {
 
   .socialmeida p {
     font-size: 20px;
-    padding-left: 30px;
+    padding-left: 58px;
     font-family: "Philosopher", sans-serif;
   }
 
@@ -2024,7 +2197,7 @@ a {
   }
 
   .homeaboutimg img {
-    width: 550px;
+    width: 100%;
   }
 
   /* Elegant Accommodation Choices start */
@@ -2205,6 +2378,59 @@ a {
     left: 27px;
     font-weight: 700;
   }
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
   /* dining section css start */
 
   .diningsection {
@@ -2220,7 +2446,7 @@ a {
   }
 
   .dining-img-1 img {
-    width: 545px;
+    width: 100%;
   }
 
   .dining-img-text {
@@ -2265,7 +2491,7 @@ a {
   }
 
   .fun-filled-activities img {
-    width: 550px;
+    width: 100%;
   }
 
   .fun-filled-activities-a {
@@ -2376,11 +2602,11 @@ a {
   }
 
   @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
+    /* .navbar-expand-lg .navbar-nav {
       flex-direction: row;
       gap: 50px;
       padding-top: 15px;
-    }
+    } */
   }
 
   .hometestimonalsec h2 {
@@ -2389,12 +2615,12 @@ a {
     font-weight: 400;
   }
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -50px;
     left: 115px;
     width: 170px;
-  }
+  } */
   /* testimonals section css */
 
   .hometestimonalsec {
@@ -2581,7 +2807,7 @@ a {
 
 @media screen and (min-width: 1440px) {
   .banner-bg-img {
-    background-image: url(/src/images/home-page/home-banner.png);
+    background-image: url(../../../public/images/home-page/home-banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2610,6 +2836,59 @@ a {
     font-size: 20px;
   }
 
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
   /* footer section css start */
 
   .footer-logo img {
@@ -2675,7 +2954,7 @@ a {
 
   .socialmeida p {
     font-size: 20px;
-    padding-left: 30px;
+    padding-left: 58px;
     font-family: "Philosopher", sans-serif;
   }
 
@@ -2757,7 +3036,7 @@ a {
   }
 
   .homeaboutimg img {
-    width: 550px;
+    width: 100%;
   }
 
   /* Elegant Accommodation Choices start */
@@ -2998,7 +3277,9 @@ a {
   }
 
   .fun-filled-activities img {
-    width: 550px;
+    width: 100%;
+    /* height: 100%;
+    object-fit: fill; */
   }
 
   .fun-filled-activities-a {
@@ -3109,11 +3390,11 @@ a {
   }
 
   @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
+    /* .navbar-expand-lg .navbar-nav {
       flex-direction: row;
       gap: 50px;
       padding-top: 15px;
-    }
+    } */
   }
 
   .hometestimonalsec h2 {
@@ -3122,12 +3403,12 @@ a {
     font-weight: 400;
   }
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -50px;
     left: 115px;
     width: 170px;
-  }
+  } */
   /* testimonals section css */
 
   .hometestimonalsec {
@@ -3314,7 +3595,7 @@ a {
 
 @media screen and (min-width: 1920px) {
   .banner-bg-img {
-    background-image: url(/src/images/home-page/home-banner.png);
+    background-image: url(../../../public/images/home-page/home-banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3445,6 +3726,59 @@ a {
     margin-top: 40px;
   }
 
+  .inner-dining-popup {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 265px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup h4 {
+    color: #2c4a18;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+
+  .dining-popup2 {
+    position: relative;
+  }
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 439px;
+    bottom: 20px;
+    left: 64%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .inner-dining-popup2 p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .inner-dining-popup2 h4 {
+    color: #2c4a18;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "PT Serif", serif;
+  }
+  .inner-dining-popup2-spl {
+    font-weight: 600 !important;
+    color: #000000;
+    font-size: 13px;
+  }
   /* home page small strip start */
 
   .smallstrip {
@@ -3491,7 +3825,7 @@ a {
   }
 
   .homeaboutimg img {
-    width: 550px;
+    width: 100%;
   }
 
   /* Elegant Accommodation Choices start */
@@ -3734,7 +4068,7 @@ a {
   }
 
   .fun-filled-activities img {
-    width: 550px;
+    width: 100%;
   }
 
   .fun-filled-activities-a {
@@ -3845,11 +4179,11 @@ a {
   }
 
   @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
+    /* .navbar-expand-lg .navbar-nav {
       flex-direction: row;
       gap: 50px;
       padding-top: 15px;
-    }
+    } */
   }
 
   .hometestimonalsec h2 {
@@ -3858,12 +4192,12 @@ a {
     font-weight: 400;
   }
 
-  #zeenath-logo-position img {
+  /* #zeenath-logo-position img {
     position: absolute;
     top: -50px;
     left: 115px;
     width: 170px;
-  }
+  } */
   /* testimonals section css */
 
   .hometestimonalsec {
@@ -4024,7 +4358,8 @@ a {
     text-align: center;
     background-color: #ffffff;
     padding: 20px;
-    width: 439px;
+    width: auto;
+    margin-right: 25px;
     bottom: 20px;
     left: 64%;
     border-radius: 5px;
@@ -4047,9 +4382,9 @@ a {
     font-size: 13px;
   }
 }
-#HomeId header .navbar-nav .nav-item .nav-link {
+/* #HomeId header .navbar-nav .nav-item .nav-link {
   color: #fff !important;
-}
+} */
 
 /* My Css */
 
@@ -4065,23 +4400,48 @@ a {
   width: 100%;
   object-fit: cover;
 }
+/* .carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+} */
 .carousel-caption {
   top: 40%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 991px) {
   #HomeId .carousel-control-prev-icon {
-    background-image: url("/src/images/ArrowPrev.svg") !important;
+    background-image: url(../../../public/images/ArrowPrev.svg) !important;
     border-radius: 50%;
     border: 1.5px solid white;
   }
   #HomeId .carousel-control-next-icon {
-    background-image: url("/src/images/ArrowNext.svg") !important;
+    background-image: url(../../../public/images/ArrowNext.svg) !important;
     border-radius: 50%;
     border: 1.5px solid white;
   }
 
   #HomeId .carousel-indicators {
     display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .inner-dining-popup2 {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-right: 25px;
+    width: auto;
+    bottom: 0px;
+    left: 45%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 }
